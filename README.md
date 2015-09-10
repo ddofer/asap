@@ -1,2 +1,2 @@
 # asap
-Amino-Acid Sequence Annotation Predictor
+Amino-acid Sequence Annotation Predictor

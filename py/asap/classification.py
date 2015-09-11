@@ -7,16 +7,16 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.feature_selection import VarianceThreshold, SelectFdr
 from sklearn.cross_validation import StratifiedKFold
 from sklearn.metrics import confusion_matrix, roc_auc_score, f1_score
-from sklearn.svm import SVC
 from sklearn.ensemble import RandomForestClassifier
+from sklearn.svm import SVC
 
 from . import window_extraction
 
 LOGGER = logging.getLogger('ML')
 
 DEFAULT_CLASSIFIERS = [
-    SVC(kernel = 'rbf', class_weight = 'auto'),
     RandomForestClassifier(n_estimators = 150, n_jobs = -1, class_weight = 'auto'),
+    SVC(kernel = 'rbf', class_weight = 'auto'),
 ]
 
 DEFAULT_TRANSFORMER = StandardScaler(copy = False)
@@ -81,6 +81,7 @@ class WindowClassifier(object):
         '''
         features, X, y = _get_training_data(windows_data_frame, drop_only_almost_positives, drop_duplicates, self.transformer, \
                 features = self.used_features)
+        LOGGER.info('Predicting %d records...' % len(X))
         y_pred = self.raw_classifier.predict(X)
         return _get_prediction_scores(y, y_pred, scoring_method)
             
@@ -180,7 +181,9 @@ def train_window_classifier(windows_data_frame, classifiers = DEFAULT_CLASSIFIER
     window_classifiers_and_results.sort(key = lambda window_classifier_and_results: window_classifier_and_results[1], reverse = True)
     
     if select_best:
-        return window_classifiers_and_results[0]
+        best_classifier, best_results = window_classifiers_and_results[0]
+        LOGGER.info('The best classifier is %s with score %f.' % (str(best_classifier), best_results[0]))
+        return best_classifier, best_results
     else:
         return window_classifiers_and_results
     
@@ -224,8 +227,8 @@ def _get_classifier_kfold_results(classifier, X, y, n_folds, feature_selector, s
     time_diff = datetime.datetime.now() - time_before
     LOGGER.info('Finished training. Took %d seconds' % int(time_diff.total_seconds()))
 
-    LOGGER.info('Confusion matrix:' + '\n' + str(cm))
     LOGGER.info('score = %f, roc = %f, sensitivity = %f, precision = %f, specificity = %f' % (score, roc, sensitivity, precision, specificity))
+    LOGGER.info('Confusion matrix:' + '\n' + str(cm))
     return score, roc, sensitivity, precision, specificity, cm
     
 def _get_trained_window_classifier(classifier, features, X, y, feature_selector, transformer):

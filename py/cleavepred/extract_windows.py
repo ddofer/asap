@@ -8,11 +8,11 @@ Arguments:
 
 import sys
 
-from . import util
-from . import project_paths
-from .common import window_extraction_params
-from ..asap import extract_windows_from_file
-from ..asap.config import POSITIVE_AMINO_ACIDS
+from asap import extract_windows_from_file
+
+from cleavepred import util
+from cleavepred import project_paths
+from cleavepred.common import window_extraction_params
 
 ### Parse arguments ###
 
@@ -32,6 +32,8 @@ csv_output_file = None
 extra_tracks_files = {}
 
 def open_files():
+
+    global annotated_seqs_file, seqs_filtration_file, csv_output_file, extra_tracks_files
     
     annotated_seqs_file = open(project_paths.get_annotated_seqs_file_path(), 'rb')
     seqs_filtration_file = open(project_paths.get_filtered_seqs_file_path(), 'rb')

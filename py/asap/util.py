@@ -1,3 +1,9 @@
+def apply_mask(array, mask):
+    if len(array) == len(mask):
+        return [element for element, flag in zip(array, mask) if flag]
+    else:
+        raise Exception('Cannot apply a mask of a different length')
+
 def bit_to_bool(bit):
     return bit == '1'
 
@@ -5,19 +11,6 @@ def find_first_index_of(string, character_list):
     for i, c in enumerate(string):
         if c in character_list:
             return i
-
-def to_chunks(items, chunk_size):
-    for i in xrange(0, len(items), chunk_size):
-        yield items[i:(i + chunk_size)]
-
-def read(path):
-    
-    f = open(path, 'rb')
-
-    try:
-        return f.read()
-    finally:
-        f.close()
 
 def format_as_csv_value(value):
     if type(value) == bool:

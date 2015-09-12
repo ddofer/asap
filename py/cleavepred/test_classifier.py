@@ -6,10 +6,12 @@ Arguments:
 
 import sys
 import pickle
+import logging
 
 import pandas as pd
 
-from . import project_paths
+from cleavepred import util
+from cleavepred import project_paths
 
 ### Parse arguments ###
 
@@ -28,6 +30,7 @@ predictor_dump_file = None
 windows_file = None
 
 def open_files():
+    global predictor_dump_file, windows_file
     predictor_dump_file = open(project_paths.get_peptide_predictor_dump_file_path(advanced), 'rb')
     windows_file = open(project_paths.get_window_features_file_path(advanced), 'rb')
     

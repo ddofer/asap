@@ -34,7 +34,7 @@ FEARURE_KEY_OPTIONS = [
     'pssm_entropy', # TODO
 ]
 
-def get_features(window, feature_keys = None):
+def get_features(window, hot_index, feature_keys = None):
 
     if feature_keys is None:
         feature_keys = FEARURE_KEY_OPTIONS
@@ -54,7 +54,7 @@ def get_features(window, feature_keys = None):
     if 'fid_disorder' in feature_keys:
         features.update(getFIDisorder(window.get_aa_seq()))
     if 'kr_motifs' in feature_keys:
-        features.update(GetKRMotifCounts(window.get_aa_seq()))
+        features.update(GetKRMotifCounts(window.get_aa_seq(), hot_index))
         
     if 'charge' in feature_keys:
         features.update(get_charge_features(window.get_aa_seq()))
@@ -82,7 +82,7 @@ def get_features(window, feature_keys = None):
         if 'ss_context_count' in feature_keys:
             features.update(get_context_count_features('ss', config.SS_OPTIONS, window, 'ss'))
         if 'ss_segment' in feature_keys:
-            features.update(get_segment_features(seq = window.get_track_seq('ss'), seqtype = 'ss'))
+            features.update(get_segment_features(window.get_track_seq('ss'), hot_index, 'ss'))
     
     if 'acc' in window.get_available_tracks():
         if 'acc' in feature_keys:
@@ -90,7 +90,7 @@ def get_features(window, feature_keys = None):
         if 'acc_context_count' in feature_keys:
             features.update(get_context_count_features('acc', config.ACC_OPTIONS, window, 'acc'))
         if 'acc_segment' in feature_keys:
-            features.update(get_segment_features(seq = window.get_track_seq('acc'), seqtype = 'acc'))
+            features.update(get_segment_features(window.get_track_seq('acc'), hot_index, 'acc'))
     
     if 'disorder' in window.get_available_tracks():
         if 'disorder' in feature_keys:
@@ -98,13 +98,13 @@ def get_features(window, feature_keys = None):
         if 'disorder_context_count' in feature_keys:
             features.update(get_context_count_features('disorder', config.DISORDER_OPTIONS, window, 'disorder'))
         if 'disorder_segment' in feature_keys:
-            features.update(get_segment_features(seq = window.get_track_seq('disorder'), seqtype = 'disorder'))
+            features.update(get_segment_features(window.get_track_seq('disorder'), hot_index, 'disorder'))
             
     if 'pssm' in window.get_available_tracks():
         if 'pssm' in feature_keys:
             features.update(get_pssm_features(window.get_track_seq('pssm')))
         if 'pssm_entropy' in feature_keys:
-            features.update(Entropy_pssm(window.get_track_seq('pssm')))
+            features.update(Entropy_pssm(window.get_track_seq('pssm'), hot_index))
     
     return features
 
@@ -188,9 +188,8 @@ def Dict_Keys_prefix(multilevelDict,PrefixStr):
     '''
     return {PrefixStr+":"+str(key): (Dict_Keys_prefix(value,PrefixStr) if isinstance(value, dict) else value) for key, value in multilevelDict.items()}
 
-
 # options_dict = elegant trick :) Dan
-def get_segment_features(seq, seqtype):
+def get_segment_features(seq, hot_index, seqtype):
 
     '''
     Get the total amount of each type of ";etter/state" ,
@@ -204,12 +203,6 @@ def get_segment_features(seq, seqtype):
     After the cleavage site - until the end of the seq (i.e the putative peptides region)
     '''
 
-    CLEAVAGE_INDEX = config.CLEAVAGE_INDEX
-    # #Using Counter gave error - due to null count options not appearing ..  - So we init by options, to ensure 0 counts appear!
-    # seg1 = Dict_Keys_prefix(Counter(seq[0:CLEAVAGE_INDEX-5]),str(seqtype)+'-seg1_counts')
-    # seg2 = Dict_Keys_prefix(Counter(seq[CLEAVAGE_INDEX-5:CLEAVAGE_INDEX+1]),str(seqtype)+'-seg2_counts')
-    # seg3 = Dict_Keys_prefix(Counter(seq[CLEAVAGE_INDEX+1:]),str(seqtype)+'-seg3_counts')
-
     options_dict = {
         'ss': config.SS_OPTIONS,
         'acc': config.ACC_OPTIONS,
@@ -219,14 +212,13 @@ def get_segment_features(seq, seqtype):
     options = options_dict[str(seqtype)] #Get appropiate options
 
     seg_features = defaultdict(int)
-    segments = [seq[0:CLEAVAGE_INDEX-5],seq[CLEAVAGE_INDEX-5:CLEAVAGE_INDEX+1],seq[CLEAVAGE_INDEX+1:]]
+    segments = [seq[0:hot_index-5],seq[hot_index-5:hot_index+1],seq[hot_index+1:]]
 
     for i,seg in enumerate(segments,start=1):
         for letter in options:
             feature_name = str(seqtype)+'-seg'+str(i)+':'+letter
             seg_features[feature_name] = seg.count(letter)
     return seg_features
-
 
 def get_charge_features(seq):
     
@@ -369,7 +361,6 @@ def GetKRMotifLocations(seq):
 
     http://code.activestate.com/recipes/499314-find-all-indices-of-a-substring-in-a-given-string/
     '''
-    # CLEAVAGE_INDEX = config.CLEAVAGE_INDEX
 
     #http://stackoverflow.com/questions/5616822/python-regex-find-all-overlapping-matches?rq=1
     # (?=...) is a lookahead assertion. (Doesn't consume string)
@@ -386,24 +377,21 @@ def GetKRMotifLocations(seq):
     Motif_count2 = len(re.findall('K[RK]', seq)) #Known motif model. Not R at P1, to avoid overlap with other motif!
     Motif_count3 = len(re.findall(KM_RE_3, km_flank)) #Known motif model - Xxx-Xxx-Arg-Arg
 
-
-
-def GetKRMotifCounts(seq) :
+def GetKRMotifCounts(seq, hot_index) :
     '''
     counts # of suspected cleavage sites according to known motif model:
     Xxx-Xxx-Lys-Lys# , Xxx-Xxx-Lys-Arg# , Xxx-Xxx-Arg-Arg# ,  Arg-Xxx-Xxx-Lys# , # # Arg-Xxx-Xxx-Arg#
     lysine: K. arginine: R.   #: Cleavage site.  "Not Proline" = [^P].
-    TODO: CHECK that positions and motif are right! (e.g [CLEAVAGE_INDEX-3] ; ^P ? ...)
+    TODO: CHECK that positions and motif are right! (e.g [hot_index-3] ; ^P ? ...)
     '''
-    CLEAVAGE_INDEX = config.CLEAVAGE_INDEX
     KnownMotifFound = 0
 
     #Look at the  4 positions prior to and including cleavage site (i.e length 4):
-    km_flank = str(seq[(CLEAVAGE_INDEX-3):(CLEAVAGE_INDEX+1)])
+    km_flank = str(seq[(hot_index-3):(hot_index+1)])
 
-    before_cleavewin_seq =  str(seq[0:(CLEAVAGE_INDEX-3)])
+    before_cleavewin_seq =  str(seq[0:(hot_index-3)])
     #Look at a wide potential window - non canonical
-    potential_flank = str(seq[(CLEAVAGE_INDEX-5):(CLEAVAGE_INDEX+1)])
+    potential_flank = str(seq[(hot_index-5):(hot_index+1)])
 
     "Check for presence of canonical known motif right before potential cleavage site"
 
@@ -439,7 +427,7 @@ def GetKRMotifCounts(seq) :
     lst = ["RR", "KK", "KR"]
     # #Alt:
     "Is This version is NOT correct ? -  looks at too wide a window (should be just the 4 before cleavage, not 5)"
-    km_window_1 = str(seq[(CLEAVAGE_INDEX-4):(CLEAVAGE_INDEX+1)])
+    km_window_1 = str(seq[(hot_index-4):(hot_index+1)])
 
     if any(s in km_window_1 for s in lst):
         KnownMotifFound = 1
@@ -678,7 +666,7 @@ def log2(number):
     return math.log(number, 2) if number > 0 else math.log(10E-50, 2)
 
 #Changed: added substraction of uniform background freq
-def Entropy_pssm(pssm,get_entropy_segs=True):
+def Entropy_pssm(pssm, hot_index, get_entropy_segs = True):
     '''
     Calculate the (Shannon) information entropy  of a given input string.
     Entropy is the expected value of the measure of information content in system.
@@ -694,7 +682,6 @@ def Entropy_pssm(pssm,get_entropy_segs=True):
     features = {}
     background_freq_uniform = 0.047 #http://bioinf.uab.es/transcout/entropy.html
 
-    CLEAVAGE_INDEX = config.CLEAVAGE_INDEX
     entropy_seq = [] #store entropy at each position along the sequence
 
     for i, profile in enumerate(pssm):
@@ -706,16 +693,16 @@ def Entropy_pssm(pssm,get_entropy_segs=True):
         entropy_seq.append(features[feature_name])
 
     if get_entropy_segs:
-        "segments = [seq[0:CLEAVAGE_INDEX-5],seq[CLEAVAGE_INDEX-5:CLEAVAGE_INDEX+1],seq[CLEAVAGE_INDEX+1:]]"
-        # entropy_seg_1 = math.fsum(entropy_seq[0:(int(CLEAVAGE_INDEX-4)/2)])
-        # entropy_seg_2 = math.fsum(entropy_seq[(int(CLEAVAGE_INDEX-5)/2):CLEAVAGE_INDEX-4])
-        # entropy_seg_3 = math.fsum(entropy_seq[CLEAVAGE_INDEX-4:CLEAVAGE_INDEX+1])
-        # entropy_seg_4 = math.fsum(entropy_seq[CLEAVAGE_INDEX+1:])
+        "segments = [seq[0:hot_index-5],seq[hot_index-5:hot_index+1],seq[hot_index+1:]]"
+        # entropy_seg_1 = math.fsum(entropy_seq[0:(int(hot_index-4)/2)])
+        # entropy_seg_2 = math.fsum(entropy_seq[(int(hot_index-5)/2):hot_index-4])
+        # entropy_seg_3 = math.fsum(entropy_seq[hot_index-4:hot_index+1])
+        # entropy_seg_4 = math.fsum(entropy_seq[hot_index+1:])
 
         #Changed:
-        entropy_seg_1 = math.fsum(entropy_seq[0:CLEAVAGE_INDEX-4])
-        entropy_seg_2 = math.fsum(entropy_seq[CLEAVAGE_INDEX-4:CLEAVAGE_INDEX+1])
-        entropy_seg_3 = math.fsum(entropy_seq[CLEAVAGE_INDEX+1:])
+        entropy_seg_1 = math.fsum(entropy_seq[0:hot_index-4])
+        entropy_seg_2 = math.fsum(entropy_seq[hot_index-4:hot_index+1])
+        entropy_seg_3 = math.fsum(entropy_seq[hot_index+1:])
 
         features['entropy_seg_1']=entropy_seg_1
         features['entropy_seg_2']=entropy_seg_2

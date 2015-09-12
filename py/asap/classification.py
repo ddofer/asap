@@ -1,15 +1,19 @@
+import datetime
+import logging
+
 import numpy as np
 import pandas as pd
 
 from sklearn.utils import shuffle
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler
-from sklearn.feature_selection import VarianceThreshold, SelectFdr
+from sklearn.feature_selection import VarianceThreshold
 from sklearn.cross_validation import StratifiedKFold
 from sklearn.metrics import confusion_matrix, roc_auc_score, f1_score
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.svm import SVC
 
+from . import util
 from . import window_extraction
 
 LOGGER = logging.getLogger('ML')
@@ -21,16 +25,12 @@ DEFAULT_CLASSIFIERS = [
 
 DEFAULT_TRANSFORMER = StandardScaler(copy = False)
 
-DEFAULT_FEATURE_SELECTOR = Pipeline([
-    ('variance_feature_selection', VarianceThreshold()),
-    ('f_feature_selection', SelectFdr(alpha = 0.5)),
-])
-
-DEFAULT_SCORING_METHOD = lambda 
-
 # Use a constant seed
 SEED = 812
 np.random.seed(SEED)
+
+# Silence annoying pandas warnings
+pd.options.mode.chained_assignment = None
 
 class WindowClassifier(object):
     
@@ -58,9 +58,12 @@ class WindowClassifier(object):
         @return: A numpy array of the predicted labels for the given windows. The length of the returned array will correspond to the number of
         windows in the given data frame.
         '''
-        X = windows_data_frame[self.used_features].values
-        X = self._transform(X)
-        return self.raw_classifier.predict(X)
+        if len(windows_data_frame) == 0:
+            return np.empty(shape = 0)
+        else:
+            X = windows_data_frame[self.used_features].values
+            X = self._transform(X)
+            return self.raw_classifier.predict(X)
         
     def test_performance(self, windows_data_frame, drop_only_almost_positives = False, drop_duplicates = True, scoring_method = f1_score):
         '''
@@ -79,6 +82,7 @@ class WindowClassifier(object):
         @return: A tuple of scores measuring the performance of this classifier against the given dataset in the format (score, roc, sensitivity,
         precision, specificity, cm), just like in train_window_classifier.
         '''
+        LOGGER.info('Testing ' + str(type(self.raw_classifier)))
         features, X, y = _get_training_data(windows_data_frame, drop_only_almost_positives, drop_duplicates, self.transformer, \
                 features = self.used_features)
         LOGGER.info('Predicting %d records...' % len(X))
@@ -123,7 +127,7 @@ class PeptidePredictor(object):
         windows_csv = window_extraction.extract_windows_from_seq(seq, extra_tracks_data = extra_tracks_data, \
                 window_extraction_params = self.window_extraction_params)
         windows_data_frame = pd.read_csv(windows_csv)
-        window_indices = windows_data_frame['window_index'].values
+        window_indices = windows_data_frame['window_hot_index'].values
         
         labels = self.window_classifier.classify_windows(windows_data_frame)
         annotation_mask = ['0'] * length
@@ -133,9 +137,9 @@ class PeptidePredictor(object):
                 annotation_mask[window_index] = '1'
                 
         return ''.join(annotation_mask)
-        
+
 def train_window_classifier(windows_data_frame, classifiers = DEFAULT_CLASSIFIERS, drop_only_almost_positives = False, \
-        drop_duplicates = True, transformer = DEFAULT_TRANSFORMER, feature_selector = DEFAULT_FEATURE_SELECTOR, n_folds = 5, \
+        drop_duplicates = True, transformer = DEFAULT_TRANSFORMER, feature_selector = VarianceThreshold(), n_folds = 5, \
         scoring_method = f1_score, select_best = True):
         
     '''
@@ -155,9 +159,8 @@ def train_window_classifier(windows_data_frame, classifiers = DEFAULT_CLASSIFIER
     @param transformer (sklearn transformer, optional, default sklearn.preprocessing.StandardScaler): A preprocessing transformer to use for
     the data before starting the kfold evaluation and final training of the classifiers. If None, will not perform any preprocessing
     transformation.
-    @param feature_selector (sklearn feature selector, optional, default a pipeline of VarianceThreshold and SelectFdr): A feature selection
-    procedure to apply during both the kfold evaluation and final training of each classifier. If None, will not perform feature selection (i.e.
-    will use all features).
+    @param feature_selector (sklearn feature selector, optional, default VarianceThreshold): A feature selection procedure to apply during both
+    the kfold evaluation and final training of each classifier. If None, will not perform feature selection (i.e. will use all features).
     @param n_folds (int, default 5): The number of folds to use during the kfold evaluation procedure.
     @param scoring_method (function, default sklearn.metrics.f1_score): A scoring method to evaluate the classifiers by. Expecting a method that
     receives two parameters (y_true and y_pred) and returns a float score. This score will be calculated for all classifiers, in addition to other
@@ -182,7 +185,7 @@ def train_window_classifier(windows_data_frame, classifiers = DEFAULT_CLASSIFIER
     
     if select_best:
         best_classifier, best_results = window_classifiers_and_results[0]
-        LOGGER.info('The best classifier is %s with score %f.' % (str(best_classifier), best_results[0]))
+        LOGGER.info('The best classifier is %s with score %f.' % (str(type(best_classifier.raw_classifier)), best_results[0]))
         return best_classifier, best_results
     else:
         return window_classifiers_and_results
@@ -218,7 +221,7 @@ def _get_training_data(windows_data_frame, drop_only_almost_positives, drop_dupl
     
 def _get_classifier_kfold_results(classifier, X, y, n_folds, feature_selector, scoring_method):
 
-    LOGGER.info('Training ' + str(classifier))
+    LOGGER.info('Estimating ' + str(type(classifier)))
     time_before = datetime.datetime.now()
 
     y_pred = _predict_using_kfold(X, y, classifier, n_folds, feature_selector)
@@ -232,8 +235,9 @@ def _get_classifier_kfold_results(classifier, X, y, n_folds, feature_selector, s
     return score, roc, sensitivity, precision, specificity, cm
     
 def _get_trained_window_classifier(classifier, features, X, y, feature_selector, transformer):
+    LOGGER.info('Training ' + str(type(classifier)))
     X_reduced = feature_selector.fit_transform(X, y)
-    used_features = features[feature_selector.get_support()]
+    used_features = util.apply_mask(features, feature_selector.get_support())
     classifier.fit(X_reduced, y)
     return WindowClassifier(classifier, used_features, transformer)
     
@@ -253,8 +257,8 @@ def _predict_using_kfold(X, y, classifier, n_folds, feature_selector):
         
         if feature_selector is not None:
             feature_selector.fit(X_train, y_train)
-            X_train = feature_selection.transform(X_train)
-            X_test = feature_selection.transform(X_test)
+            X_train = feature_selector.transform(X_train)
+            X_test = feature_selector.transform(X_test)
             LOGGER.info('Selected features. Remained with %d features.' % X_train.shape[1])
         
         classifier.fit(X_train, y_train)

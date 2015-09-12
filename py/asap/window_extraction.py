@@ -1,11 +1,14 @@
 from StringIO import StringIO
+import datetime
+import csv
+import logging
 
 from . import util
 from . import parse
 
 BASIC_HEADERS = [
     'peptide_id',
-    'window_index',
+    'window_hot_index',
     'window_seq',
     'window_neighbourhood',
 ]
@@ -57,7 +60,7 @@ class WindowExtractionParams(object):
         self.neighbourhood_size = neighbourhood_prefix + neighbourhood_suffix + 1
         
 def extract_windows_from_file(source, extract_annotations = False, seqs_filtration_file = None, \
-        extra_tracks_files = {}, csv_output_file = None, window_extraction_params = WindowExtractionParams())
+        extra_tracks_files = {}, csv_output_file = None, window_extraction_params = WindowExtractionParams()):
     
     '''
     Parses a given file with peptide sequences and breaks it into windows with features, outputting a CSV with a row for each window
@@ -153,7 +156,7 @@ def _pad_records(records, window_extraction_params):
         _pad_record(record, window_extraction_params)
         
 def _pad_record(record, window_extraction_params):
-    record.pad(window_extraction_params.windows_prefix - 1, window_extraction_params.window_suffix - 1)
+    record.pad(window_extraction_params.window_prefix - 1, window_extraction_params.window_suffix - 1)
         
 def _extract_windows(full_records, csv_output_file, window_extraction_params):
     if csv_output_file is None:
@@ -166,7 +169,7 @@ def _extract_windows(full_records, csv_output_file, window_extraction_params):
     
 def _extract_windows_to_csv(full_records, output_file, window_extraction_params):
 
-    LOGGER.info('Extracting windows\' features in CSV format...')
+    LOGGER.info('Extracting windows with features in CSV format...')
     start = datetime.datetime.now()
     csv_writer = csv.writer(output_file)
     feature_headers = None
@@ -174,25 +177,26 @@ def _extract_windows_to_csv(full_records, output_file, window_extraction_params)
 
     for record in full_records:
         for window in record.get_windows(window_extraction_params.window_size):
-            if window_extraction_params.windows_filter is None or window_extraction_params.windows_filter(window):
-                feature_headers, include_annotations = _write_window_to_csv(window, csv_writer, window_extraction_params, \
+            feature_headers, include_annotations = _process_window_to_csv(window, csv_writer, window_extraction_params, \
                         feature_headers, include_annotations)
                 
     time_diff = datetime.datetime.now() - start
     LOGGER.info('Done. Extraction took %d seconds.' % time_diff.total_seconds())
-            
-def _write_window_to_csv(window, csv_writer, window_extraction_params, feature_headers, include_annotations):
+    
+def _process_window_to_csv(window, csv_writer, window_extraction_params, feature_headers, include_annotations):
 
-    features = window.get_features(window_extraction_params.feature_keys)
+    features = window.get_features(window_extraction_params.window_hot_index, window_extraction_params.feature_keys)
 
     if feature_headers is None:
         feature_headers = list(sorted(features.keys()))
         include_annotations = window.has_annotation_mask()
         util.write_csv_line(csv_writer, _get_meta_headers(include_annotations) + feature_headers)
     
-    meta_values = _get_window_meta_values(window, window_extraction_params, include_annotations)
-    feature_values = [features[header] for header in feature_headers]
-    util.write_csv_line(csv_writer, meta_values + feature_values)
+    if window_extraction_params.windows_filter is None or window_extraction_params.windows_filter(window): 
+        meta_values = _get_window_meta_values(window, window_extraction_params, include_annotations)
+        feature_values = [features[header] for header in feature_headers]
+        util.write_csv_line(csv_writer, meta_values + feature_values)
+    
     return feature_headers, include_annotations
     
 def _get_meta_headers(include_annotations):
@@ -203,9 +207,10 @@ def _get_meta_headers(include_annotations):
         
 def _get_window_meta_values(window, window_extraction_params, include_annotations):
 
+    hot_index = window.original_index + window_extraction_params.window_hot_index
     neighbourhood = window.get_neighbourhood(window_extraction_params.window_hot_index, window_extraction_params.neighbourhood_prefix, \
             window_extraction_params.neighbourhood_suffix)
-    meta_values = [window.ful_record.id, window.original_index, window.get_aa_seq(), neighbourhood]
+    meta_values = [window.full_record.id, hot_index, window.get_aa_seq(), neighbourhood]
     
     if include_annotations:
         label = window.get_label(window_extraction_params.window_hot_index)

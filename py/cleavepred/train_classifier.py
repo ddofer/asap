@@ -14,10 +14,11 @@ from sklearn.linear_model import LogisticRegressionCV
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.svm import SVC
 
-from . import util
-from . import project_paths
-from .common import window_extraction_params
-from ..asap import train_window_classifier, PeptidePredictor
+from asap import train_window_classifier, PeptidePredictor
+
+from cleavepred import util
+from cleavepred import project_paths
+from cleavepred.common import window_extraction_params
 
 ### Parse arguments ###
 
@@ -38,7 +39,6 @@ classifiers = [
     RandomForestClassifier(max_features = 92, n_estimators = 150, n_jobs = -1, class_weight = 'auto'),
     SVC(kernel = 'rbf', C = 3.798, probability = True, cache_size = 1600, class_weight = 'auto'),
 ]
-classifiers = [classifiers[1]] # XXX In the meantime let's just use Random Forest, for the sake of speed
 
 ### Train the classifier and dump the predictor ###
 
@@ -46,6 +46,7 @@ windows_file = None
 predictor_dump_file = None
 
 def open_files():
+    global windows_file, predictor_dump_file
     windows_file = open(project_paths.get_window_features_file_path(advanced), 'rb')
     predictor_dump_file = util.open_file(predictor_dump_path, 'wb')
     

@@ -27,7 +27,7 @@ class CleavagePredictor(object):
         of the returned string will orrespond to the length of the provided peptide sequence.
         2. cleavage_products - A list of strings, each representing the amino-acid sequence of a predicted cleavage product.
         '''
-        cleavage_mask = self.get_peptide_predictor.predict_annotations(seq, extra_tracks_data = extra_tracks_data)
+        cleavage_mask = self.get_peptide_predictor().predict_annotations(seq, extra_tracks_data = extra_tracks_data)
         cleavage_products = _get_cleavage_products(seq, cleavage_mask)
         return cleavage_mask, cleavage_products
         
@@ -59,8 +59,8 @@ def _get_cleavage_products(seq, cleavage_mask):
     products = []
     current_product = ''
     
-    for aa, is_cleavage in zip(seq, cleavage_mask):
-        if is_cleavage:
+    for aa, label in zip(seq, cleavage_mask):
+        if label == '1':
             _add_if_not_empty(products, current_product)
             current_product = ''
         else:

@@ -1,3 +1,6 @@
+from asap import WindowExtractionParams
+from asap.config import POSITIVE_AMINO_ACIDS
+
 AVAILABLE_TRACKS = [
     'ss',
     'acc',

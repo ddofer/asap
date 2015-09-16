@@ -1,0 +1,348 @@
+>sp|Q21156|FLP11_CAEEL FMRFamide-like neuropeptides 11 OS=Caenorhabditis elegans GN=flp-11 PE=1 SV=1
+eee-e--------------eee-ee-eeeeee-ee---e--e-eee-ee---e--eeeeeeeee-eeeee-eeeeeeeee---e--eeee-ee-ee--e--ee-eeeeee
+>sp|O17058|FLP24_CAEEL FMRFamide-like neuropeptides 24 OS=Caenorhabditis elegans GN=flp-24 PE=1 SV=3
+eeeeee-----------------e-ee-eee-ee-eee---e--e-ee-eeee-eeeee---e--eeee
+>sp|Q8MPY9|FLP26_CAEEL FMRFamide-like neuropeptides 26 OS=Caenorhabditis elegans GN=flp-26 PE=1 SV=1
+ee------------------e---e----eee-eee-eeee--eeee-eee-e-ee---e--eeeeeeee-e--ee----eeee
+>sp|Q18502|FLP09_CAEEL FMRFamide-like neuropeptides 9 OS=Caenorhabditis elegans GN=flp-9 PE=1 SV=2
+eee--------------e--eeee-eee-e--eee-eee--e---e--eee--e-eeeeee-eeeeee--e--eeee-----eeeeee-eeeeee--e-eee
+>sp|A8WU84|FLP27_CAEBR FMRFamide-like neuropeptides 27 OS=Caenorhabditis briggsae GN=flp-27 PE=3 SV=1
+eee-ee------------e--eeeee-eeeee---eeee-ee--e---e-eeee-e-e-e--eeeeeeee----------ee-e-e--ee
+>sp|Q1MX22|FMRF_BOMMO FMRFamide-related peptides OS=Bombyx mori GN=RFa PE=1 SV=1
+ee-ee--------------eeeeeeeeee-eeeeeee-ee---e--e-e-eeeeeeeee--ee-eeeee-e---ee--e--ee-eee-eee-eee--e--e--ee-e--e--e--eeeee--eee-ee-eeeeee-ee---e--eeeee-eeeeeeeee-eeeeeeeeeeee-ee-e
+>sp|Q9GSL0|FMRF_DOROP FMRFamide-related neuropeptides OS=Doryteuthis opalescens GN=FMRFa PE=1 SV=1
+ee-------------e-------e--e--e---eeeeee--e----------eeeeeeeeeee-ee---------eee-------e-eeeeeeee-------eeee-ee--ee--ee-eeeeeeeee--e-e-eeee-eeeeeeeeeeeeeeee-eeeeeeeeeeee-e---e--e---e--e-eeeeeeeeeee------ee-eee--e-eeeeeee-----ee-eeeeeeeeeee------e-eeeeeeeeeee--e--e--eee--e--eeeeee------eeeeeeeeeee--e--eeeeeeeeeeeee---e--eeeee-e---ee
+>sp|A6P3B2|FMRF_MUSDO FMRFamide neuropeptides OS=Musca domestica GN=fmrf PE=1 SV=1
+e----------------------eeee-ee--e-eee-ee-eee-eeeeee-ee-eee-eeeeeeeeeeee-eeeeeeeee-e-e-ee--ee-e-eeeeee------eeeeeeeee-eee--e--e--eee--e--eeeeeeee-ee-eeeeeeeeee-e--e-ee--eeeeeee-----eeeeeeeeeeee--e--eeeeeee--e--ee-eee--e-eeeeeee--e-eeeeeee-----eeee-ee--e--eeeeeee--e-eeeeeeee--e--eeeeeee------eeeeee--e-eeeeeeee-----eeeeee------eeeeeee-----eeee--e--eeeeeeee--e--eeeeeeee--e--ee-eeeeeeeee-ee
+>sp|P55885|GAST_HORSE Gastrin OS=Equus caballus GN=GAST PE=1 SV=1
+eee---------------ee-e-eeeeeeee-ee-e-eeee-e-e-eee-eee-e-eee-ee-eeee-e---ee-eeeeee-eee-ee-----e--eeeeeeeeeee
+>sp|P80398|GGN4_GLARU Gaegurin-4 OS=Glandirana rugosa GN=GGN4 PE=1 SV=2
+eee-ee----------------eeeeeeeeeeeeee-eee-eeeeeeeeeeeeeeeeeeeeeeeeeeeee-ee-eeeeee
+>sp|Q8JIM3|GHRP_LITCT Growth hormone-releasing peptides OS=Lithobates catesbeiana PE=1 SV=1
+eeee-e----e---------------e-----eee-ee-eeeee-ee--eeeee-eeeee-e-ee-ee-eeee--e--e-ee-e-e-eee-eeee--e---e---------eeee-eeeeeeee-eee-ee--e------e-e---e--ee--ee-ee-ee-ee--ee-ee-eee-eeeee-ee-e-e-e--eee-eeeeeeeeeeeeee---e-eeeeee
+>sp|Q76IQ4|GHRL_ONCMY Ghrelin OS=Oncorhynchus mykiss GN=ghrl PE=1 SV=1
+eeeeee---------------ee-e-e-e---eeeeeeeeeeeeeeee-e-e--ee--eeeeee-eeeeee-e-e---e-----eee--ee--e---e--ee--eeeeeee
+>sp|Q9PUR1|GLUC1_PETMA Glucagon-1 OS=Petromyzon marinus GN=gcg1 PE=1 SV=1
+ee-----------------ee--eeeeeeeeeeeee-eeeee-eeee--ee--e--eee--ee--e---eeeeeeeeeee---e--------e--eee--ee--e--eeeeeeeee-eee--eee-eee--ee--e--ee---ee--e---eee-eeeee
+>sp|P68259|GLUC_CHICK Glucagon OS=Gallus gallus GN=GCG PE=1 SV=1
+ee-e--------------e--eee-ee-eee-ee-e-eeeeeeee-ee-eeeeee-ee---ee-ee--eee--ee--e---eeeeeeeeeeeeeeeeeeeeee-ee---ee-ee-e-eeeeee-eeeeeeeeeeeeeeeeee-eeeeeeee-eee--eeee-eee--e-e--ee--e--ee---ee--e---eee-eeee-eee-e
+>sp|P61516|HEPC1_DANRE Hepcidin-1 OS=Danio rerio GN=hamp1 PE=3 SV=1
+eee-e-----------------e--e-eee-eeeeeee-ee-eeeeeeee-eeeeeee------eeeee-e--e---e--eeee-----ee
+>sp|Q801Y3|HEPC1_SALSA Hepcidin-1 OS=Salmo salar GN=hamp1 PE=3 SV=1
+eee---------------e-e--e-eeeeeeeeee-eee-eeeeeeeee-ee--ee-e-eeee--e--e---e--eeee-----ee
+>sp|Q5U9D2|HEPC_CANFA Hepcidin OS=Canis familiaris GN=HAMP PE=3 SV=1
+ee--ee--------------eeeee-eeeeee-ee-eeeeeee-e-e-e-e-eeee-eeeeee--------e--eeee-ee--ee
+>sp|A1Z0M0|HEPC_LARCR Hepcidin OS=Larimichthys crocea GN=hamp PE=1 SV=2
+eee-e----------e---eeeee-e-eeeee-eeeee-eeeeee-e--e---e-eeeeeeee-e-e---e--ee-ee-----ee
+>sp|Q9GQV7|HPEP_AEDAE Head peptide OS=Aedes aegypti GN=HP-I PE=1 SV=1
+eee-----------------eeeeeee-eee-eeeeeeeeeee---ee--eeeeeeeeee-eee-eeeee-e--eeeeeeeeee-eee-eee-eeeeeeee-eeeeeeeee--ee-eeeeeeeeeeee
+>sp|Q8ML70|IM10_DROME Immune-induced peptides OS=Drosophila melanogaster GN=IM10 PE=1 SV=2
+eee----------------eeeee-eeee------eeee------eee-e-e-ee-e-e-ee-eee-e---e-ee------eeeeeeeee----------e-eeee--ee-e--ee-eeeee---e-eee-eeeee-e-----eeeeee-e-e-ee---e--eee-----eeeeee-e-e-ee-----eeee------eeeeee-e-eeee--ee-ee----eee----e-eeeee---eee-e-----eee--ee--e-ee--ee-e
+>sp|Q9VT50|INSL1_DROME Probable insulin-like peptide 1 OS=Drosophila melanogaster GN=Ilp1 PE=3 SV=1
+e--eee--e--e-----------------------e-eee-ee-e-e---ee-ee--e----------eeeeeeeeeeeeeeee-e-e-eeeee--ee-e-ee--------e-----------ee-eeeee---ee--ee--eeee--e--eee
+>sp|Q9VT51|INSL2_DROME Probable insulin-like peptide 2 OS=Drosophila melanogaster GN=Ilp2 PE=2 SV=1
+eeee---------------eeee-eee---ee-ee--ee--ee--e--eeeee-e--eee-ee-e-----eeeeeeeee-ee--e----e-e-eee--e------eeeeeeee--ee--eee-e-ee-ee--ee-ee
+>sp|Q9VT52|INSL3_DROME Probable insulin-like peptide 3 OS=Drosophila melanogaster GN=Ilp3 PE=2 SV=2
+ee-e-e-ee------------------e-e-e---ee-ee--ee---e---ee-ee--ee-eeee-ee-ee-e---e--eee-ee--e--ee-e---ee--ee--e-ee--e--eeeeee
+>sp|Q7KUD5|INSL5_DROME Probable insulin-like peptide 5 OS=Drosophila melanogaster GN=Ilp5 PE=1 SV=2
+ee-e----------------e-ee--ee--ee--e--e---ee--e----ee------e-ee--ee-eeeeeee-ee-ee-eee-ee--ee--eee-e-ee-eee-ee
+>sp|Q9VT53|INSL4_DROME Probable insulin-like peptide 4 OS=Drosophila melanogaster GN=Ilp4 PE=2 SV=1
+ee--e------------ee--ee-eeeee---e--ee--e--------e--eeeeeeeeee-ee--ee-ee-eee-eeeeeeee-eeeeeeeeeeee-eee-eeeee-ee--ee---e--eee-e-ee--ee-e
+>sp|Q9W4Z4|INSL6_DROME Probable insulin-like peptide 6 OS=Drosophila melanogaster GN=Ilp6 PE=2 SV=1
+eeee-ee-e----------------e--ee--e-e-e-eeeeee-e---e--ee-------------ee--eee-eeeeeee-ee--ee--eeee-e-ee-ee--ee
+>sp|Q9W4Q9|INSL7_DROME Probable insulin-like peptide 7 OS=Drosophila melanogaster GN=Ilp7 PE=2 SV=2
+eee---ee-e-------------e-ee-ee-eee-eee-----ee--eee-ee--eeee-ee--ee--e------ee---e--e--eeeeeeee---ee-eeeeee----eeee-ee--e--eeeeeeee--ee--eeee-e-ee--ee-eeeeeeeee
+>sp|Q26492|ITPL_SCHGR Ion transport peptide-like OS=Schistocerca gregaria PE=2 SV=1
+eeeeeeeee-eeeee-e-e--------------------eeee-e-eee-e-ee----e-e-e-e-eee--ee-ee--ee--e--eeee--ee-eee--e-e--e---e--e-eee-ee-ee--e--e--eeee
+>sp|E6ZBE2|KASSO_KASSE Kassorin-S OS=Kassina senegalensis PE=1 SV=1
+eee-ee---------------eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-eeeeeee-ee-----------eee
+>sp|C5J893|KKX26_OPICY Potassium channel toxin kappa-KTx 2.6 OS=Opisthacanthus cayaporum PE=2 SV=1
+eeeee--------------ee--e---ee-eeee--e-eee-e---e---eeeeeeee-eee-ee
+>sp|P0DJ34|KKX27_HETPE Potassium channel toxin kappa-KTx 2.7 OS=Heterometrus petersii PE=1 SV=1
+eeeee--------------ee--e---ee-eeee--e-eee-e---e---eeeeeeee-ee--ee
+>sp|P08948|LITL_PHYSA [Leu8]-phyllolitorin OS=Phyllomedusa sauvagei PE=1 SV=3
+eee-e--e---------e-------e-e--ee-eee-ee-eeee--ee---e--e-eeeee-eeeeeeeeee-e-----eeee-e-eeee
+>sp|Q25060|LWA_HYDEC LWamide neuropeptides OS=Hydractinia echinata PE=2 SV=1
+eeee-ee------------e-eeeeeeeeeeeeeee-eeeee-e-eeeeee-eeeeee-eee--ee-eeeeeeeee-eeeeeeeeeee--e-eeeeee-eeeeeeeee-e-ee-eeeeeeeeeeee-eeeeeeee-eeeee-ee--eeeee-eeeeeee-eeeeeeeee-e-ee-eeeeeeeee--eeeee-ee---eeeeeeeeeeee-e-eee-eeeee-eeeeeee-e-ee-e-eeee-e-e-eeeee-e----eeeeeee-eeeeee-ee-e-eeee-ee-e-ee-e-eeee-eeee-ee-e-ee-e-eeeeeeeee-ee--eeeeeeeeee-eeeee-eeeee-e--eeeee-ee-eeeee-eeeee-ee--e--eee-------e--eee--ee-eeeee-eeeeeeeeeeee
+>sp|Q16992|LWA_ANTEL LWamide neuropeptides OS=Anthopleura elegantissima PE=1 SV=1
+ee--------ee-e-----eee-eeeeeeeee-eeee-ee-eee-e-ee-eeeee-ee-eeeeeeeeeeeee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-eeeeee-ee--e-ee-ee-ee-ee-ee-ee-eeeeeeeee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-eeeeee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee--e-ee-ee-ee-ee-eeeeeee-e-eeeeeee-e-ee-ee-ee-ee-eeee
+>sp|Q58T69|M3H91_BOMMX Maximins 3/H9 type 1 OS=Bombina maxima PE=1 SV=1
+ee-e--------------eeeeeeeee-eeeee-eeee--ee-ee-eee-ee--ee--ee--ee--ee-eeeeeeeeeee--ee-ee--ee-ee-e-eee-eeeeeee-eeee--e--eee-ee----------ee-ee--eeee
+>sp|Q09180|MATP2_SCHPO Pro-P-factor OS=Schizosaccharomyces pombe (strain 972 / ATCC 24843) GN=map2 PE=1 SV=1
+ee--------------ee-eeeeee--e-ee---e-ee-ee--ee-eeeeeee-eeeeeeeeeeee--e--e---e--e-eeeeeee-eeeeeeeeeeee--e--e---e--e-e-eeeee-eeeeeeeeeeee--e--e------e-eeeeeee-eee-eeeeeeeeeeee--e---------eee-e-ee-e--ee-ee
+>sp|C9X4J0|NDB2_TITDI Bradykinin-potentiating peptide OS=Tityus discrepans PE=3 SV=1
+eeee-------------ee-ee-e-ee--ee--eee--ee-eee-ee--ee--ee--eeeee-eee-eeeeeeeeee
+>sp|C5J897|NDB3S_OPICY Probable antimicrobial peptide Con10 OS=Opisthacanthus cayaporum PE=3 SV=1
+eeeeeee------------e--ee--e---e---e--e--eee-eeeeeeeeeeee-ee--ee--ee-eee-ee--eeee
+>sp|Q718F4|NDB43_MESMA Peptide BmKb1 OS=Mesobuthus martensii PE=1 SV=1
+ee-e--------------e---------ee---------eeeeeee-eee-ee-ee-eeeeee-ee--ee-eee
+>sp|L0GCV8|NDB4G_UROYA Antimicrobial peptide UyCT1 OS=Urodacus yaschenkoi PE=2 SV=1
+eee------------e---e-eee---e--ee-ee--eee--ee-ee--e--eee-ee-ee--eee-ee-eee--ee-e
+>sp|P0DMF9|NDB4Q_CHATC Peptide Ctri9677 OS=Chaerilus tricostatus PE=3 SV=1
+eeeee------------ee-ee-e-e---ee-eee-eeeeeeee--e--eee--ee-ee--eee
+>sp|G1FE62|NDB4A_CHATC Antimicrobial peptide ctriporin OS=Chaerilus tricostatus PE=2 SV=1
+eeee----------------e-------ee--e---e--eeeeeeee-eee-e--ee-eeeeee-ee--ee-eee
+>sp|P0C8W1|NDB4S_HADGE Non-disulfide-bridged peptide 5.5 OS=Hadrurus gertschi PE=2 SV=1
+eeee-----------e--ee-ee--e---e--ee--eeee-ee-e-ee-ee--eeee-eee--e--ee-ee
+>sp|L0GCJ6|NDB4_UROYA Putative antimicrobial peptide 7848 OS=Urodacus yaschenkoi PE=3 SV=1
+eeee-ee-eeeee--ee---ee-e-eeeeeee--eeeeeeeee-e-eeeeeeeeeee--eeee-eee-------eeeeeeee
+>sp|Q09982|NLP32_CAEEL Neuropeptide-like protein 32 OS=Caenorhabditis elegans GN=nlp-32 PE=3 SV=1
+eee-------------e-e----eee-e-e--e-e-----eee-eeee-ee-ee---------------------------------------------ee-eee
+>sp|P43443|NMB_XENLA Neuromedin-B OS=Xenopus laevis GN=nmb PE=2 SV=1
+eee---e-----e-----------------e--ee-ee-ee-eeee---------ee--eeeeee-eee-e-ee--ee--ee-----eeeeee-eeeee-ee--e--ee--ee--eeeee
+>sp|P81872|NMU_LITCE Neuromedin-U OS=Litoria caerulea GN=nmu PE=1 SV=2
+eee--eeeeeee-ee---e-ee-----------------ee-e-eeee-eeee--e--ee-ee---e--eeeeee--e--ee---------eeeeeeeeee-ee------eeeeeeeee-e--------e--ee--ee-eee-e-eee-e-ee----e-------eeeeeeeeee
+>sp|P86442|NPF_LOCMI Neuropeptide F OS=Locusta migratoria PE=1 SV=1
+eee--------------------e-e-eeeeeee-ee--e--e--ee-ee---e--eee-eeeee-eeeeeee--eeeee-ee--ee--eee
+>sp|Q9BP85|O1611_CONAE Conotoxin ArMKLT2-0321 OS=Conus arenatus PE=2 SV=1
+ee---------------e----eeeeeeee-e--e--e--ee-eeeeee-eeeeee-eeee--ee-e-eeeeee---eee
+>sp|Q9BP91|O165_CONAE Conotoxin ArMKLT2-022 OS=Conus arenatus PE=2 SV=1
+ee---------------ee--eeeeee-ee--eee-eee--eeeeeeee--ee------eeee--ee--------ee
+>sp|Q9BPC1|O262_CONTS Conotoxin TsMEKL-P012 OS=Conus tessulatus PE=2 SV=1
+eee--------------e---eeeeeeeeeeee-e--ee-ee-eee-eeee-ee-----eeeee--eee-eee--eee
+>sp|Q9BP62|O3619_CONVE Conotoxin VnMSGL-0121 OS=Conus ventricosus PE=2 SV=1
+eee---------------eeeeeeeeee-eeee--e-eeeee-eee--eee-ee--eeeeee---e-eeee-e-----ee
+>sp|Q9NL82|ORCKB_PROCL Orcokinin peptides type B OS=Procambarus clarkii PE=1 SV=1
+ee-------------e--ee-------eeeeee-eeee-e-eeee-ee--ee-e--e-ee---ee-eeee-e-ee---ee-e-ee-e-ee---ee-eeee---ee---ee-eee----ee---e--eee----ee---ee-eeee---eee--ee-e-ee---ee---ee-e-ee---ee---ee-eeee-e-eee-e-eeeeee-ee---ee-eeee-e-ee---ee-eee--e-eeee-ee-eee---ee-eee----eeeeee
+>sp|P0DKU2|PA2_PANIM Phospholipase A2 phospholipin OS=Pandinus imperator PE=1 SV=1
+eee--eeeeeeeee--------e---eeee-ee-ee--e-e--e--ee--e-ee-eeeeee-e-e-eee------e--ee--e--ee-eeeeeeeeeee--e----------e-e--e-e-eeeeeee-ee-eee-ee-eee-ee
+>sp|Q7PTL2|PBAN_ANOGA PBAN-type neuropeptides OS=Anopheles gambiae GN=PBAN PE=3 SV=2
+eee--------------ee--eee-eeeeee-ee-eeeeeee-ee-e-eeeeeeeeeee-ee-eee--------e--ee---ee--ee--ee-eee-----eee-ee--ee--ee----------eeeeeee-----e-ee-eeeeeeeeeeee-e--ee-eee-e--ee-ee--eee-e---e-ee
+>sp|A8CL69|PBAN_APIME PBAN-type neuropeptides OS=Apis mellifera GN=PBAN PE=1 SV=1
+ee------e-eee-e------------------e-e-ee-ee-eeeee-eeeee---ee-e--ee-eeeee-------e--eeeeeeeeee-eee-ee--e--ee-e------eeeeee-e-e---e--eeeeee--e--eeeeeeeeeeee---------e-eee-ee-e-ee-eee-ee--eeeeee-eeeee
+>sp|P21259|PRFA_POLPE Pol-RFamide neuropeptides OS=Polyorchis penicillatus PE=1 SV=3
+ee--------eee-ee-eeeeeeeeeee-eeeeeeeeeeeeeeeeeeeeeeeee-eee-eeeeee--eee---eeeee--ee----eeeeee-eee--eeeeee--eee---eeeee--eee---eeeeee-eee--eeeeee--ee----eeeeeeeeee-eeeeeeee-eee-e-eeeee--eee--eeeeeee-eeeeeeeeeeee-eee--eeeeeee-eee--eeeeeeee-ee-eeeeeeeeeeeeeeeeeeee-eeeeeeeeeeeeeeeeeeeee--eee
+>sp|P31394|PROC_RAT Vitamin K-dependent protein C OS=Rattus norvegicus GN=Proc PE=2 SV=1
+eee----------------e-eee----eeee-ee--eeee-ee--ee-eeee-eee-eeee-e-e---e--eeeee-ee--ee-eeeee-eeeeee-e-eee-eeeee-eee-ee---e-eee-eeee-e-e---ee---eeee------eeeee-e----ee-e--eeeee-eeeee-e-----e-eeee-ee-eee-e-eee-eeee----e-ee-ee-e---------eeeee-------ee-------e--eeeee---------eeee-ee-ee-e-eee-e-ee--eee----------eee-eeee--------ee---ee--eee-e-e-----eeeeeeeeeeeeeee-----e----eeee-eee-eee--e------eeeee----e---------e-ee----------e-ee-eee---------e--e--eeeeeeeeeeeeeeee
+>sp|P85799|PROH2_APIME Prohormone-2 OS=Apis mellifera PE=1 SV=1
+ee-e-------------------ee--ee-ee-eeeeeee-ee--e--e--eeeee-eeeeeeee-eee-ee---eeeeeee-ee--eeeeeeeeeeeeee-----eeee-eee-e-eee--ee-ee-e------eeee-ee-eee--eeeeeee-e--e-e---eeeeeee-eeeeeee-e-eeeee-eee-e-e-e---------eeeeeeee--e--eee-eeeeeeee-eeeeeeee-----------e---e-e---ee------e---e--ee-eee-eee-ee-e-eeee-e-e-------e-eee-----eeeeeeeee-ee------eeeeee-e-e---ee
+>sp|P82003|PTSP_BOMMO Prothoracicostatic peptide OS=Bombyx mori PE=1 SV=2
+ee---------------e--eeeeeeee-eeeee-eeeeeeeee-ee-eeee-ee-eee-eeeeeee--e--ee-eeee--ee-ee-eeeee-e--ee-eeee--e--e--e-eeeeee-eeeeeeee-eeeeeee--e--e--e-ee--e--ee-eeeee-e--e-ee-eee-e--e--e-ee--e--e--eeee-eee-ee-eeee-eeeeeeee-ee-ee-ee--ee-eeeeeee-eeeeeee-ee-e----eeeeeee--eeeeeeeeee
+>sp|A5LHG2|ADM5_PIG ADM5 OS=Sus scrofa GN=ADM5 PE=1 SV=1
+ee-------------eeeeeeeeeeeeee-eeeee------e-eeee-ee---------eee-eeeeeeeeee-eeeee-eeeeeeeeeeeeeeeeeeeee-eee-ee
+>sp|Q868F8|ALLS_SPOFR Allatostatin OS=Spodoptera frugiperda GN=ast PE=2 SV=1
+eeee--------------------ee-eeeeeeee-ee-----eeee-e-e-e-e----e--ee---e-e-eee-ee-eee-ee-eeee---e--eee--ee-eeeeee-e-ee-e-ee-e-eee
+>sp|P0DMI8|AMP2_HETSP Antimicrobial peptide HsAp2 OS=Heterometrus spinifer PE=3 SV=1
+eeee------------e--ee-eeee-e--ee-eeeeeeeeeeee-ee-----ee--e--eee-eeeee-eeee
+>sp|Q8AXR3|ANFC1_ONCMY C-type natriuretic peptide 1 OS=Oncorhynchus mykiss GN=cnp-1 PE=2 SV=1
+ee-------------e-eeee-ee-eeeee--e--ee--ee-ee-eeee-ee-eeeeeeeeeee-eee-e--eeee--eeeeeee-------ee--eeeee-eeeeeee--ee-----e-ee--e-eeeee
+>sp|Q800I8|ANFC3_ORYLA C-type natriuretic peptide 3 OS=Oryzias latipes GN=cnp-3 PE=2 SV=1
+ee-e-------------e-eeeee-ee-ee--eeeeee-eeeeeee-eeeeeeee-eeeee-eeeeee---e--ee--ee-eeeeeeeeeee-------e-ee--e-eeeee
+>sp|Q805D5|ANFC2_TAKRU C-type natriuretic peptide 2 OS=Takifugu rubripes GN=cnp-2 PE=2 SV=1
+eee-eee-----------e-eeeeeeeeeeee--ee---ee---------eeee--ee-eeeee-eeeeeee-ee-e---eeeee--e---e--ee-ee-eeeeee---e-e-----e-ee----eeeee
+>sp|Q800I7|ANFC4_ORYLA C-type natriuretic peptide 4 OS=Oryzias latipes GN=cnp-4 PE=2 SV=1
+ee---------------eeeeeeeeeeeeee-eee-e-ee--e-eeeeeeeeeeeeeee--e--ee-eee-e------e--eeeeeeeeeee-eeeeeeeeee-------ee---e--eee
+>sp|Q805D4|ANFC3_TAKRU C-type natriuretic peptide 3 OS=Takifugu rubripes GN=cnp-3 PE=2 SV=1
+eeee-e-----------e-e-eeeee-ee-ee--eeeeeeeeeeeeeeeeeeeeeeeeeee-eeeeee-eeeeeeeee-eeeeeeeeeeeeeeeee---eee-ee-e---eeee---e--ee--e--eee-eeeeeee-e-----e-ee--e-eeeee
+>sp|Q76KW6|ANFC_ACITR C-type natriuretic peptide OS=Acipenser transmontanus GN=cnp PE=2 SV=1
+ee-eeeeeeeeeee---------------eeeee-eeeeeeee--e---e---e--ee-eeeeeeeeeeee-eee-eee-ee--eeeee---eee-eeeeeeeeeeeee--ee--eeee--eee-ee-eeee-----e-ee--e-eeeee
+>sp|P20968|ANFC_LITCT C-type natriuretic peptide 1 OS=Lithobates catesbeiana PE=1 SV=2
+eeee------------------e-eeeee-ee--e--eee-eee-eeee-eeee-eeee-ee-eee-e-eeeeeeeeee-eeeee---e--ee--ee-ee-eeeeeeee-e-----e-ee--e-eeeee
+>sp|P18909|ANF_LITCT Natriuretic peptides A OS=Lithobates catesbeiana PE=1 SV=2
+eee----------------e-e-----ee-e-ee-ee-ee--ee-eee-eeeeeeeeeee-eeeeeeeeeeeeeeee-eee-eeeeeeee-eeeeee-eeee-e-eee-ee--e--ee-eee-e---e--ee--ee------eee
+>sp|Q805D8|ANF_TAKRU Natriuretic peptides A OS=Takifugu rubripes GN=nppa PE=2 SV=1
+ee-------------e---e-e---e-ee-ee-ee-ee--ee-ee--eeeeeeeeeeeeee-e-eeeeeeeeee-eeeeeeeeee--eeeee-eeeeee-eee-ee--e--eee---------ee--e------eeeee
+>sp|Q5SC60|ANN1_AREMA Arenicin-1 OS=Arenicola marina PE=1 SV=1
+eeeeee--------------ee-e-ee--e-e-ee-eeeeeeeeee-ee-e-eeee-e-eeeeeee-----eeee-e--------ee-------ee-e---------ee-ee-ee------eeeeeee-ee-eee-e-ee-ee-e-ee-e---ee-eee-eeee-----e-eeeeeeeeeeee---------ee----ee-e
+>sp|P80111|ANTR_LITCT Gastrin/cholecystokinin-like peptide OS=Lithobates catesbeiana GN=GAST PE=1 SV=2
+eeee-----------------ee-eeeeeeeeeeeeeeeee---ee-eee-eee-e-e---e--ee--e---eeee---e---ee-ee--e--ee-ee-eee
+>sp|Q25461|ARNP_MYTED APGW-amide-related neuropeptide OS=Mytilus edulis PE=1 SV=1
+eee--------------------eee-eeeeeeeeeeeeeeeeeeee-ee-ee--e---eeee-ee-eeeee---e--e--eeeee-eeeeee--eeeee-eeeeeeeee--e--ee--ee-e--ee--eeee---e--eeeeeeeeee---e--ee--ee-eee--ee-ee------e--ee-ee--ee-ee-ee
+>sp|Q0MWV8|AURE_AURAU Aurelin OS=Aurelia aurita PE=1 SV=1
+ee--e-----------------eeeee-eee-eeee-e--eeeeeeeeee-eeee-eeeeee-eeeeee-ee-eee-ee--eee
+>sp|E7EKC4|B1HN1_ODOHA Brevinin-1HN1 OS=Odorrana hainanensis PE=1 SV=1
+eee-ee-----------e-e--eeeeeeeeeeeeeeeeeee-e--ee--e-------e--ee---e-eeee
+>sp|Q9PW56|BNP2_BOTJA Bradykinin-potentiating and C-type natriuretic peptides OS=Bothrops jararaca PE=1 SV=2
+ee--e--e-------------eeee-ee--eee-eeeeee-ee-e--e--eee-eeeeee-ee-e-ee-eeeeeeeeeee-e--e--eeeeeeeeeeee-e-ee--eee-eeee-eeee-ee-eeeeee-e--eeee-eee--e---ee-eee-ee-e--e---eeeeeeeee-e--eeeeeeee--e------e--ee-eee-ee--ee-ee----e----e-e----------e-eee-eeee-e-----e-ee--e-e-eee
+>sp|P86994|BOMB_RANSH Bombesin OS=Rana shuchinae PE=1 SV=1
+ee--e--ee----------------ee---e--ee-ee-ee-ee-eee-eee---------e--eee
+>sp|P20481|BUCC_APLCA Buccalin OS=Aplysia californica PE=1 SV=2
+eeeee--------------------ee-eeeeeee-e-e--e--eeeeee-e----ee-eee-e--e-e-----eeeee-e-e-ee--eeeee-e-e-ee---ee-e-e--e-ee-eee-ee---e-e-eeeee-e----e--eeeee-e---eee-eeeee-e-------eeeee-e-------eee-eee---e--eeeeee-e-------eeeee-e-------eeeee-e-------ee--ee----ee--e---e----ee-eee-e-e----e--eee-e-----ee--eee-e---ee--eeeee-e-------eeeee-e-------eeeeeee-e-e----eeeeee-------eeeee-e------eeeeeeee----e-eeeeeeee------eeeeee-e----e-eeeeeeee------eeeeee------e-eeeeee-e---ee-eeeeee-e---ee-eeeeeeeeee-ee-eeeeeeeeeeeeeeeee
+>sp|P0CAQ5|CA11B_CONAH Alpha-conotoxin-like Ac1.1b OS=Conus achatinus PE=2 SV=1
+ee-e----------------e-eeeeeeeeeeee-eeeeee-ee-eee-e---ee--ee-e-ee
+>sp|P0CB13|CA91_CONAJ Alpha-conotoxin-like 291 OS=Conus ammiralis PE=2 SV=1
+e-e---------e--eeeeeee--e-eee-eeeee--e-eeeeee--eeee-eeeeee--eeee
+>sp|P05226|CAER4_XENBO Preprocaerulein type-4 OS=Xenopus borealis PE=1 SV=1
+eee-------------ee-eeee-eeeeeeee-e---e---e--e---e--e---ee-eeeee-eeee---ee-ee-e------eeeeeee-eeee-e---e--ee--e--ee--ee---e-ee-eeeeeeee--eee-eeee--e--eee-eee------e-eeeeeee-eeee-e---e--ee--e---e---ee-eeeeeeeeeeeeee-eeeeee-e------eeeeeee
+>sp|U5KJJ0|CAMP3_CRODC Cathelicidin-related peptide isoform 3 OS=Crotalus durissus cascavella PE=2 SV=1
+eee-------------------eee-e-ee--ee--e---eeeeee------e-e-eeeeeeeeeeeee-e-e-ee-e-eeeeeeeeee-e-eeeee-ee-e-e-eeeeeee------eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-ee--ee-ee--ee-eee-eee-ee--ee-e-----eee
+>sp|E3PQQ8|CCAP_CONVL ConoCAP OS=Conus villepinii GN=conoCAP PE=1 SV=1
+eee--e-----------e--eeeeeee--ee-e-eeeeeee-eeee-eee------e----eeeeeeee-eeeeee--e--eeee--ee----eeeee-eee-ee-eeeeeeeeeee-ee--e--ee--eeeeee-ee--eeeeeee-eeeeeeeeee--ee---------eeeee----e--ee-ee--eeeeeeee--ee-eeee
+>sp|Q01301|CCG4_NEUCR Clock-controlled pheromone ccg-4 OS=Neurospora crassa (strain ATCC 24698 / 74-OR23-1A / CBS 708.71 / DSM 1257 / FGSC 987) GN=ccg-4 PE=2 SV=2
+ee--------------e---eeeeeeeee--eee-e---e--e--e--ee--ee-ee-eeeee-ee-e-ee-ee--ee--e-----eeeeee--ee-e-eee-eeeeeeeeeeeeeeeee-eeeee----e-----eeeeeeee----e-e---eeeeeeeeeee--e-e-----eeeeeeeeeeeeeeeeee--e-ee------eee-e---e--ee-eeeee-e-eeee-ee-eeeeeeeee-------eeee--e-eeeee---e-eeee-ee-ee--e---e--ee--ee-eeee
+>sp|Q9PU41|CCKN_CHICK Cholecystokinin OS=Gallus gallus GN=CCK PE=1 SV=1
+ee------------------eee-eeeeeeeeeee-eeeeeeeeee-ee-ee-ee-eeeeeeeeeeee-ee-ee---e--ee-ee-ee-e----e-e-ee-e-eee-ee-e--------ee--ee-e-ee
+>sp|P0C8W0|CGA_CONDI Conotoxin di16a OS=Conus distans PE=1 SV=1
+eee-----------e-eeeeeeeeeee-eeeee-ee-e-ee--ee-eeee-eeeee-eee--eeeeee---eee-e-e-eeeeeee-e-eeeeee-ee
+>sp|D6C4K5|CI16F_CONCL Conotoxin Cl6.15 OS=Conus californicus PE=3 SV=1
+ee---e------------eee-eeeeeeeeee-eee-eeeeeee-eee-eee-e---e----e----------e-ee
+>sp|D6C4I0|CI1B2_CONCL Conotoxin Cl11.2 OS=Conus californicus PE=3 SV=1
+ee---------------e-e-eeeee-ee-eee--eee--eee--ee-eee-eee-e--ee---e-e-eeeee-ee-eee
+>sp|D6C4H9|CI1B1_CONCL Conotoxin Cl11.1 OS=Conus californicus PE=3 SV=1
+ee--------------eeeeeeeeee--ee-e-ee-eee-ee-eee-ee--ee-ee-ee--eee--ee---ee-ee-e
+>sp|C7DQB8|CI2B5_CONEM Conotoxin Em11.5 OS=Conus emaciatus PE=2 SV=1
+ee-e-ee-----------e--e----ee--ee-e---ee----e----e-e-eee-eee-eeeeeeee
+>sp|C7DQX8|CI2B3_CONVT Conotoxin Vi11.3 OS=Conus vitulinus PE=2 SV=1
+ee-e-ee----------------ee-e-eeee---e---e--eee--eee-ee--eeeeeeee-e---e--eee
+>sp|D2DGD7|CI3B2_CONPL Conotoxin Pu11.2 OS=Conus pulicarius PE=2 SV=1
+ee---------------eeeeeeeeeeeee-ee-eee--eee-ee-eeeeee-eee-e----------e--e------eee
+>sp|P16240|CION_CIOIN Cionin OS=Ciona intestinalis PE=1 SV=2
+eeee-------------e-ee-eeee--ee-eeee-eeeee-eeee-eee-e--e---e--ee-eee--ee-eeeeeeeee-e--e---e-ee-eeeeeee--ee--e------e--ee--ee-eeee
+>sp|C7DQB9|CIXB3_CONEB Conotoxin Eb11.3 OS=Conus eburneus PE=2 SV=1
+ee-e-------------eee-ee--e-eeee---e------e--e---e-eeeee-eeee--ee-ee--eeeee-ee--ee
+>sp|D6C4I7|CLE1A_CONCL Conotoxin Cl14.1a OS=Conus californicus PE=3 SV=1
+ee-------------e-eee-e-e-eeeee---e-eee-ee--ee--eeeee-eee-eeee-eeeee
+>sp|D6C4J3|CLE4_CONCL Conotoxin Cl14.4 OS=Conus californicus PE=3 SV=1
+ee------------e--ee-e-eeee-eee-ee--eee-eee-eee-eeeee-eee-ee
+>sp|Q9BPJ4|CM236_CONTE Conotoxin TxMMSK-06 OS=Conus textile PE=2 SV=1
+eeee------------e-e--e-eeeeeeee--ee-eee-eeee-e--e--eeeeeeee-e-eeee-eeeeeee--ee-------ee--e
+>sp|Q9BPH6|CM336_CONVE Conotoxin VnMLKM-02 OS=Conus ventricosus PE=2 SV=1
+eee------------e----eeeeeee-ee--eeeee-eeeee-e---e--eeee--eee--eee--ee-e
+>sp|P60207|CM3A_CONSE Mu-conotoxin SmIIIA (Fragment) OS=Conus stercusmuscarum PE=2 SV=1
+eeeeeeee--eeeee-eee--eeeee--eee
+>sp|D6C4L5|CM67_CONCL Conotoxin Cl6.7 OS=Conus californicus PE=3 SV=1
+ee---------------e-eeeeeee--ee-eeeeee-eeee-eeeee--e-ee----eee---e-e
+>sp|Q2I2P8|CMG1_CONLT Conotoxin Lt16.1 OS=Conus litteratus PE=2 SV=1
+eee-----------------e-eeeee-eee-eeeeee--e--ee-ee--eeeeeeee--ee--ee---e---eee-eeeeee
+>sp|Q3YEG3|CO142_CONMI Conotoxin MiK42 OS=Conus miles PE=2 SV=1
+ee--------------------eeeeeeee-eeee-eee-eeeee-e--ee-eeeeee-eeeeee--eee--eeeeee--ee
+>sp|P0C833|CO16V_CONST Conotoxin S6.10 OS=Conus striatus PE=2 SV=1
+ee---------------eeeeeee-eeeeeeeee-eeeeee-e--ee-eeeeee-eee-e--ee--ee-ee---e------eeeee
+>sp|Q3YEE1|CO194_CONMR Conotoxin MaIr94 OS=Conus marmoreus PE=2 SV=1
+ee--------------------eeeeeeeeeeeeeeeee-eeeeeee--ee--eeeee-eeeeee-e--e-e--eeeee---e-e
+>sp|P0C1M8|CO27A_CONRA Conotoxin r7a (Fragment) OS=Conus radiatus PE=1 SV=1
+eeeee--eeee------e-eeeee--eee-eee--eee
+>sp|P0CY72|CO714_CONBU Conotoxin Bu14 (Fragment) OS=Conus bullatus PE=2 SV=1
+eeee--e-eeeeeeeee-ee-eeeeeeeeeeee-ee--ee-eeeee--eee-e--eee-eeeeeee-------e---eee
+>sp|P0CY65|CO76_CONBU Conotoxin Bu6 OS=Conus bullatus PE=2 SV=1
+ee---------------e-ee-eeeeeeeeeee-eeeee-eeeeeee--eeeee----e-e---e--ee-ee-ee
+>sp|D2Y495|COG1A_CONCL Conotoxin Cal6.1a OS=Conus californicus PE=2 SV=1
+eee-e------------e-e-eeeeeeeeeeee-eeeeeeeeeeeeee------ee-ee-eee-eeeeee--eee-e-e-eeeee--eee----e-e
+>sp|Q04618|COLI2_ONCMY Pro-opiomelanocortin B OS=Oncorhynchus mykiss GN=pomcb PE=2 SV=1
+ee----ee-e-e-------------------ee-e-e--eeee-ee-eeeee--e--e--eee-eee-ee-eeeeeeeeeeeee-e------eeeeeeeeeeeeeeeeeeee--------eeee-eeeee-e---ee-eeeeeeeee-eee-eee-eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-e-e--e-ee-eeeee-e---ee-eeeeeee--e--ee--eeeee
+>sp|Q2I2P2|CON2_CONLT Contulakin-Lt2 OS=Conus litteratus PE=2 SV=1
+eee--------------e-eeeee-ee--ee--eee--ee--ee--eee-ee-e-eeee-e------e--eeeeeeeee-eeeee
+>sp|Q17AN4|CORZ_AEDAE Pro-corazonin OS=Aedes aegypti GN=Crz PE=3 SV=1
+eee--ee-----------e-ee-e-eee-eeeeeeeeeeeeeeee--ee-e-e-eeeeee-ee--ee--eee-e-e--e---ee-ee--ee--ee-ee-------e-e--ee-eeee-e-eeeeeeee--ee--eee
+>sp|Q299B0|CORZ_DROPS Pro-corazonin OS=Drosophila pseudoobscura pseudoobscura GN=Crz PE=3 SV=1
+e-e--------------------e--e--ee-e-----------------eeee-ee--e-eeeeeee---e--e---------------e-eeeeeeee-ee---eeeeeeeeeee---e---ee--ee-ee--ee-ee-eeeeeee---eee-e--eee
+>sp|A0NDK8|CORZ_ANOGA Pro-corazonin OS=Anopheles gambiae GN=CRZ PE=3 SV=1
+eeeee-------------e-ee-e-eee-eeeeeee-eeeeeeeeeeee-ee-e-ee--ee--eeee-ee-eeeeee--ee--eee-e-e-----ee-eeeee--e--eee-ee-eee------------eeeee------e-eeeee-eee-e-eeee-ee-eeeeeeee
+>sp|Q9NDA6|COW3_CONTE Leu-contryphan-Tx OS=Conus textile PE=1 SV=1
+eee--------------e---eeeeeeeeeeee-eeeeeeee-eee--e--eeee-e-e-e-e
+>sp|Q29CA0|CP2B_DROPS Cardio acceleratory peptide 2b OS=Drosophila pseudoobscura pseudoobscura GN=capa PE=3 SV=2
+ee-------------------e-ee-eeeeeeeeee-e-------e--e--ee--ee-ee-ee----e----eee-ee-eeee-eeee------e--eeeee-ee----e---e--eeeeeee-e-------e-eeeeee-ee-eeeeeeeeeee
+>sp|Q9GU58|CP9A_CONTE Spasmodic peptide tx9a OS=Conus textile PE=1 SV=1
+ee----e-------------e----eeee-eee-eeee-eeeeee-eee-ee------eee-eee-eeeee-eee-----e--eeeee
+>sp|Q9BPG7|CT111_CONTE Conotoxin Tx-D0111 OS=Conus textile PE=2 SV=1
+ee---------------eeee-e-eeeee-eee-ee-e-ee--e--eeee--ee-e-----ee
+>sp|Q9BPD6|CT0C6_CONVE Conotoxin VnMLCL-041 OS=Conus ventricosus PE=2 SV=1
+ee-------------eeeeee-eee-eee--ee-eeeee-eeeee------------e--eeeee
+>sp|Q3YEH1|CT192_CONLT Conotoxin LeDr192 OS=Conus litteratus PE=2 SV=1
+ee-------------e-e--e-eeeeeee-e-ee-eee-ee--eee-e-ee--eee---e--eeeee
+>sp|P0C667|CT52_CONCB Conotoxin Ca5.2 OS=Conus caracteristicus PE=2 SV=1
+ee-------------e-eeeeeeeeeeee--ee-eee-ee--ee-eeeee--eeeee--e--eeee
+>sp|Q1A3Q7|CT59_CONLT Conotoxin Lt5.9 OS=Conus litteratus PE=2 SV=1
+ee-------------eeeeee-eee-eee-eeeeee-eeeee-ee-ee-------eee---eeeeee
+>sp|Q1A3Q5|CT58_CONLT Conotoxin Lt5.8 OS=Conus litteratus PE=2 SV=1
+ee-------------eeee-e-e-e--eeeeeeeeee-e---e--eeeee--eeee-e--ee
+>sp|P36190|CTXA1_CERCA Ceratotoxin-A OS=Ceratitis capitata GN=CTXA1 PE=1 SV=2
+eee-e-------------e---eeeeeeee-e-eee-ee--ee--e--ee-ee---e--ee--ee-eeeee
+>sp|D2Y493|CU63A_CONCL Conotoxin Cal6.3a OS=Conus californicus PE=2 SV=1
+ee---------------eeeeeeeeeeeeeeeeeeee-e--e-eeee-------e-e-ee-eeeee---ee--eeeee
+>sp|D6C4L9|CU92_CONCL Conotoxin Cl9.2 OS=Conus californicus PE=3 SV=1
+eee----------e--eeeeeeeeeeeeeeee---------eeee-eeeee--eeee-e----ee-ee-ee-e
+>sp|B3FIA6|CVF1_CONVT Conotoxin Vt15.1 OS=Conus vitulinus PE=2 SV=1
+eee-----------eeeeeee-eeeee--ee--ee-eeee-e-ee--ee-eeeee--eee-e-eeee-e--eeee
+>sp|P0C1D0|CXA1A_CONRE Alpha-conotoxin RgIA (Fragment) OS=Conus regius PE=1 SV=1
+eeeeeeee--e---ee--e---eeee-e-e-e
+>sp|P0DJC6|CXT61_CONQU Conotoxin Qc6.1 OS=Conus quercinus PE=2 SV=1
+ee--------------------e--eee-eeeeeeeeeee--e--ee--ee-eeee-ee-eeeee-eee-e--e----eee---ee-------e
+>sp|A4H220|DB118_GORGO Beta-defensin 118 OS=Gorilla gorilla gorilla GN=DEFB118 PE=3 SV=1
+ee-------------e--ee-eeeee--eeeee-eee-eeee--ee--ee-------eeeeeeeeeeeee-e-ee-eee------------ee-e-e-eeeeeee-eeeeeee-eeee-eeee
+>sp|Q8N687|DB125_HUMAN Beta-defensin 125 OS=Homo sapiens GN=DEFB125 PE=2 SV=2
+ee-------------e--e-e-e-ee--eee--e--ee-eeee--e---eee-------e-eeeeee-ee-e-ee-e---e-ee-e---e----e-e-e-e-eeeeeeeeeeeeee-ee-eeee-e-ee-e-e-eeeee-eeeee--eeeee-eee
+>sp|Q9BEE3|DB126_MACFA Beta-defensin 126 OS=Macaca fascicularis GN=DEFB126 PE=2 SV=1
+eee---------------e-e---ee--eeeee-eee-eeee-eeee-e-e-eee-------eeeeee-----eeee-ee-e-eeee-eee-e--e-e------eee-ee--e-eeeeeeeee
+>sp|Q9H1M4|DB127_HUMAN Beta-defensin 127 OS=Homo sapiens GN=DEFB127 PE=1 SV=1
+ee----------eeee-eee-ee--ee--e-e-ee--e-ee-ee---ee-e----e-ee-ee-ee-eeeeeee-ee-----eee-e--ee-ee-eeeee
+>sp|P0C8A2|DEFA2_ORNAN Defensin-A2 OS=Ornithorhynchus anatinus PE=2 SV=1
+eee------------ee-eee-eee-ee--eeeee-eeeeee-------e--eeeeeeeeeee-----e-e-ee-eeeeee-eeee-e-e---eeee
+>sp|P0C8A1|DEFA1_ORNAN Defensin-A1 OS=Ornithorhynchus anatinus PE=2 SV=1
+eee------------eeeeeeeeeeeeeee-eeee-ee-ee---------eeeeeeeeeee-ee---e-e---e--ee-eee-eeeeee-e---eeee
+>sp|P0C8A4|DEFA4_ORNAN Defensin-A4 OS=Ornithorhynchus anatinus PE=2 SV=1
+eee--------------eeeeee-eee-eeeeee-e-eeeeee-e---eeee-ee-e-e--e-eeee-eeee---ee--e-eeeeeee-eeeee---ee
+>sp|P0C8A5|DEFB1_ORNAN Defensin-B1 OS=Ornithorhynchus anatinus PE=2 SV=1
+ee-----------------e--ee-eee--e-eee-eee-e-eee-ee--eeeee---ee---eee
+>sp|Q9WTL0|DEFB3_MOUSE Beta-defensin 3 OS=Mus musculus GN=Defb3 PE=2 SV=1
+ee--------------eeee-eee-eee-e--eeeee---e--eeeee-ee-e-e--e--eee
+>sp|P0C8A7|DEFB3_ORNAN Defensin-B3 OS=Ornithorhynchus anatinus PE=2 SV=1
+ee-----------eeeeeeeee-ee-e--eeeeee-e-e-e-eeee-ee-e--------eeeeee
+>sp|P0C8A9|DEFB5_ORNAN Defensin-B5 OS=Ornithorhynchus anatinus PE=2 SV=1
+eee-------------e-eeeeeeeeee-eee-eeeeeeeeee--ee-e--e-eeee--eeeee------ee-eeeeee-ee---e-eee--------ee--eeeeeee
+>sp|O93456|DEM_PACDA Dermorphin peptides OS=Pachymedusa dacnicolor PE=2 SV=1
+eee-ee------------e---eeeeeeeeeeeeeeeeeeeeeee-ee------eeeeee-eeeeeeeeeeeeeeeeeeee-ee-----eeeeeee-eeeeeeeeeeeeeeeeeeee-ee---e-eeeeeee-eeeeeeeeeeeeeeeeeeee-ee---e-eeee-ee-eeeeeeeeeeeeeeee--e------eee-eee
+>sp|B3IUE0|DIH45_BOMMO Diuretic hormone 45 OS=Bombyx mori GN=dh45 PE=2 SV=1
+ee----------------ee-eeeee-e--e--ee-eeee-------e-e-e-----------e-eeeeee--e-eeeeeeeeeeee-ee---ee--e--eee-e-ee--ee-ee-eee--e--ee--ee-eeeeee-ee---e-ee
+>sp|Q17UZ0|DISTL_PHYAZ Distinctin-like peptide (Fragment) OS=Phyllomedusa azurea GN=ppdis-H1 PE=1 SV=1
+eee---------e------eeeeeeeeeeeeeeeeeeeeeee--e---e-ee--ee--ee-ee-eeeeeeeeeeeee
+>sp|O93455|DMS5_PACDA Dermaseptin PD-3-7 OS=Pachymedusa dacnicolor PE=1 SV=1
+ee--ee-------------ee-eeeeeeeeeeeeeeeeeeee--ee--ee-ee--ee-eee--eee
+>sp|P36193|DROS_DROME Drosocin OS=Drosophila melanogaster GN=Dro PE=1 SV=2
+ee-----------------eeeeeeeeeeeeeeeeee-e-eee-ee-eee-ee---eeeeeeee
+>sp|B2ZB95|DSK_DROER Drosulfakinins OS=Drosophila erecta GN=Dsk PE=3 SV=1
+eee------------------------e--ee-ee-ee-eeeee-ee-eeee-ee-e-e---e-e-e------ee--e-----ee--e----e---e-----e-eeeee-eee-ee-------eeeeee--ee----e-ee
+>sp|Q5NRP8|EDN2_ATEAB Endothelin-2 OS=Atelerix albiventris GN=EDN2 PE=2 SV=1
+e-------------------e-eeeeeeeeeeeeeeeeeeeeeeeeeee-e-ee-eeee--------------eee----e-eeeeeeeeeeeee--e--eee-ee--e--eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee--ee--e--e-eeeeeeeeeeeeeeeeeeeeee-eee
+>sp|C6EVG2|EXE2_HELSC Exendin-2-long OS=Heloderma suspectum cinctum PE=2 SV=1
+eee---------------e-e-e---eee-eeeeeeeeee--e-eee-ee--eee--e--ee---ee--ee--eeeeeeeeeee
+>sp|C6EVG1|EXE4_HELSC Exendin-4 OS=Heloderma suspectum cinctum PE=2 SV=1
+eee---------------e---e-e-eee-eeeeeeeeee--ee-eeeeeeeeeeeeeeeeeeeeeeeeee-eeee-eeeeeeeeee
+>FARX_LYMST P42565 FMRFamide-related neuropeptides OS=Lymnaea stagnalis PE=1 SV=1
+ee---e-----------------e----eeeee-e------eeee------eee-----ee--------e--------e-------ee--------e--------e--------e--------e-e------e-------ee-e------e-------ee-e-----ee--------e--------e-e------e-e------e--------eee--------e------e-----e--e-------e---------e-------ee-------ee--------e-------ee--------ee-------eeee--------eee-e-ee-----eee-e------eeeee-e-eeee
+>FLP18_CAEEL Q9N4V0 FMRFamide-like neuropeptide 18 OS=Caenorhabditis elegans GN=flp-18 PE=1 SV=2
+eee--e----------ee-ee-eee--e-eeee-eee--e--e--eeeeee------ee-e--------eeee--eeeeeeeeeee--------e-e-eeeeee--------eee-eeeeee--------eeeeeeeeee--------e-eeeeeeeeeeee--------eee--------e-ee-eee--e--eeee-e---e-eee
+>FLP19_CAEEL Q9XVX1 FMRFamide-like neuropeptides 19 OS=Caenorhabditis elegans GN=flp-19 PE=1 SV=1
+ee-e---------------eee-eeeeee-e-e--eeeee-e-e--eeeee--e--eeeeee-ee-eee-eee-e-eee-e--ee-eee
+>RANA_LITPI P08950 Ranatensin OS=Lithobates pipiens PE=1 SV=1
+eee-ee------e------------e----e--ee-ee-eeeee-eee-ee----e---eee-eeeeee-e---ee--eeee
+>SCPRP_OCTVU Q2V2G5 Small cardioactive peptide-related peptide OS=Octopus vulgaris GN=SCPRP PE=1 SV=1
+ee-ee---------------eeeee-eeee-e-eee--ee-eee-----eeeeeeeeeee-e----e--e---------e--ee-ee--eeeeeee-------eee
+>SIL1_CYLFU Q9SE35 Silaffin-1 OS=Cylindrotheca fusiformis GN=SIL1 PE=1 SV=1
+ee-ee--e-----------e--ee--eee-eeeeeeeeee-eeeeeeeeeeee-ee-eeeeee-eeee-ee-e-eeee-ee-e-eeee-ee-eeeeeeeeeee-e--eeeeeee----eeeeeee-ee-eeeee--ee--eeeeeee-ee-eeeeeeeee--eeeeeee-eeeeeeeee--eeeeeee-eeeeeeeeee-eeeeeee-eeeeeeeee--eeeeeee-eeeeeeeeee-eeeeeee-eeeeeeeee--eee-eeee
+>SMS2_LOPAM P01170 Somatostatin-2 OS=Lophius americanus GN=sst2 PE=1 SV=2
+ee--e--------------e--eee-eeeeeeeee-e-e---ee--ee-ee-ee--ee--ee--ee--ee-e-ee-e-eee-ee--e-eeee-e-eee-eeeee-eeeeeeee-ee---ee-eee
+>sp|P87385|SMS2_PELRI Somatostatin-2 OS=Pelophylax ridibundus GN=sst2 PE=1 SV=1
+eee--------------e-eeeeeeeeeee-eeee-eee-ee---e------eeeeee-ee-eee-eeeeeee-eee-e-ee-eeeeeeee-ee---ee-eee
+>sp|Q9YGH4|SMS2_CARAU Somatostatin-2 OS=Carassius auratus GN=sst2 PE=2 SV=1
+eee-e----------------e-eeee-eee-ee--ee--ee-e---e-eee--ee--ee--ee-eeeeee-eeee-ee--eeee-e-e-eee-eeeee-eeeeeeee-ee---ee-eee
+>sp|A0SIF1|SNPF_ANOGA Short neuropeptide F OS=Anopheles gambiae GN=sNPF PE=2 SV=1
+e-e--------------e-e-eeeeeeeee--ee--e----ee---e-e-ee-e-eee-eeeee-e-e--eeeeee-e-e-eeee--eeeeee--e---e---e-ee-ee-eee---eee-eee-ee---e--e-e-eee-ee--eeeee--ee--e-ee---e---e--e---e-e-eeee--eeeeeee-eeeeee-ee-e--eeeee-eeeeeeee--eeeeeeeeeeeee
+>sp|P0DJK0|SRTX1_ATRIR Sarafotoxin-i1 OS=Atractaspis irregularis PE=1 SV=1
+ee--ee-ee------------eeeee-ee--ee-eeeeeeeeeeeee--e--e-eeeeee---e-eeeee--eeeeeeeeeeee-e-ee-eeee--e---ee---e-eeeeeeeeeee
+>sp|A8YPR9|SVMI1_CERCE Snake venom metalloprotease inhibitor 02A10 OS=Cerastes cerastes GN=Svmpi-Cce12 PE=1 SV=1
+ee--e-------------e-eeeeeeeeee-eeeeeeeeee-eeeeeeeeee-eeeeeeeeee-eeeeeeee-e-eeeeeeeeee-eeeeeeeeee-eeeeeeeeee-eeeeeeee-e-eeeeeeeeee-eeeeeeeeee-eeeeeeee-e-eeeeeeeeee-eeeeeeeeee-eeeeeeeeee-eeeeeeee-e-eeeeeeeeee-eeeeeeeeee-eeeeeeeeee-eeeeeee-eeeeeeeeeee-eeeeeeeeeeeeee-eeeeeeeeeeeeeeeeeeeeeeeeee-e-ee-eeeeee
+>sp|A8YPR6|SVMI_ECHOC Snake venom metalloprotease inhibitor 02D01 OS=Echis ocellatus PE=1 SV=2
+ee--e---e------------eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-eeeeeeeeeeeeeeeeeeeeeee-eee-eeeeeeeeeee-eeeeeee-eeeeeeeeeee-eee-eeeeeeeeeeeeeeeeeee-eeeeeeeeeee-eee-eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-eeeeeeeeeeeeeee-eeeeeeeeeeeeeeeee-------e-e---e--e----ee-e-e-ee--e--eee-eeee-e-----e--e-eee----e
+>sp|P00735|THRB_BOVIN Prothrombin OS=Bos taurus GN=F2 PE=1 SV=2
+eee----e----------------e----eeee-ee--e--ee--ee--ee-eeee-eee-eeee-eeee-ee--eeeeeeeeeeeeee--ee-eeeee-eee-ee-e---ee-e--e-eeee---e-e--e-eeee--e-e-eeeeeee-e-ee------ee-ee------eeeeeee-----e--eeeee--eeeeeeeee--ee--eeeee-eee-ee-e-ee-e-eeeee--e-e-ee-ee--e--eeeee-eeeee-----ee-ee-------ee-------e-e-eeeeee-e-ee-eee--eeeeeeeeeeeeee--e--eee---eeeee--------eeeee-e--e--eee-eeee--eeee-ee----------eeeeee---------ee-----------eeee-e-e-ee----------eee-eee-ee-e-ee--e-ee--eee-----------eee-eeeee-------eee--ee--eee----------eeeeeeeeeee-e-e----------eeee-ee--eee--e-------eeeeeee----e-----------eeee---------------eeee--------e--e--ee--eeeee
+>sp|S0F1M9|TK1E_HADVE Kappa-hexatoxin-Hv1e OS=Hadronyche versuta PE=3 SV=1
+eee-----------------eeee-e-eee-----eeeee--eeee-eeeee--ee-eeeeeeeeeee-eeeee
+>sp|Q8CH01|TKN4_RAT Tachykinin-4 OS=Rattus norvegicus GN=Tac4 PE=2 SV=1
+e------------------eeeee---eee-e-------ee-e-ee-e-e-ee-eeee-ee------ee-ee--e-eeeeee--e-ee---e---ee---ee-eeeeeeeeeeeeee-eeeee-eeeeeeeeeeeeee--e--eeeeeeeee-ee-eee-ee-eeeeeee
+>sp|Q86UU9|TKN4_HUMAN Tachykinin-4 OS=Homo sapiens GN=TAC4 PE=1 SV=1
+ee-----------------eeeeee-e--ee-e-------ee-e-ee-e-e-ee-eeee-ee------ee-eee-e-eeeeee--e-ee---e---ee---eeeeeeeeeeee
+>sp|P83580|TO1A_ATRRO Omega-hexatoxin-Ar1a OS=Atrax robustus PE=1 SV=2
+eee-e---------------e-eee-ee-ee---ee-eeeeeeee-eeeeee-eeeee-eeeee-eeee-eeeeeeeeeeeee-e
+>sp|P0DKP4|TU172_LOPOL Turripeptide OL172 OS=Lophiotoma olangoensis PE=2 SV=1
+eee-------------eeee-eee-ee-ee-e-ee--e--eee--e--eeee-ee-ee-ee-e-ee--e--eeeeee-eeeee-ee-ee-ee-e-ee--e--eeeeeee-eeee-------eeeeee
+>sp|D5KXG5|TU61_GEMSP Turripeptide VI/VII-01 OS=Gemmula speciosa PE=2 SV=1
+ee-e---------------ee----eeeeee--ee-ee--e--eeee-e-eeeeeeeee-------ee---e-eeeeeee
+>sp|E2S064|TXT1A_CRYAD Kappa-thalatoxin-Sm1a OS=Cryptodendrum adhaesivum PE=3 SV=1
+ee--------------------e-eeeeeeeeeeee-eeeeeee-e-eeee-eee--ee-eeeeeee-eee-eee
+>sp|P04560|UTS2A_CYPCA Prepro-urotensin II-alpha OS=Cyprinus carpio PE=1 SV=1
+ee-e-------------e----e-eee-e-e-ee-e--eeee----eeee-eee-e---e----e------eee-e-eee--ee--ee---e-eee-ee--e-----ee-eeeeee-e---e--e
+>sp|Q7ZZY8|UTS2B_DANRE Prepro-urotensin II-beta OS=Danio rerio GN=uts2b PE=2 SV=1
+e--e------------ee--e-e-ee--e-e-ee-e--eeee--e-eeee-eee-----e---------e-ee-eeee-e-eee--ee-eee---eeee-ee-----ee-eeeeee-e---e--e
+>sp|P07198|XENO_XENLA Xenopsin peptides OS=Xenopus laevis PE=1 SV=1
+eee-------------e--eeeeeeeeeeeee-ee------ee--e---ee-e-e-ee--eeeee---ee-eeeeeeeeee

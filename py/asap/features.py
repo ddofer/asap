@@ -18,7 +18,7 @@ FEARURE_KEY_OPTIONS = [
     'accum_charge_right', # Accumulating charge from the right of the window
     'accum_pos_charge_left', # Accumulating charge from the left of the window where only positive amino-acids (K and R) are considered
     'accum_pos_charge_right', # Accumulating charge from the right of the window where only positive amino-acids (K and R) are considered
-    # 'aa', # the actual amino-acid at each position given by one-hot encoding
+    'aa', # the actual amino-acid at each position given by one-hot encoding
     'aa_reduced', # Same as 'aa', after using a reduced alphabet of 15 amino-acids
     'aa_context_count', # Counting the number of occurrences of each amino-acid in the part of the protein to the left/right of the window
     'aa_counts', # Counting the number of occurrences of each amino-acid in the window
@@ -67,8 +67,6 @@ def get_features(window, hot_index, feature_keys = None):
         features.update(get_accumulating_positive_charge_features(window.get_aa_seq(), 'left'))
     if 'accum_pos_charge_right' in feature_keys:
         features.update(get_accumulating_positive_charge_features(window.get_aa_seq()[::-1], 'right'))
-
-    #It will rarely make sense to get AA and reduced AA. May be better to make this an "if-else". - DAN
 
     if 'aa' in feature_keys:
         features.update(get_aa_features(window.get_aa_seq()))

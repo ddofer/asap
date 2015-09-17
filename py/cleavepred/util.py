@@ -1,3 +1,7 @@
+def split_to_chunks(array, chunk_size):
+    for i in xrange(0, len(array), chunk_size):
+        yield array[i:(i + chunk_size)]
+
 def parse_bool(raw_value):
     if raw_value.lower() in ['true', 'yes', '1']:
         return True
@@ -11,6 +15,15 @@ def open_file(path, *args, **argv):
         return None
     else:
         return open(path, *args, **argv)
+        
+def read_file(path):
+    
+    f = open(path, 'rb')
+    
+    try:
+        return f.read()
+    finally:
+        f.close()
 
 def close_file(file):
     if file is not None:

@@ -23,6 +23,10 @@ def get_window_features_file_path(advanced):
     else:
         return os.path.join(get_dataset_dir(), 'window_simple_features.csv')
         
+def get_raw_data_xml_file_path():
+    # Relevant only for when dataset_name = 'uniprot'
+    return os.path.join(get_dataset_dir(), 'raw_data.xml')
+        
 def get_annotated_seqs_file_path():
     return os.path.join(get_dataset_dir(), 'annotated_seqs.lf')
     

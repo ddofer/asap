@@ -5,6 +5,7 @@ from .features_deps.AAScales import *
 import math
 from collections import Counter, defaultdict
 
+## "FEARURE" - should be FEATURE :P. - Dan
 FEARURE_KEY_OPTIONS = [
     'position', # Features related to the position of the window within the whole protein
     'basic_properties', # TODO
@@ -17,7 +18,7 @@ FEARURE_KEY_OPTIONS = [
     'accum_charge_right', # Accumulating charge from the right of the window
     'accum_pos_charge_left', # Accumulating charge from the left of the window where only positive amino-acids (K and R) are considered
     'accum_pos_charge_right', # Accumulating charge from the right of the window where only positive amino-acids (K and R) are considered
-    'aa', # the actual amino-acid at each position given by one-hot encoding
+    # 'aa', # the actual amino-acid at each position given by one-hot encoding
     'aa_reduced', # Same as 'aa', after using a reduced alphabet of 15 amino-acids
     'aa_context_count', # Counting the number of occurrences of each amino-acid in the part of the protein to the left/right of the window
     'aa_counts', # Counting the number of occurrences of each amino-acid in the window
@@ -30,8 +31,8 @@ FEARURE_KEY_OPTIONS = [
     'disorder', # The given disorder prediction at each position in the window given by one-hot encoding
     'disorder_context_count', # Like 'aa_context_count', only for disorder instead of aa
     'disorder_segment', # TODO
-    'pssm', # The given PSSM at each position in the window
-    'pssm_entropy', # TODO
+    'pssm', # AA Frequency from the PSSM at each position in the window
+    'pssm_entropy', # Entropy of the PSSM at each position
 ]
 
 def get_features(window, hot_index, feature_keys = None):
@@ -42,7 +43,7 @@ def get_features(window, hot_index, feature_keys = None):
         raise Exception('Unknown feature keys: ' + ', '.join(map(str, set(feature_keys).difference(FEARURE_KEY_OPTIONS))))
 
     features = {}
-    
+
     if 'position' in feature_keys:
         features.update(get_position_features(window))
     if 'basic_properties' in feature_keys:
@@ -55,7 +56,7 @@ def get_features(window, hot_index, feature_keys = None):
         features.update(getFIDisorder(window.get_aa_seq()))
     if 'kr_motifs' in feature_keys:
         features.update(GetKRMotifCounts(window.get_aa_seq(), hot_index))
-        
+
     if 'charge' in feature_keys:
         features.update(get_charge_features(window.get_aa_seq()))
     if 'accum_charge_left' in feature_keys:
@@ -66,7 +67,9 @@ def get_features(window, hot_index, feature_keys = None):
         features.update(get_accumulating_positive_charge_features(window.get_aa_seq(), 'left'))
     if 'accum_pos_charge_right' in feature_keys:
         features.update(get_accumulating_positive_charge_features(window.get_aa_seq()[::-1], 'right'))
-    
+
+    #It will rarely make sense to get AA and reduced AA. May be better to make this an "if-else". - DAN
+
     if 'aa' in feature_keys:
         features.update(get_aa_features(window.get_aa_seq()))
     if 'aa_reduced' in feature_keys:
@@ -75,7 +78,7 @@ def get_features(window, hot_index, feature_keys = None):
         features.update(get_context_count_features('aa', config.AMINO_ACIDS, window, 'aa'))
     if 'aa_counts' in feature_keys:
         features.update(get_aa_counts_features(window.get_aa_seq()))
-    
+
     if 'ss' in window.get_available_tracks():
         if 'ss' in feature_keys:
             features.update(get_ss_features(window.get_track_seq('ss')))
@@ -83,7 +86,7 @@ def get_features(window, hot_index, feature_keys = None):
             features.update(get_context_count_features('ss', config.SS_OPTIONS, window, 'ss'))
         if 'ss_segment' in feature_keys:
             features.update(get_segment_features(window.get_track_seq('ss'), hot_index, 'ss'))
-    
+
     if 'acc' in window.get_available_tracks():
         if 'acc' in feature_keys:
             features.update(get_acc_features(window.get_track_seq('acc')))
@@ -91,7 +94,7 @@ def get_features(window, hot_index, feature_keys = None):
             features.update(get_context_count_features('acc', config.ACC_OPTIONS, window, 'acc'))
         if 'acc_segment' in feature_keys:
             features.update(get_segment_features(window.get_track_seq('acc'), hot_index, 'acc'))
-    
+
     if 'disorder' in window.get_available_tracks():
         if 'disorder' in feature_keys:
             features.update(get_disorder_features(window.get_track_seq('disorder')))
@@ -99,13 +102,13 @@ def get_features(window, hot_index, feature_keys = None):
             features.update(get_context_count_features('disorder', config.DISORDER_OPTIONS, window, 'disorder'))
         if 'disorder_segment' in feature_keys:
             features.update(get_segment_features(window.get_track_seq('disorder'), hot_index, 'disorder'))
-            
+
     if 'pssm' in window.get_available_tracks():
         if 'pssm' in feature_keys:
             features.update(get_pssm_features(window.get_track_seq('pssm')))
         if 'pssm_entropy' in feature_keys:
             features.update(Entropy_pssm(window.get_track_seq('pssm'), hot_index))
-    
+
     return features
 
 def get_position_features(window):
@@ -152,10 +155,10 @@ def get_reduced_aa_seq(seq):
     tran = maketrans(BaseAlph,OutAlph)
 
     return seq.translate(tran)
-    
+
 def get_aa_features(seq):
     return get_multi_option_features('aa', config.AMINO_ACIDS, seq)
-    
+
 def get_reduced_aa_features(seq):
     return get_multi_option_features('aa', config.REDUCED_AMINO_ACIDS, get_reduced_aa_seq(seq))
 
@@ -221,7 +224,7 @@ def get_segment_features(seq, hot_index, seqtype):
     return seg_features
 
 def get_charge_features(seq):
-    
+
     features = {}
 
     for i, seq_aa in enumerate(seq):
@@ -376,6 +379,7 @@ def GetKRMotifLocations(seq):
     Motif_count1 = len(re.findall(KM_RE_1, km_flank)) #Known motif model. Arg-Xxx-Xxx-[Arg|Lys]
     Motif_count2 = len(re.findall('K[RK]', seq)) #Known motif model. Not R at P1, to avoid overlap with other motif!
     Motif_count3 = len(re.findall(KM_RE_3, km_flank)) #Known motif model - Xxx-Xxx-Arg-Arg
+    return ({"Motif_count1":Motif_count1,"Motif_count2":Motif_count2,"Motif_count3":Motif_count3})
 
 def GetKRMotifCounts(seq, hot_index) :
     '''
@@ -510,7 +514,7 @@ def getCysteineMotifs(seq): #(Why have called submethods as static (and not call
     res.update(cysteineSpaceMotif(seq))
     return res
 
-def getFIDisorder(seq,segments=4):
+def getFIDisorder(seq,segments=3):
     '''
     Divide protein sequence into segments, and returns for each seg.
     predicted disorder (Y/N) according to FoldIndex method (Uversky et al).
@@ -621,7 +625,7 @@ def Get_ParamScales(Bio_PP,window=4,edge=0.8,PickScales = PTMScales_Dict): ##,SA
     return PP_scales
 
 "TODO: Mod this to work with a given WINDOW, and it's parent sequence as a scale!!"
-def Get_ParamScales_Features(seq,window=3,PickScales = MinScales_Dict,segs=None):
+def Get_ParamScales_Features(seq,window=4,PickScales = MinScales_Dict,segs=None):
     '''
     Similar to "Get_ParamScales_Features", but gets a small(er) set of features (per scale),
     for a smaller set (by efault) of AA scales, extracted from multiple segments of the sequence.
@@ -665,9 +669,12 @@ def log2(number):
     """Shorthand for base-2 logarithms"""
     return math.log(number, 2) if number > 0 else math.log(10E-50, 2)
 
-#Changed: added substraction of uniform background freq
+#Changed: division by uniform background freq - http://docs.scipy.org/doc/scipy-dev/reference/generated/scipy.stats.entropy.html # DAN
 def Entropy_pssm(pssm, hot_index, get_entropy_segs = True):
     '''
+    TODO: Is the formula correct ???
+    TODO: Background frequency correction.
+
     Calculate the (Shannon) information entropy  of a given input string.
     Entropy is the expected value of the measure of information content in system.
     http://rosettacode.org/wiki/Entropy#Python
@@ -677,6 +684,7 @@ def Entropy_pssm(pssm, hot_index, get_entropy_segs = True):
 
     https://github.com/talmo/MotifSearch/blob/master/genomics.py
 
+    http://stackoverflow.com/questions/23480002/shannon-entropy-of-data-in-this-format-dna-motif
     '''
 
     features = {}
@@ -684,11 +692,13 @@ def Entropy_pssm(pssm, hot_index, get_entropy_segs = True):
 
     entropy_seq = [] #store entropy at each position along the sequence
 
+    #TODO: Check that PSSM entropy formula is correct!
     for i, profile in enumerate(pssm):
         feature_name = 'EntropyPssm@' + str(i)
         #ORIG
         # features[feature_name] = (-sum( ((count * log2(count)) - background_freq_uniform) for count in profile.values()))
-        features[feature_name] = (-sum( (count * log2(count)) for count in profile.values()))
+        #CHANGED: Dan - from (count) to (count/background_freq)
+        features[feature_name] = (-sum( (count * log2(count/background_freq_uniform)) for count in profile.values()))
 
         entropy_seq.append(features[feature_name])
 
@@ -704,10 +714,12 @@ def Entropy_pssm(pssm, hot_index, get_entropy_segs = True):
         entropy_seg_2 = math.fsum(entropy_seq[hot_index-4:hot_index+1])
         entropy_seg_3 = math.fsum(entropy_seq[hot_index+1:])
 
+        entropy_seg_peptide = math.fsum(entropy_seq[hot_index-2:-2])
+
         features['entropy_seg_1']=entropy_seg_1
         features['entropy_seg_2']=entropy_seg_2
         features['entropy_seg_3']=entropy_seg_3
-        # features['entropy_seg_4']=entropy_seg_4
+        features['entropy_seg_peptide']=entropy_seg_peptide
 
         # for aa, value in profile.items():
     # s=self.seq
@@ -780,7 +792,8 @@ def Entropy_pssm(pssm, hot_index, get_entropy_segs = True):
     #     AA_information['Total Entropy']=entropy # Equivalent to old Entropy_Seq.
 
     #     return self.alphabet_prefix(AA_information)
-    
+
+
 KM_RE_1 = 'R.{2}[RK]'
 KM_RE_2 = '[^R].K[RK]'
 KM_RE_3 = '[^R].R{2}'

@@ -9,14 +9,14 @@ from . import data
 LOGGER = logging.getLogger('PARSE')
 
 def convert_lf_to_fasta(source, output_file):
-    
+
     '''
     Converts a .lf file, which also contains annotations, to a .fasta file, which contains only the amino-acid sequences of the
     records.
     @param source (file handle): The source .lf file to read.
     @param output_file (file handle): A file handlw with writing permissions to write the output FASTA into.
     '''
-    
+
     full_records = parse_records_from_file(source, extract_annotations = True)
     fasta_records = [full_record.to_fasta_record() for full_record in full_records]
     SeqIO.write(fasta_records, output_file, 'fasta')
@@ -24,20 +24,26 @@ def convert_lf_to_fasta(source, output_file):
 def parse_records_from_file(source, extract_annotations, relevant_ids = None, extra_tracks = {}):
 
     '''
-    Parses full data records from a file (either .lf format, which also includes annotation masks, or a simple .fasta format)
-    @param source (file): A file handle to parse the records from.
-    @param extract_annotations (bool): Whether to expect for a .lf format which also contains annotations, or a simple .fasta format.
-    @param relevant_ids (collection, optional): An optional list of ids. If None, will do nothing. If provided with a collection,
+    Parses full data records from a file (either .lf format, which also includes annotation masks,
+        or a simple fasta )
+    @param source (file):
+        A file handle to parse the records from.
+    @param extract_annotations (bool):
+        Whether to expect a .lf format which also contains annotations, or a simple .fasta format.
+    @param relevant_ids (collection, optional):
+        An optional list of ids. If None, will do nothing. If provided with a collection,
     will return only records with the given ids.
-    @param extra_tracks (dict, empty by default): Extra tracks to give the records, given in the following format:
-    {
-        track_name : {
-            record_id: (seq, padding_value),
+    @param extra_tracks (dict, empty by default):
+        Extra tracks to give the records, given in the following format:
+        {
+            track_name : {
+                record_id: (seq, padding_value),
+                ...
+            }
             ...
         }
-        ...
-    }
-    @return: A generator of the parsed records (each of type FullDataRecord).
+    @return:
+        A generator for the parsed records (each of type FullDataRecord).
     '''
 
     seqs = list(SeqIO.parse(source, 'fasta'))
@@ -46,45 +52,52 @@ def parse_records_from_file(source, extract_annotations, relevant_ids = None, ex
     for seq in seqs:
         if relevant_ids is None or _format_id(seq.id) in relevant_ids:
             yield _parse_fasta_record(seq, extra_tracks, extract_annotations)
-            
+
 def get_record_from_seq(seq, annotation_mask = None, extra_tracks = {}):
 
     '''
     Creates a full data record from sequences.
-    @param seq (string): The amino-acid sequence of the record
-    @param annotation_mask (string, optional): A binary mask (made of 0's and 1's) in the same size of the given sequence to use
+    @param seq (string):
+        The amino-acid sequence of the record
+    @param annotation_mask (string, optional):
+        A binary mask (made of 0's and 1's) in the same size of the given sequence to use
     as an annotation mask. If not provided, the record will not have an annotation mask.
-    @param extra_tracks (dict, empty by default): Extra tracks to give the record, given in the following format:
-    {
-        track_name: (seq, padding_value),
-        ...
-    }
-    @return: A FullDataRecord created from the provided data.
+    @param extra_tracks (dict, empty by default):
+    Extra tracks to give the record, given in the following format:
+        {
+            track_name: (seq, padding_value),
+            ...
+        }
+    @return:
+        A FullDataRecord created from the provided data.
     '''
-    
+
     sequence_tracks = data.SequenceTracks()
     sequence_tracks.add_track(data.SequenceTrack('aa', seq))
-    
+
     if annotation_mask is not None:
         sequence_tracks.add_track(data.SequenceTrack('annotation', annotation_mask))
-        
+
     for track_name, track_data in extra_tracks.items():
         track_seq, track_padding_value = track_data
         sequence_tracks.add_track(data.SequenceTrack(track_name, track_seq, track_padding_value))
-        
+
     return data.FullDataRecord('N/A', 'N/A', 'N/A', sequence_tracks)
 
 def parse_track_from_file(source, type):
 
     '''
     Parses the track data of multiple records from a FASTA file .
-    @param source (file): The file handle to parse (in FASTA format)
-    @param type (string): The type of the track to parse (options: seq, disorder, pssm)
-    @return: A dictionary of the following format:
-    {
-        record_id: (seq, padding_value),
-        ...
-    }
+    @param source (file):
+        The file handle to parse (in FASTA format)
+    @param type (string):
+        The type of the track to parse (options: seq, disorder, pssm)
+    @return:
+        A dictionary of the following format:
+        {
+            record_id: (seq, padding_value),
+            ...
+        }
     '''
 
     track_file_parser, track_seq_parser, padding_value = _TRACK_TYPE_TO_PARSERS_AND_PADDING[type]
@@ -94,19 +107,22 @@ def parse_track_from_file(source, type):
         track_data[_format_id(record_id)] = (seq, padding_value)
 
     return track_data
-    
+
 def parse_track_from_seq(seq, type):
 
     '''
     Parses the track data of a single record from a raw sequence.
-    @param seq (string): The raw seqeuence to parse
-    @param type (string): The type of the track to parse (options: seq, disorder, pssm)
-    @return: A tuple containing the parsed track sequence and its padding value.
+    @param seq (string):
+        The raw sequence to parse
+    @param type (string):
+        The type of the track to parse (options: seq, disorder, pssm)
+    @return:
+        A tuple containing the parsed track sequence and its padding value.
     '''
-    
+
     track_file_parser, track_seq_parser, padding_value = _TRACK_TYPE_TO_PARSERS_AND_PADDING[type]
     return track_seq_parser(seq), padding_value
-    
+
 def _parse_fasta_record(fasta_seq, extra_tracks, extract_annotations):
 
     record_id = _format_id(fasta_seq.id)
@@ -122,7 +138,7 @@ def _parse_fasta_record(fasta_seq, extra_tracks, extract_annotations):
 
     sequence_tracks = data.SequenceTracks()
     sequence_tracks.add_track(data.SequenceTrack('aa', aa_seq))
-    
+
     if annotation_mask is not None:
         sequence_tracks.add_track(data.SequenceTrack('annotation', annotation_mask))
 
@@ -134,18 +150,18 @@ def _parse_fasta_record(fasta_seq, extra_tracks, extract_annotations):
             raise Exception('No record for %s in track %s' % (record_id, track_name))
 
     return data.FullDataRecord(record_id, fasta_seq.name, fasta_seq.description, sequence_tracks)
-    
+
 def _parse_seq_track_from_file(source):
     for seq in SeqIO.parse(source, 'fasta'):
         yield seq.id, str(seq.seq)
-        
+
 def _parse_seq_track_from_seq(seq):
     return seq
-    
+
 def _parse_disorder_track_from_file(source):
     for seq in SeqIO.parse(source, 'fasta'):
         yield seq.id, _parse_disorder_track_from_seq(str(seq.seq))
-        
+
 def _parse_disorder_track_from_seq(seq):
     disorder_start_index = util.find_first_index_of(seq, config.DISORDER_OPTIONS)
     return seq[disorder_start_index:]
@@ -156,7 +172,7 @@ def _parse_pssm_track_from_file(source):
         record_id = lines[0].split(' ')[0]
         pssm = _parse_pssm(lines[1:])
         yield record_id, pssm
-        
+
 def _parse_pssm_track_from_seq(seq):
     return _parse_pssm(seq.splitlines())
 

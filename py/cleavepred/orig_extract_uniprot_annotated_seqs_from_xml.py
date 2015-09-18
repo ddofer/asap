@@ -78,10 +78,10 @@ def get_proteins_with_cleavage_sites(raw_xml_path):
                 else:
 
                     if begin is not None:
-                        # if type == 'propeptide':
-                        cleavage_sites.add(begin - 1)
-                        # else:
-                        cleavage_sites.add(begin - 2)
+                        if type == 'propeptide':
+                            cleavage_sites.add(begin - 1)
+                        else:
+                            cleavage_sites.add(begin - 2)
 
                     if end is not None:
                         if type == 'propeptide':
@@ -91,15 +91,10 @@ def get_proteins_with_cleavage_sites(raw_xml_path):
 
         if skip_protein:
             continue
-        #Changed to look at 4th AA until 4 before last AA # DAN.
-        cleavage_sites = set([i for i in cleavage_sites if i >= (signal_peptide_end+3) and i < (len(seq)-3) and seq[i] in 'KR'])
-        # ORIG:
-        # cleavage_sites = set([i for i in cleavage_sites if i >= signal_peptide_end and i < len(seq) seq[i] in 'KR'])
 
-        #TODO: Change this to keep only C-terminal nost site, given consecutive K|R (e.g. KRKRK) - DAN
+        cleavage_sites = set([i for i in cleavage_sites if i >= signal_peptide_end and i < len(seq) and seq[i] in 'KR'])
         cleavage_sites_to_remove = set([i - 1 for i in cleavage_sites]) # If 11, we take only the second
         cleavage_sites = cleavage_sites.difference(cleavage_sites_to_remove)
-
 
         if cleavage_sites: # we don't want samples with no cleavages at all - it's probably a mistake
             yield accession, seq, cleavage_sites, signal_peptide_end

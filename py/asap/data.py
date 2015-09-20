@@ -63,6 +63,7 @@ class SequenceTracks(object):
                 used_track_name = track.name
                 length = track.length()
             elif length != track.length():
+                # print(self.name)
                 raise Exception('Track lengths don\'t match (%s: %d, %s: %d)' % (used_track_name, length, track.name, track.length()))
 
         return length
@@ -77,7 +78,7 @@ class DataRecord(object):
         self.length = sequence_tracks.length()
         self.padding_prefix_length = 0
         self.padding_suffix_length = 0
-        
+
     def pad(self, prefix_length, suffix_length):
         self.padding_prefix_length += prefix_length
         self.padding_suffix_length += suffix_length
@@ -91,10 +92,10 @@ class DataRecord(object):
 
     def get_annotation_mask(self):
         return self.get_track_seq('annotation')
-        
+
     def get_available_tracks(self):
         return self.sequence_tracks.tracks.keys()
-        
+
     def has_annotation_mask(self):
         return 'annotation' in self.get_available_tracks()
 
@@ -121,7 +122,7 @@ class FullDataRecord(DataRecord):
     def get_windows(self, window_size):
         for i in range(self.length - window_size + 1):
             yield Window(self, i, i - self.padding_prefix_length, self.sequence_tracks.get_subsequence(i, window_size))
-            
+
     def __repr__(self):
         return 'Record %s' % self.id
 
@@ -135,7 +136,7 @@ class Window(DataRecord):
 
     def get_left_context_track_seq(self, name):
         return self.full_record.get_track_seq(name)[:self.offset]
-        
+
     def get_right_context_track_seq(self, name):
         return self.full_record.get_track_seq(name)[(self.offset + self.length):]
 
@@ -156,6 +157,6 @@ class Window(DataRecord):
 
     def get_features(self, hot_index, feature_keys = None):
         return features.get_features(self, hot_index, feature_keys)
-        
+
     def __repr__(self):
         return 'Window %d of %s' % (self.offset, self.full_record.id)

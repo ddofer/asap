@@ -1,348 +1,654 @@
->sp|Q21156|FLP11_CAEEL FMRFamide-like neuropeptides 11 OS=Caenorhabditis elegans GN=flp-11 PE=1 SV=1
-eee-e--------------eee-ee-eeeeee-ee---e--e-eee-ee---e--eeeeeeeee-eeeee-eeeeeeeee---e--eeee-ee-ee--e--ee-eeeeee
->sp|O17058|FLP24_CAEEL FMRFamide-like neuropeptides 24 OS=Caenorhabditis elegans GN=flp-24 PE=1 SV=3
-eeeeee-----------------e-ee-eee-ee-eee---e--e-ee-eeee-eeeee---e--eeee
->sp|Q8MPY9|FLP26_CAEEL FMRFamide-like neuropeptides 26 OS=Caenorhabditis elegans GN=flp-26 PE=1 SV=1
-ee------------------e---e----eee-eee-eeee--eeee-eee-e-ee---e--eeeeeeee-e--ee----eeee
->sp|Q18502|FLP09_CAEEL FMRFamide-like neuropeptides 9 OS=Caenorhabditis elegans GN=flp-9 PE=1 SV=2
-eee--------------e--eeee-eee-e--eee-eee--e---e--eee--e-eeeeee-eeeeee--e--eeee-----eeeeee-eeeeee--e-eee
->sp|A8WU84|FLP27_CAEBR FMRFamide-like neuropeptides 27 OS=Caenorhabditis briggsae GN=flp-27 PE=3 SV=1
-eee-ee------------e--eeeee-eeeee---eeee-ee--e---e-eeee-e-e-e--eeeeeeee----------ee-e-e--ee
->sp|Q1MX22|FMRF_BOMMO FMRFamide-related peptides OS=Bombyx mori GN=RFa PE=1 SV=1
-ee-ee--------------eeeeeeeeee-eeeeeee-ee---e--e-e-eeeeeeeee--ee-eeeee-e---ee--e--ee-eee-eee-eee--e--e--ee-e--e--e--eeeee--eee-ee-eeeeee-ee---e--eeeee-eeeeeeeee-eeeeeeeeeeee-ee-e
->sp|Q9GSL0|FMRF_DOROP FMRFamide-related neuropeptides OS=Doryteuthis opalescens GN=FMRFa PE=1 SV=1
-ee-------------e-------e--e--e---eeeeee--e----------eeeeeeeeeee-ee---------eee-------e-eeeeeeee-------eeee-ee--ee--ee-eeeeeeeee--e-e-eeee-eeeeeeeeeeeeeeee-eeeeeeeeeeee-e---e--e---e--e-eeeeeeeeeee------ee-eee--e-eeeeeee-----ee-eeeeeeeeeee------e-eeeeeeeeeee--e--e--eee--e--eeeeee------eeeeeeeeeee--e--eeeeeeeeeeeee---e--eeeee-e---ee
->sp|A6P3B2|FMRF_MUSDO FMRFamide neuropeptides OS=Musca domestica GN=fmrf PE=1 SV=1
-e----------------------eeee-ee--e-eee-ee-eee-eeeeee-ee-eee-eeeeeeeeeeee-eeeeeeeee-e-e-ee--ee-e-eeeeee------eeeeeeeee-eee--e--e--eee--e--eeeeeeee-ee-eeeeeeeeee-e--e-ee--eeeeeee-----eeeeeeeeeeee--e--eeeeeee--e--ee-eee--e-eeeeeee--e-eeeeeee-----eeee-ee--e--eeeeeee--e-eeeeeeee--e--eeeeeee------eeeeee--e-eeeeeeee-----eeeeee------eeeeeee-----eeee--e--eeeeeeee--e--eeeeeeee--e--ee-eeeeeeeee-ee
->sp|P55885|GAST_HORSE Gastrin OS=Equus caballus GN=GAST PE=1 SV=1
-eee---------------ee-e-eeeeeeee-ee-e-eeee-e-e-eee-eee-e-eee-ee-eeee-e---ee-eeeeee-eee-ee-----e--eeeeeeeeeee
->sp|P80398|GGN4_GLARU Gaegurin-4 OS=Glandirana rugosa GN=GGN4 PE=1 SV=2
-eee-ee----------------eeeeeeeeeeeeee-eee-eeeeeeeeeeeeeeeeeeeeeeeeeeeee-ee-eeeeee
->sp|Q8JIM3|GHRP_LITCT Growth hormone-releasing peptides OS=Lithobates catesbeiana PE=1 SV=1
-eeee-e----e---------------e-----eee-ee-eeeee-ee--eeeee-eeeee-e-ee-ee-eeee--e--e-ee-e-e-eee-eeee--e---e---------eeee-eeeeeeee-eee-ee--e------e-e---e--ee--ee-ee-ee-ee--ee-ee-eee-eeeee-ee-e-e-e--eee-eeeeeeeeeeeeee---e-eeeeee
->sp|Q76IQ4|GHRL_ONCMY Ghrelin OS=Oncorhynchus mykiss GN=ghrl PE=1 SV=1
-eeeeee---------------ee-e-e-e---eeeeeeeeeeeeeeee-e-e--ee--eeeeee-eeeeee-e-e---e-----eee--ee--e---e--ee--eeeeeee
->sp|Q9PUR1|GLUC1_PETMA Glucagon-1 OS=Petromyzon marinus GN=gcg1 PE=1 SV=1
-ee-----------------ee--eeeeeeeeeeeee-eeeee-eeee--ee--e--eee--ee--e---eeeeeeeeeee---e--------e--eee--ee--e--eeeeeeeee-eee--eee-eee--ee--e--ee---ee--e---eee-eeeee
->sp|P68259|GLUC_CHICK Glucagon OS=Gallus gallus GN=GCG PE=1 SV=1
-ee-e--------------e--eee-ee-eee-ee-e-eeeeeeee-ee-eeeeee-ee---ee-ee--eee--ee--e---eeeeeeeeeeeeeeeeeeeeee-ee---ee-ee-e-eeeeee-eeeeeeeeeeeeeeeeee-eeeeeeee-eee--eeee-eee--e-e--ee--e--ee---ee--e---eee-eeee-eee-e
->sp|P61516|HEPC1_DANRE Hepcidin-1 OS=Danio rerio GN=hamp1 PE=3 SV=1
-eee-e-----------------e--e-eee-eeeeeee-ee-eeeeeeee-eeeeeee------eeeee-e--e---e--eeee-----ee
->sp|Q801Y3|HEPC1_SALSA Hepcidin-1 OS=Salmo salar GN=hamp1 PE=3 SV=1
-eee---------------e-e--e-eeeeeeeeee-eee-eeeeeeeee-ee--ee-e-eeee--e--e---e--eeee-----ee
->sp|Q5U9D2|HEPC_CANFA Hepcidin OS=Canis familiaris GN=HAMP PE=3 SV=1
-ee--ee--------------eeeee-eeeeee-ee-eeeeeee-e-e-e-e-eeee-eeeeee--------e--eeee-ee--ee
->sp|A1Z0M0|HEPC_LARCR Hepcidin OS=Larimichthys crocea GN=hamp PE=1 SV=2
-eee-e----------e---eeeee-e-eeeee-eeeee-eeeeee-e--e---e-eeeeeeee-e-e---e--ee-ee-----ee
->sp|Q9GQV7|HPEP_AEDAE Head peptide OS=Aedes aegypti GN=HP-I PE=1 SV=1
-eee-----------------eeeeeee-eee-eeeeeeeeeee---ee--eeeeeeeeee-eee-eeeee-e--eeeeeeeeee-eee-eee-eeeeeeee-eeeeeeeee--ee-eeeeeeeeeeee
->sp|Q8ML70|IM10_DROME Immune-induced peptides OS=Drosophila melanogaster GN=IM10 PE=1 SV=2
-eee----------------eeeee-eeee------eeee------eee-e-e-ee-e-e-ee-eee-e---e-ee------eeeeeeeee----------e-eeee--ee-e--ee-eeeee---e-eee-eeeee-e-----eeeeee-e-e-ee---e--eee-----eeeeee-e-e-ee-----eeee------eeeeee-e-eeee--ee-ee----eee----e-eeeee---eee-e-----eee--ee--e-ee--ee-e
->sp|Q9VT50|INSL1_DROME Probable insulin-like peptide 1 OS=Drosophila melanogaster GN=Ilp1 PE=3 SV=1
-e--eee--e--e-----------------------e-eee-ee-e-e---ee-ee--e----------eeeeeeeeeeeeeeee-e-e-eeeee--ee-e-ee--------e-----------ee-eeeee---ee--ee--eeee--e--eee
->sp|Q9VT51|INSL2_DROME Probable insulin-like peptide 2 OS=Drosophila melanogaster GN=Ilp2 PE=2 SV=1
-eeee---------------eeee-eee---ee-ee--ee--ee--e--eeeee-e--eee-ee-e-----eeeeeeeee-ee--e----e-e-eee--e------eeeeeeee--ee--eee-e-ee-ee--ee-ee
->sp|Q9VT52|INSL3_DROME Probable insulin-like peptide 3 OS=Drosophila melanogaster GN=Ilp3 PE=2 SV=2
-ee-e-e-ee------------------e-e-e---ee-ee--ee---e---ee-ee--ee-eeee-ee-ee-e---e--eee-ee--e--ee-e---ee--ee--e-ee--e--eeeeee
->sp|Q7KUD5|INSL5_DROME Probable insulin-like peptide 5 OS=Drosophila melanogaster GN=Ilp5 PE=1 SV=2
-ee-e----------------e-ee--ee--ee--e--e---ee--e----ee------e-ee--ee-eeeeeee-ee-ee-eee-ee--ee--eee-e-ee-eee-ee
->sp|Q9VT53|INSL4_DROME Probable insulin-like peptide 4 OS=Drosophila melanogaster GN=Ilp4 PE=2 SV=1
-ee--e------------ee--ee-eeeee---e--ee--e--------e--eeeeeeeeee-ee--ee-ee-eee-eeeeeeee-eeeeeeeeeeee-eee-eeeee-ee--ee---e--eee-e-ee--ee-e
->sp|Q9W4Z4|INSL6_DROME Probable insulin-like peptide 6 OS=Drosophila melanogaster GN=Ilp6 PE=2 SV=1
-eeee-ee-e----------------e--ee--e-e-e-eeeeee-e---e--ee-------------ee--eee-eeeeeee-ee--ee--eeee-e-ee-ee--ee
->sp|Q9W4Q9|INSL7_DROME Probable insulin-like peptide 7 OS=Drosophila melanogaster GN=Ilp7 PE=2 SV=2
-eee---ee-e-------------e-ee-ee-eee-eee-----ee--eee-ee--eeee-ee--ee--e------ee---e--e--eeeeeeee---ee-eeeeee----eeee-ee--e--eeeeeeee--ee--eeee-e-ee--ee-eeeeeeeee
->sp|Q26492|ITPL_SCHGR Ion transport peptide-like OS=Schistocerca gregaria PE=2 SV=1
-eeeeeeeee-eeeee-e-e--------------------eeee-e-eee-e-ee----e-e-e-e-eee--ee-ee--ee--e--eeee--ee-eee--e-e--e---e--e-eee-ee-ee--e--e--eeee
->sp|E6ZBE2|KASSO_KASSE Kassorin-S OS=Kassina senegalensis PE=1 SV=1
-eee-ee---------------eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-eeeeeee-ee-----------eee
->sp|C5J893|KKX26_OPICY Potassium channel toxin kappa-KTx 2.6 OS=Opisthacanthus cayaporum PE=2 SV=1
-eeeee--------------ee--e---ee-eeee--e-eee-e---e---eeeeeeee-eee-ee
->sp|P0DJ34|KKX27_HETPE Potassium channel toxin kappa-KTx 2.7 OS=Heterometrus petersii PE=1 SV=1
-eeeee--------------ee--e---ee-eeee--e-eee-e---e---eeeeeeee-ee--ee
->sp|P08948|LITL_PHYSA [Leu8]-phyllolitorin OS=Phyllomedusa sauvagei PE=1 SV=3
-eee-e--e---------e-------e-e--ee-eee-ee-eeee--ee---e--e-eeeee-eeeeeeeeee-e-----eeee-e-eeee
->sp|Q25060|LWA_HYDEC LWamide neuropeptides OS=Hydractinia echinata PE=2 SV=1
-eeee-ee------------e-eeeeeeeeeeeeeee-eeeee-e-eeeeee-eeeeee-eee--ee-eeeeeeeee-eeeeeeeeeee--e-eeeeee-eeeeeeeee-e-ee-eeeeeeeeeeee-eeeeeeee-eeeee-ee--eeeee-eeeeeee-eeeeeeeee-e-ee-eeeeeeeee--eeeee-ee---eeeeeeeeeeee-e-eee-eeeee-eeeeeee-e-ee-e-eeee-e-e-eeeee-e----eeeeeee-eeeeee-ee-e-eeee-ee-e-ee-e-eeee-eeee-ee-e-ee-e-eeeeeeeee-ee--eeeeeeeeee-eeeee-eeeee-e--eeeee-ee-eeeee-eeeee-ee--e--eee-------e--eee--ee-eeeee-eeeeeeeeeeee
->sp|Q16992|LWA_ANTEL LWamide neuropeptides OS=Anthopleura elegantissima PE=1 SV=1
-ee--------ee-e-----eee-eeeeeeeee-eeee-ee-eee-e-ee-eeeee-ee-eeeeeeeeeeeee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-eeeeee-ee--e-ee-ee-ee-ee-ee-ee-eeeeeeeee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-eeeeee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee--e-ee-ee-ee-ee-eeeeeee-e-eeeeeee-e-ee-ee-ee-ee-eeee
->sp|Q58T69|M3H91_BOMMX Maximins 3/H9 type 1 OS=Bombina maxima PE=1 SV=1
-ee-e--------------eeeeeeeee-eeeee-eeee--ee-ee-eee-ee--ee--ee--ee--ee-eeeeeeeeeee--ee-ee--ee-ee-e-eee-eeeeeee-eeee--e--eee-ee----------ee-ee--eeee
->sp|Q09180|MATP2_SCHPO Pro-P-factor OS=Schizosaccharomyces pombe (strain 972 / ATCC 24843) GN=map2 PE=1 SV=1
-ee--------------ee-eeeeee--e-ee---e-ee-ee--ee-eeeeeee-eeeeeeeeeeee--e--e---e--e-eeeeeee-eeeeeeeeeeee--e--e---e--e-e-eeeee-eeeeeeeeeeee--e--e------e-eeeeeee-eee-eeeeeeeeeeee--e---------eee-e-ee-e--ee-ee
->sp|C9X4J0|NDB2_TITDI Bradykinin-potentiating peptide OS=Tityus discrepans PE=3 SV=1
-eeee-------------ee-ee-e-ee--ee--eee--ee-eee-ee--ee--ee--eeeee-eee-eeeeeeeeee
->sp|C5J897|NDB3S_OPICY Probable antimicrobial peptide Con10 OS=Opisthacanthus cayaporum PE=3 SV=1
-eeeeeee------------e--ee--e---e---e--e--eee-eeeeeeeeeeee-ee--ee--ee-eee-ee--eeee
->sp|Q718F4|NDB43_MESMA Peptide BmKb1 OS=Mesobuthus martensii PE=1 SV=1
-ee-e--------------e---------ee---------eeeeeee-eee-ee-ee-eeeeee-ee--ee-eee
->sp|L0GCV8|NDB4G_UROYA Antimicrobial peptide UyCT1 OS=Urodacus yaschenkoi PE=2 SV=1
-eee------------e---e-eee---e--ee-ee--eee--ee-ee--e--eee-ee-ee--eee-ee-eee--ee-e
->sp|P0DMF9|NDB4Q_CHATC Peptide Ctri9677 OS=Chaerilus tricostatus PE=3 SV=1
-eeeee------------ee-ee-e-e---ee-eee-eeeeeeee--e--eee--ee-ee--eee
->sp|G1FE62|NDB4A_CHATC Antimicrobial peptide ctriporin OS=Chaerilus tricostatus PE=2 SV=1
-eeee----------------e-------ee--e---e--eeeeeeee-eee-e--ee-eeeeee-ee--ee-eee
->sp|P0C8W1|NDB4S_HADGE Non-disulfide-bridged peptide 5.5 OS=Hadrurus gertschi PE=2 SV=1
-eeee-----------e--ee-ee--e---e--ee--eeee-ee-e-ee-ee--eeee-eee--e--ee-ee
->sp|L0GCJ6|NDB4_UROYA Putative antimicrobial peptide 7848 OS=Urodacus yaschenkoi PE=3 SV=1
-eeee-ee-eeeee--ee---ee-e-eeeeeee--eeeeeeeee-e-eeeeeeeeeee--eeee-eee-------eeeeeeee
->sp|Q09982|NLP32_CAEEL Neuropeptide-like protein 32 OS=Caenorhabditis elegans GN=nlp-32 PE=3 SV=1
-eee-------------e-e----eee-e-e--e-e-----eee-eeee-ee-ee---------------------------------------------ee-eee
->sp|P43443|NMB_XENLA Neuromedin-B OS=Xenopus laevis GN=nmb PE=2 SV=1
-eee---e-----e-----------------e--ee-ee-ee-eeee---------ee--eeeeee-eee-e-ee--ee--ee-----eeeeee-eeeee-ee--e--ee--ee--eeeee
->sp|P81872|NMU_LITCE Neuromedin-U OS=Litoria caerulea GN=nmu PE=1 SV=2
-eee--eeeeeee-ee---e-ee-----------------ee-e-eeee-eeee--e--ee-ee---e--eeeeee--e--ee---------eeeeeeeeee-ee------eeeeeeeee-e--------e--ee--ee-eee-e-eee-e-ee----e-------eeeeeeeeee
->sp|P86442|NPF_LOCMI Neuropeptide F OS=Locusta migratoria PE=1 SV=1
-eee--------------------e-e-eeeeeee-ee--e--e--ee-ee---e--eee-eeeee-eeeeeee--eeeee-ee--ee--eee
->sp|Q9BP85|O1611_CONAE Conotoxin ArMKLT2-0321 OS=Conus arenatus PE=2 SV=1
-ee---------------e----eeeeeeee-e--e--e--ee-eeeeee-eeeeee-eeee--ee-e-eeeeee---eee
->sp|Q9BP91|O165_CONAE Conotoxin ArMKLT2-022 OS=Conus arenatus PE=2 SV=1
-ee---------------ee--eeeeee-ee--eee-eee--eeeeeeee--ee------eeee--ee--------ee
->sp|Q9BPC1|O262_CONTS Conotoxin TsMEKL-P012 OS=Conus tessulatus PE=2 SV=1
-eee--------------e---eeeeeeeeeeee-e--ee-ee-eee-eeee-ee-----eeeee--eee-eee--eee
->sp|Q9BP62|O3619_CONVE Conotoxin VnMSGL-0121 OS=Conus ventricosus PE=2 SV=1
-eee---------------eeeeeeeeee-eeee--e-eeeee-eee--eee-ee--eeeeee---e-eeee-e-----ee
->sp|Q9NL82|ORCKB_PROCL Orcokinin peptides type B OS=Procambarus clarkii PE=1 SV=1
-ee-------------e--ee-------eeeeee-eeee-e-eeee-ee--ee-e--e-ee---ee-eeee-e-ee---ee-e-ee-e-ee---ee-eeee---ee---ee-eee----ee---e--eee----ee---ee-eeee---eee--ee-e-ee---ee---ee-e-ee---ee---ee-eeee-e-eee-e-eeeeee-ee---ee-eeee-e-ee---ee-eee--e-eeee-ee-eee---ee-eee----eeeeee
->sp|P0DKU2|PA2_PANIM Phospholipase A2 phospholipin OS=Pandinus imperator PE=1 SV=1
-eee--eeeeeeeee--------e---eeee-ee-ee--e-e--e--ee--e-ee-eeeeee-e-e-eee------e--ee--e--ee-eeeeeeeeeee--e----------e-e--e-e-eeeeeee-ee-eee-ee-eee-ee
->sp|Q7PTL2|PBAN_ANOGA PBAN-type neuropeptides OS=Anopheles gambiae GN=PBAN PE=3 SV=2
-eee--------------ee--eee-eeeeee-ee-eeeeeee-ee-e-eeeeeeeeeee-ee-eee--------e--ee---ee--ee--ee-eee-----eee-ee--ee--ee----------eeeeeee-----e-ee-eeeeeeeeeeee-e--ee-eee-e--ee-ee--eee-e---e-ee
->sp|A8CL69|PBAN_APIME PBAN-type neuropeptides OS=Apis mellifera GN=PBAN PE=1 SV=1
-ee------e-eee-e------------------e-e-ee-ee-eeeee-eeeee---ee-e--ee-eeeee-------e--eeeeeeeeee-eee-ee--e--ee-e------eeeeee-e-e---e--eeeeee--e--eeeeeeeeeeee---------e-eee-ee-e-ee-eee-ee--eeeeee-eeeee
->sp|P21259|PRFA_POLPE Pol-RFamide neuropeptides OS=Polyorchis penicillatus PE=1 SV=3
-ee--------eee-ee-eeeeeeeeeee-eeeeeeeeeeeeeeeeeeeeeeeee-eee-eeeeee--eee---eeeee--ee----eeeeee-eee--eeeeee--eee---eeeee--eee---eeeeee-eee--eeeeee--ee----eeeeeeeeee-eeeeeeee-eee-e-eeeee--eee--eeeeeee-eeeeeeeeeeee-eee--eeeeeee-eee--eeeeeeee-ee-eeeeeeeeeeeeeeeeeeee-eeeeeeeeeeeeeeeeeeeee--eee
->sp|P31394|PROC_RAT Vitamin K-dependent protein C OS=Rattus norvegicus GN=Proc PE=2 SV=1
-eee----------------e-eee----eeee-ee--eeee-ee--ee-eeee-eee-eeee-e-e---e--eeeee-ee--ee-eeeee-eeeeee-e-eee-eeeee-eee-ee---e-eee-eeee-e-e---ee---eeee------eeeee-e----ee-e--eeeee-eeeee-e-----e-eeee-ee-eee-e-eee-eeee----e-ee-ee-e---------eeeee-------ee-------e--eeeee---------eeee-ee-ee-e-eee-e-ee--eee----------eee-eeee--------ee---ee--eee-e-e-----eeeeeeeeeeeeeee-----e----eeee-eee-eee--e------eeeee----e---------e-ee----------e-ee-eee---------e--e--eeeeeeeeeeeeeeee
->sp|P85799|PROH2_APIME Prohormone-2 OS=Apis mellifera PE=1 SV=1
-ee-e-------------------ee--ee-ee-eeeeeee-ee--e--e--eeeee-eeeeeeee-eee-ee---eeeeeee-ee--eeeeeeeeeeeeee-----eeee-eee-e-eee--ee-ee-e------eeee-ee-eee--eeeeeee-e--e-e---eeeeeee-eeeeeee-e-eeeee-eee-e-e-e---------eeeeeeee--e--eee-eeeeeeee-eeeeeeee-----------e---e-e---ee------e---e--ee-eee-eee-ee-e-eeee-e-e-------e-eee-----eeeeeeeee-ee------eeeeee-e-e---ee
->sp|P82003|PTSP_BOMMO Prothoracicostatic peptide OS=Bombyx mori PE=1 SV=2
-ee---------------e--eeeeeeee-eeeee-eeeeeeeee-ee-eeee-ee-eee-eeeeeee--e--ee-eeee--ee-ee-eeeee-e--ee-eeee--e--e--e-eeeeee-eeeeeeee-eeeeeee--e--e--e-ee--e--ee-eeeee-e--e-ee-eee-e--e--e-ee--e--e--eeee-eee-ee-eeee-eeeeeeee-ee-ee-ee--ee-eeeeeee-eeeeeee-ee-e----eeeeeee--eeeeeeeeee
->sp|A5LHG2|ADM5_PIG ADM5 OS=Sus scrofa GN=ADM5 PE=1 SV=1
-ee-------------eeeeeeeeeeeeee-eeeee------e-eeee-ee---------eee-eeeeeeeeee-eeeee-eeeeeeeeeeeeeeeeeeeee-eee-ee
->sp|Q868F8|ALLS_SPOFR Allatostatin OS=Spodoptera frugiperda GN=ast PE=2 SV=1
-eeee--------------------ee-eeeeeeee-ee-----eeee-e-e-e-e----e--ee---e-e-eee-ee-eee-ee-eeee---e--eee--ee-eeeeee-e-ee-e-ee-e-eee
->sp|P0DMI8|AMP2_HETSP Antimicrobial peptide HsAp2 OS=Heterometrus spinifer PE=3 SV=1
-eeee------------e--ee-eeee-e--ee-eeeeeeeeeeee-ee-----ee--e--eee-eeeee-eeee
->sp|Q8AXR3|ANFC1_ONCMY C-type natriuretic peptide 1 OS=Oncorhynchus mykiss GN=cnp-1 PE=2 SV=1
-ee-------------e-eeee-ee-eeeee--e--ee--ee-ee-eeee-ee-eeeeeeeeeee-eee-e--eeee--eeeeeee-------ee--eeeee-eeeeeee--ee-----e-ee--e-eeeee
->sp|Q800I8|ANFC3_ORYLA C-type natriuretic peptide 3 OS=Oryzias latipes GN=cnp-3 PE=2 SV=1
-ee-e-------------e-eeeee-ee-ee--eeeeee-eeeeeee-eeeeeeee-eeeee-eeeeee---e--ee--ee-eeeeeeeeeee-------e-ee--e-eeeee
->sp|Q805D5|ANFC2_TAKRU C-type natriuretic peptide 2 OS=Takifugu rubripes GN=cnp-2 PE=2 SV=1
-eee-eee-----------e-eeeeeeeeeeee--ee---ee---------eeee--ee-eeeee-eeeeeee-ee-e---eeeee--e---e--ee-ee-eeeeee---e-e-----e-ee----eeeee
->sp|Q800I7|ANFC4_ORYLA C-type natriuretic peptide 4 OS=Oryzias latipes GN=cnp-4 PE=2 SV=1
-ee---------------eeeeeeeeeeeeee-eee-e-ee--e-eeeeeeeeeeeeeee--e--ee-eee-e------e--eeeeeeeeeee-eeeeeeeeee-------ee---e--eee
->sp|Q805D4|ANFC3_TAKRU C-type natriuretic peptide 3 OS=Takifugu rubripes GN=cnp-3 PE=2 SV=1
-eeee-e-----------e-e-eeeee-ee-ee--eeeeeeeeeeeeeeeeeeeeeeeeeee-eeeeee-eeeeeeeee-eeeeeeeeeeeeeeeee---eee-ee-e---eeee---e--ee--e--eee-eeeeeee-e-----e-ee--e-eeeee
->sp|Q76KW6|ANFC_ACITR C-type natriuretic peptide OS=Acipenser transmontanus GN=cnp PE=2 SV=1
-ee-eeeeeeeeeee---------------eeeee-eeeeeeee--e---e---e--ee-eeeeeeeeeeee-eee-eee-ee--eeeee---eee-eeeeeeeeeeeee--ee--eeee--eee-ee-eeee-----e-ee--e-eeeee
->sp|P20968|ANFC_LITCT C-type natriuretic peptide 1 OS=Lithobates catesbeiana PE=1 SV=2
-eeee------------------e-eeeee-ee--e--eee-eee-eeee-eeee-eeee-ee-eee-e-eeeeeeeeee-eeeee---e--ee--ee-ee-eeeeeeee-e-----e-ee--e-eeeee
->sp|P18909|ANF_LITCT Natriuretic peptides A OS=Lithobates catesbeiana PE=1 SV=2
-eee----------------e-e-----ee-e-ee-ee-ee--ee-eee-eeeeeeeeeee-eeeeeeeeeeeeeeee-eee-eeeeeeee-eeeeee-eeee-e-eee-ee--e--ee-eee-e---e--ee--ee------eee
->sp|Q805D8|ANF_TAKRU Natriuretic peptides A OS=Takifugu rubripes GN=nppa PE=2 SV=1
-ee-------------e---e-e---e-ee-ee-ee-ee--ee-ee--eeeeeeeeeeeeee-e-eeeeeeeeee-eeeeeeeeee--eeeee-eeeeee-eee-ee--e--eee---------ee--e------eeeee
->sp|Q5SC60|ANN1_AREMA Arenicin-1 OS=Arenicola marina PE=1 SV=1
-eeeeee--------------ee-e-ee--e-e-ee-eeeeeeeeee-ee-e-eeee-e-eeeeeee-----eeee-e--------ee-------ee-e---------ee-ee-ee------eeeeeee-ee-eee-e-ee-ee-e-ee-e---ee-eee-eeee-----e-eeeeeeeeeeee---------ee----ee-e
->sp|P80111|ANTR_LITCT Gastrin/cholecystokinin-like peptide OS=Lithobates catesbeiana GN=GAST PE=1 SV=2
-eeee-----------------ee-eeeeeeeeeeeeeeeee---ee-eee-eee-e-e---e--ee--e---eeee---e---ee-ee--e--ee-ee-eee
->sp|Q25461|ARNP_MYTED APGW-amide-related neuropeptide OS=Mytilus edulis PE=1 SV=1
-eee--------------------eee-eeeeeeeeeeeeeeeeeeee-ee-ee--e---eeee-ee-eeeee---e--e--eeeee-eeeeee--eeeee-eeeeeeeee--e--ee--ee-e--ee--eeee---e--eeeeeeeeee---e--ee--ee-eee--ee-ee------e--ee-ee--ee-ee-ee
->sp|Q0MWV8|AURE_AURAU Aurelin OS=Aurelia aurita PE=1 SV=1
-ee--e-----------------eeeee-eee-eeee-e--eeeeeeeeee-eeee-eeeeee-eeeeee-ee-eee-ee--eee
->sp|E7EKC4|B1HN1_ODOHA Brevinin-1HN1 OS=Odorrana hainanensis PE=1 SV=1
-eee-ee-----------e-e--eeeeeeeeeeeeeeeeeee-e--ee--e-------e--ee---e-eeee
->sp|Q9PW56|BNP2_BOTJA Bradykinin-potentiating and C-type natriuretic peptides OS=Bothrops jararaca PE=1 SV=2
-ee--e--e-------------eeee-ee--eee-eeeeee-ee-e--e--eee-eeeeee-ee-e-ee-eeeeeeeeeee-e--e--eeeeeeeeeeee-e-ee--eee-eeee-eeee-ee-eeeeee-e--eeee-eee--e---ee-eee-ee-e--e---eeeeeeeee-e--eeeeeeee--e------e--ee-eee-ee--ee-ee----e----e-e----------e-eee-eeee-e-----e-ee--e-e-eee
->sp|P86994|BOMB_RANSH Bombesin OS=Rana shuchinae PE=1 SV=1
-ee--e--ee----------------ee---e--ee-ee-ee-ee-eee-eee---------e--eee
->sp|P20481|BUCC_APLCA Buccalin OS=Aplysia californica PE=1 SV=2
-eeeee--------------------ee-eeeeeee-e-e--e--eeeeee-e----ee-eee-e--e-e-----eeeee-e-e-ee--eeeee-e-e-ee---ee-e-e--e-ee-eee-ee---e-e-eeeee-e----e--eeeee-e---eee-eeeee-e-------eeeee-e-------eee-eee---e--eeeeee-e-------eeeee-e-------eeeee-e-------ee--ee----ee--e---e----ee-eee-e-e----e--eee-e-----ee--eee-e---ee--eeeee-e-------eeeee-e-------eeeeeee-e-e----eeeeee-------eeeee-e------eeeeeeee----e-eeeeeeee------eeeeee-e----e-eeeeeeee------eeeeee------e-eeeeee-e---ee-eeeeee-e---ee-eeeeeeeeee-ee-eeeeeeeeeeeeeeeee
->sp|P0CAQ5|CA11B_CONAH Alpha-conotoxin-like Ac1.1b OS=Conus achatinus PE=2 SV=1
-ee-e----------------e-eeeeeeeeeeee-eeeeee-ee-eee-e---ee--ee-e-ee
->sp|P0CB13|CA91_CONAJ Alpha-conotoxin-like 291 OS=Conus ammiralis PE=2 SV=1
-e-e---------e--eeeeeee--e-eee-eeeee--e-eeeeee--eeee-eeeeee--eeee
->sp|P05226|CAER4_XENBO Preprocaerulein type-4 OS=Xenopus borealis PE=1 SV=1
-eee-------------ee-eeee-eeeeeeee-e---e---e--e---e--e---ee-eeeee-eeee---ee-ee-e------eeeeeee-eeee-e---e--ee--e--ee--ee---e-ee-eeeeeeee--eee-eeee--e--eee-eee------e-eeeeeee-eeee-e---e--ee--e---e---ee-eeeeeeeeeeeeee-eeeeee-e------eeeeeee
->sp|U5KJJ0|CAMP3_CRODC Cathelicidin-related peptide isoform 3 OS=Crotalus durissus cascavella PE=2 SV=1
-eee-------------------eee-e-ee--ee--e---eeeeee------e-e-eeeeeeeeeeeee-e-e-ee-e-eeeeeeeeee-e-eeeee-ee-e-e-eeeeeee------eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-ee--ee-ee--ee-eee-eee-ee--ee-e-----eee
->sp|E3PQQ8|CCAP_CONVL ConoCAP OS=Conus villepinii GN=conoCAP PE=1 SV=1
-eee--e-----------e--eeeeeee--ee-e-eeeeeee-eeee-eee------e----eeeeeeee-eeeeee--e--eeee--ee----eeeee-eee-ee-eeeeeeeeeee-ee--e--ee--eeeeee-ee--eeeeeee-eeeeeeeeee--ee---------eeeee----e--ee-ee--eeeeeeee--ee-eeee
->sp|Q01301|CCG4_NEUCR Clock-controlled pheromone ccg-4 OS=Neurospora crassa (strain ATCC 24698 / 74-OR23-1A / CBS 708.71 / DSM 1257 / FGSC 987) GN=ccg-4 PE=2 SV=2
-ee--------------e---eeeeeeeee--eee-e---e--e--e--ee--ee-ee-eeeee-ee-e-ee-ee--ee--e-----eeeeee--ee-e-eee-eeeeeeeeeeeeeeeee-eeeee----e-----eeeeeeee----e-e---eeeeeeeeeee--e-e-----eeeeeeeeeeeeeeeeee--e-ee------eee-e---e--ee-eeeee-e-eeee-ee-eeeeeeeee-------eeee--e-eeeee---e-eeee-ee-ee--e---e--ee--ee-eeee
->sp|Q9PU41|CCKN_CHICK Cholecystokinin OS=Gallus gallus GN=CCK PE=1 SV=1
-ee------------------eee-eeeeeeeeeee-eeeeeeeeee-ee-ee-ee-eeeeeeeeeeee-ee-ee---e--ee-ee-ee-e----e-e-ee-e-eee-ee-e--------ee--ee-e-ee
->sp|P0C8W0|CGA_CONDI Conotoxin di16a OS=Conus distans PE=1 SV=1
-eee-----------e-eeeeeeeeeee-eeeee-ee-e-ee--ee-eeee-eeeee-eee--eeeeee---eee-e-e-eeeeeee-e-eeeeee-ee
->sp|D6C4K5|CI16F_CONCL Conotoxin Cl6.15 OS=Conus californicus PE=3 SV=1
-ee---e------------eee-eeeeeeeeee-eee-eeeeeee-eee-eee-e---e----e----------e-ee
->sp|D6C4I0|CI1B2_CONCL Conotoxin Cl11.2 OS=Conus californicus PE=3 SV=1
-ee---------------e-e-eeeee-ee-eee--eee--eee--ee-eee-eee-e--ee---e-e-eeeee-ee-eee
->sp|D6C4H9|CI1B1_CONCL Conotoxin Cl11.1 OS=Conus californicus PE=3 SV=1
-ee--------------eeeeeeeeee--ee-e-ee-eee-ee-eee-ee--ee-ee-ee--eee--ee---ee-ee-e
->sp|C7DQB8|CI2B5_CONEM Conotoxin Em11.5 OS=Conus emaciatus PE=2 SV=1
-ee-e-ee-----------e--e----ee--ee-e---ee----e----e-e-eee-eee-eeeeeeee
->sp|C7DQX8|CI2B3_CONVT Conotoxin Vi11.3 OS=Conus vitulinus PE=2 SV=1
-ee-e-ee----------------ee-e-eeee---e---e--eee--eee-ee--eeeeeeee-e---e--eee
->sp|D2DGD7|CI3B2_CONPL Conotoxin Pu11.2 OS=Conus pulicarius PE=2 SV=1
-ee---------------eeeeeeeeeeeee-ee-eee--eee-ee-eeeeee-eee-e----------e--e------eee
->sp|P16240|CION_CIOIN Cionin OS=Ciona intestinalis PE=1 SV=2
-eeee-------------e-ee-eeee--ee-eeee-eeeee-eeee-eee-e--e---e--ee-eee--ee-eeeeeeeee-e--e---e-ee-eeeeeee--ee--e------e--ee--ee-eeee
->sp|C7DQB9|CIXB3_CONEB Conotoxin Eb11.3 OS=Conus eburneus PE=2 SV=1
-ee-e-------------eee-ee--e-eeee---e------e--e---e-eeeee-eeee--ee-ee--eeeee-ee--ee
->sp|D6C4I7|CLE1A_CONCL Conotoxin Cl14.1a OS=Conus californicus PE=3 SV=1
-ee-------------e-eee-e-e-eeeee---e-eee-ee--ee--eeeee-eee-eeee-eeeee
->sp|D6C4J3|CLE4_CONCL Conotoxin Cl14.4 OS=Conus californicus PE=3 SV=1
-ee------------e--ee-e-eeee-eee-ee--eee-eee-eee-eeeee-eee-ee
->sp|Q9BPJ4|CM236_CONTE Conotoxin TxMMSK-06 OS=Conus textile PE=2 SV=1
-eeee------------e-e--e-eeeeeeee--ee-eee-eeee-e--e--eeeeeeee-e-eeee-eeeeeee--ee-------ee--e
->sp|Q9BPH6|CM336_CONVE Conotoxin VnMLKM-02 OS=Conus ventricosus PE=2 SV=1
-eee------------e----eeeeeee-ee--eeeee-eeeee-e---e--eeee--eee--eee--ee-e
->sp|P60207|CM3A_CONSE Mu-conotoxin SmIIIA (Fragment) OS=Conus stercusmuscarum PE=2 SV=1
+>P0DMI8
+eeee--eee-e-eeeeeeeeeeee-ee--e--ee--e--eee-eeeee-eeee
+>Q8AYR6
+eeeeeeee--e--ee--ee-ee--e-ee-ee--eeeeeeeee-eee-eeee-ee-ee-eeeeee---e--ee--eeeeeeeeeeeeee-ee-----e-ee--e-eeeee
+>A7WNV3
+eeeeeeeeeeeeeeeeee-e--ee--e------ee--ee---e--eee
+>B3VZU0
+eeeeeeeeeeeeee-eeeeee--ee--e---ee-ee------eee
+>E7EKE0
+eeeeeeeeeeee--eee-eee--ee-ee---e-eee--ee--ee-e-e-eeee
+>Q2UXW0
+eeeeeeeeeeeeeeeee-e-e-eee--ee------ee-ee---e-eeee
+>P0CAQ4
+eeeeeeeeeeeee-eeeeee--e-eee-e---ee-eee-e-ee
+>P05222
+eeeee-e---e---e--ee--e---e--ee-eeeeeeeeeee-eeeeee-eee--e-------e--ee--e-------e-eeeeeeeeeee-eeeeee-eeee-e-------e--ee--e---ee-eeeeeeeeeeeeee-eeeeee-e------eeeeeee
+>B6D434
+eeeee-e-ee--ee--e---eeeeee------e-e-eeeeeeeeeeeee-e-e-ee-e-eeeeeeeeee-e-eeeee-ee------eeeeee--e---eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-ee--ee-ee--ee-eee-ee--ee--ee-ee--eeeee
+>Q01301
+eeeeeeeee-eee--eeeee---e--e--e---e--eeeee-eee-eeeee--ee-ee--ee--e------ee-ee--ee-e-eeee-eeeeeeeeeeeeeeeeeeeeee--eee-ee--eeeeeeee----e-----eeeeeeeeeee--e-e-e---eeee-eee-eeeeeeeee--eeee------eee-e---e--ee-eeeee---eeee-ee-eee-eee-e-------eeee--eeeeeeee----eeee-ee-ee--e---e--ee--ee-eeee
+>P0C8W0
+eeeeeeee-eeeee-ee-e-ee--ee-eeee-eeeee-eee--eeeeee---eee-e-e-eeeeeee-e-eeeeee-ee
+>D6C4I0
+eeeeeee-ee-eee--eee--eee--ee-eee-eee-e--ee---e-e-eeeee-ee-eee
+>C7DQB7
+ee--eee----ee----------e-ee--e-e-eeeeeeee
+>C7DQB9
+eee-eeee---e------ee-e---e-eeeee-eeee--ee-ee--eeeee-ee--ee
+>D6C4J2
+eeeee-eee-eeee-eeeee
+>D6C4I9
+ee-e-eeeee---e-eee-ee--ee--eeeee-eee-eeee-eeeee
+>Q9BPJ1
+eeeeeeeeeeee-ee-eee-eeeeee--ee-ee--ee---e-ee-ee
+>Q9BPI6
+eeeeeeeeee-ee-eeee-eeeeeee-ee-ee--ee------e--ee
+>P0C1N7
+eeeeeeeeeee--ee-eeeeeee-eeeee--e-e-eee-e----e
+>C1J5M7
+eeeeeeeeeeeee-eee-eeeeee--eee--ee--eeeeeeee--e--eee-e--eee
+>P0C7I1
+eeeeeeeeeeee-ee-eee-eeeeee--eee-ee--eeeee--eee-eee---ee
+>Q5K0B9
+eeeeee-ee-ee-eeeeeeeee-ee-eee----ee-e--------e---------e-e
+>Q3YEF1
+eeeeeeee---eeeee--e-eee-ee--ee-eeee--e-e---------e--------------eee
+>Q9XZK9
+eeeeee--ee---e--ee-eeeeeee-eee-eeeeee-eeeee--------e-e
+>P0C8V5
+eeeeee-ee--ee-eee-eeee-ee-eeeee--ee------eee----e---e------ee
+>P0CB09
+eeeeee--e--ee-eee-eeee-ee-eee--eeeee--e--eee--ee-----e-e
+>P58913
+eeeeee-ee--ee-eee-eeee-ee-eeee---ee------ee-----e---e---eee
+>P69762
+eeeeee-ee--ee-eee-eeeeeee-eee--e--ee-----ee--ee--ee-e-e
+>Q9UA72
+eeeeeeeeeeee-e-eeeeee--ee-eeeee---eeee--e-e-eeee-e
+>Q3YEF4
+eeeeeeeee--e--eeeeeeeeeeeee-ee---e-eee-e--e-e-ee--eeee
+>Q3YEF9
+eeeeeeeeeeeee-e--eeeee-ee--eee-ee-------e-e--eee-ee---eee
+>G1AS83
+eeeeeeeeee-ee-eeeeeeeeee-ee--eeeeee-ee--e----e-eeee-ee
+>P0CY65
+eeeeeeeeeeee-eeeee-eeeeeee-eeeeee---ee-e---e-eeeeee-ee
+>D2Y4A1
+eeeeeeee--eeeee-e-ee------ee----e-e
+>B2KPN7
+eeeeeee-eee-eeeeee-eeeeee-ee--eeee-e-eeeeeee---eee
+>Q17AN4
+ee-e-eee-eeeeeeeeeeeeeeee--ee-e-e-eeeeee-ee--ee--eee-e-e--e---ee-ee--ee--ee-ee-------e-e--ee-eeee-e-eeeeeeee--ee--eee
+>A0NDK8
+ee-e-eee-eeeeeee-eeeeeeeeeeee-ee-e-ee--ee--eeee-ee-eeeeee--ee--eee-e-e-----ee-eeeee--e--eee-ee-eee------------eeeee------e-eeeee-eee-e-eeee-ee-eeeeeeee
+>Q9BH75
+eeeeeee-e----e--ee-ee--e---e-ee--eee---eee
+>Q9BPD6
+eeeeee-eee--eeeeeeee-eeeee--------e---e--eeeee
+>Q9BH86
+eeeeeee-e--e-ee--ee--ee-eee-e--ee-e--eee
+>Q3YEH6
+eeeeeee-e-ee-eee-ee--e--eeeee--eeeee-ee
+>Q1A3R0
+eeeeeee-e-ee-eee-ee--ee--eeee--eee----ee
+>P0C641
+eeeeeeeeeeee-ee-eee--eee-eee--eee------ee
+>Q3YEH2
+eeeeeee-eeee--ee-ee--e--eeeee--eee---eeee
+>P69766
+eeeeeeee-e----eee-ee--ee-eeee----eee---e
+>Q9BPH2
+eeeeee-ee-eeeeee-ee----eee----ee---eee
+>O17512
+eeeeee----eee-ee--ee--ee-ee-ee---e--ee--ee-eeeee
+>P0DJC4
+eeeeeee-eeee-eee-eee-e-ee-ee---ee----eee
+>B5A9S9
+eeeeeeeeeeee-eeeeeee-eee--e-e-----eee
+>A4H222
+eeeeeee-eeeeee-eee-eeee--ee--ee------eeeeeeeeeeeeee-e-ee-eee--------e---ee-e-eeeeeeeee-eee-eee-eeee-eeee
+>Q8N687
+eee-ee--eee-ee-eee--eeee-e---eee-e---e-eeeee-ee-eeee-ee-e---e-ee-ee--e----e-e-e---eeeeeeeeeeeeee-ee-eee--eeeeee-ee-eeee-e-ee-eeeeee--eee
+>Q9BYW3
+ee--ee--ee-e--eee-eeee-e-ee---e--eeee---e-eeeee------eee-eee---e-e--ee----ee---ee-eeeeeeeee
+>Q9BEE3
+ee--ee--ee-e--eee-eeee-e-ee------eeee---e-eeeee------eeeeeee-------------------e---eee---e--e--e-e-eeee
+>Q9H1M4
+eee--ee--e-e-ee--e-ee-ee---ee-e----e-ee-ee-ee-eeeeeee-ee---e-eeeee--ee-ee-eeeee
+>P0C8A2
+eeeeee-ee--eeeee-eeeeee-------e--eeeeeeeeeee-----e-e-ee-eeeeee-eeee-e-e---eeee
+>P0C8A1
+eeeeeeeeeee-eeee-ee-ee---------eeeeeeeeeee-ee---e-e---e--ee-eee-eeeeee-e---eeee
+>Q17UZ0
+eeeeeeeeeeeeeeeeeeeeeee--e---e-ee--ee--ee-ee-eeeeeeeeeeeee
+>O93222
+eeeeeeeeeeeeeeeeeeeeeee--------------e---e--e-eeeee
+>O93224
+eeeeeeeeeeeeeeeeeeeeee---e--e---e---e---e--ee-eeee
+>O93454
+eeeeeeeeeeeeeeeeeeeeeeee---e--ee------e-----eeeee
+>O93453
+eeeeeeeeeeeeeeeeeeeeeee--ee-ee-eee-eeeeeeeeeee--ee--eeeeee
+>Q6XMH8
+eeeeeeeeeeeeeeeeee-e-eee-ee-eee-ee---eeeeeeee
+>Q19165
+eeeee-eee-ee-ee---e--eeeeeee-e-ee-ee---e--ee--eeeeee--eeee-e-ee-ee---e--eeeeeeeee-e-ee-e-------eeeeeeeeeeeeeeeeee-e--e------e--eeeeeeeee-e-eee-----e-ee
+>Q9XVX1
+eeeeeeeee-e-e--eeeee-e-e--eeeee--e--eeeeee-ee-eee-eee-e-eee-e--ee-eee
+>O44185
+eeeee-e---ee-eeeee--e--eeeeeeeeeeeeeeee-----ee-eeeee-----eeeeeee-----ee--eeee-----e-ee-ee-----ee-eeeee-----e-eeeee-----eeee---------eeee--e-eee
+>O17058
+ee-eee-ee-eee---e--e-ee-eeee-eeeee---e--eeee
+>P80398
+eeeeeeeeeeeee-eeee-eeeeeeeeeeeeeeeeeeeeeeeeeeeee-ee-eeeeee
+>P85070
+eeeeeeeeeeeeeee-ee-ee-ee-------eeeee-----eeee
+>P61516
+eee-ee-eeeeeeeeee-eeeee-eeeeeeeee-----eeeeeee-e--e---e--eeee-e---ee
+>Q801Y3
+eeeee-eeeeeee-eeeeeeeeeeeeee-e-eee-e-eeee--e--e---e--eeee-----ee
+>A1Z0M0
+eeeeeeee-eee----eee-e-ee-e-e---eeeeeeeeee-e---e--eeeee-----ee
+>Q9VT52
+eee---ee-ee--ee---e---ee-eee-eeeeeee-ee-ee-e---e--eee-e---e--ee-e---ee--ee--e-ee--e--eeeeee
+>Q7KUD5
+eee-ee--ee--e--e---ee-------ee------e-ee--ee-eeeeeee-ee-ee-eee-ee--ee--eee-e-ee-eee-ee
+>Q9W4Z4
+eeeeeee-eeee---eee-ee--ee---e-e-e-ee--eeeeeeeeeee-ee-ee---eeee-e-ee--ee-ee
+>K7ZGS2
+eeeeeeeeeeeeeeee-e-e--ee--e---ee------eee
+>E4Z7G0
+eeeeeeeeeeeeeeeeeeeeeeeeeeeee--ee--ee-e-eee
+>C5J893
+eeeeeeee-e-eee-ee--e---eeeee-ee-eee-ee
+>Q16998
+eeeeeeee-ee-eeeee--e-ee-eeeee-ee-ee-ee-ee-ee-ee-ee-ee-eeeee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-eeeeeee-ee-ee-ee-ee-ee-ee-ee-ee-eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+>Q58T45
+eeeeeeeee-eeee-eeee--ee-ee-ee---e--ee--ee--ee--e--eeeeeeeeeee--ee-ee--ee-ee-e-eee-eeeeeee-eeee--e--eee-ee----------e--ee--eeee
+>C5J897
+eee---e--ee--ee--eeeeeeeeeeeeeee-ee--ee-eee-eee-ee--eeee
+>Q718F4
+ee----ee---------eeeeeee-eee-eeeee-eeeeee-ee--ee-eee
+>P0DJO3
+eee----ee-ee---ee--ee-ee-ee-e-ee--eee-ee---e--ee--e
+>P0DJ02
+e-e---ee-ee--eeee-ee-ee-eee-eee-eee--e--ee-ee
+>L0GCV8
+eee-e--ee-ee--eeee-ee-ee--e--eee-ee-ee--eee-ee-eee--ee-e
+>I0DEB3
+eee---e--ee--eeee-ee-ee-eee-eee-eee--e--ee-ee
+>P0C8W1
+e-e---e--ee--eeee-ee-e-ee-ee--eeee-eee--e--ee-ee
+>P0DJ03
+e-e---e--ee--eeee-ee-e-ee-ee--eee-eee--e--ee-ee
+>F1CJ89
+eeee--ee--eeee-ee-eeee
+>Q9U662
+eeeeeee--e---e-eee-eeeeeee-eee--ee--e-eeeee--ee----e-e
+>Q9U657
+eeeee---e--ee-eee-eeeeeee-eeeee-eee-e--e-e----e---e---------e
+>Q9BP77
+eeeeeeee-eeeee-eeeee-e--ee-eee-e--eeeeee----e--eeeee------eeee
+>Q9BPC6
+eeeeeeeee-eee-e---eeeee-ee--e-e-ee--e--eeeee--ee--e-e-eee
+>Q9BPC3
+eeeeeeeeeeeee-e--eeee-eeeeee-e---------eeeeee---e---e---ee
+>Q9BP62
+eeeeeeeeeeeee--e-eeeee-eee--eee-ee--eeeeee---e-eeee-e-----ee
+>Q9BP65
+eeeeeeeeeeee-e-eeeee-eee-eee-eee-eeeeee--eeeeeee-eee-ee
+>B6DT16
+ee------e--eeee-ee-eeee-ee-eeeeee-ee-eeee-ee-eee--ee-eee--e--eeeeeeee
+>P0DKU2
+e---e--e---eeee-ee-ee--eee--e--ee-ee-ee-e-eeee-e-e-ee-------e--ee--e--ee-eeeeeeeeeee--e----------e-e--e-e-eee-eee-ee-eee-ee-eee-ee
+>Q16N80
+eeeeeeeeee-ee--eeeee-ee-eee--------e--ee---ee--ee--ee-eee-----eee-ee--ee--ee----------e-eeeee------e-ee-eeeeeeeeeeeeee-e--ee-eee-e--ee-eee-e-e-eee-ee
+>Q0VZ39
+eeeeeeeeeeeeeeeeeeeeeeee--e--ee--ee--e--eeee
+>P85882
+eeeeeeeeeeeeeeeeeeeeeeee--e--ee--e--ee--eeee
+>A8B5P7
+eeeeeeeeeeeee-eeee-ee---e--eeee-ee--ee---e-eeee
+>P31394
+eeeeee----eeee-ee--eeee-ee--ee-eeee-eee-eeee-e-e---e--eeeee-ee---e-eeeee-eeeee--e-eee-eeeee-eeeeee-e-e-eee-eeee-e-e-e-ee--eeeee-----e-eeeeee-e--ee-e--eeeee-eeee--e--e-e-eee-e-ee-e---e-e-eeeee-----e-ee-ee-e---------eeeee-------ee-------e--eeeee---------eeee-ee-ee-e-eee-e-ee--eee----------eee-eeee--------ee---ee--eee-e-e-----eeeeeeeeeeeeeee-----e----eeee-eee-eee--e------eeeee----e---------e-ee----------e-ee-eee---------e--e--eeeeeeeeeeeeeeee
+>D3UA80
+eee-e-eeee-eee--ee-ee--ee--ee--ee-e-e-eee
+>P83719
+eeeeeeeeeeeee--eee-ee---e---eeeeeeee-eee
+>P08950
+e-ee--ee-ee-eeeee-eee-ee----e---eee-eeeeee-e---ee--eeee
+>Q99109
+eee-e-ee-eeeee-ee--eee-ee-ee-e---e--eeee-ee-ee--ee-eee-e----eeee--e-ee-e-e----eeeeeeeee-ee--e---e--eeeeee-------eeee-e--eee-e-eeeeee-ee-e-eeeeeeeeeeeeeee-e--e--ee-ee--ee-ee------e-e-eeeeee-----e---e--e--eeeeeee----eeeee-e-eeee------e------e-eeeeee----e-eee-e-eeee--ee-ee---e----ee-e-e-ee-eee-ee-ee-eee-e-e--eee---e-ee-eee-ee-eee-ee-e--ee-ee-eeeeeeee-e-eeeee--ee-eee-ee-eeeeeeee-eeeeeeeeeeeeeeee-eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-eeeee-eeee-----e--e-eeeee--e-eeeeee---e----e-e-e
+>A6MWS8
+ee-----eeeeeeeeeeeeeee--ee-e-ee----ee-eeee-eeeeeeeeee
+>Q9SE35
+ee-ee--eee-eeeeeeeeee-eeeeeeeeeeee-ee-eeeeee-eeee-ee-e-eeee-ee-e-eeee-ee-eeeeeeeeeee-e--eeeeeee----eeeeeee-ee-eeeee--ee--eeeeeee-ee-eeeeeeeee--eeeeeee-eeeeeeeee--eeeeeee-eeeeeeeeee-eeeeeee-eeeeeeeee--eeeeeee-eeeeeeeeee-eeeeeee-eeeeeeeee--eee-eeee
+>Q9YGH3
+eee-eeeeeeeeeeeee-ee-ee---e------e--ee-e-eee--e-e-eeeee-eee-eeee--ee-ee-eeeeeeee-ee---ee-eee
+>Q9YGH4
+eeeeee-e-e-e-ee--ee-ee-ee--ee--ee--ee--ee-e-ee-e-eee-ee--ee-ee-e-e-eee-eeeee-eeeeeeee-ee---ee-eee
+>Q91194
+e--eeeeeeee-e---ee--ee-e---e-eee--e---ee--ee-eeeeeeeeeee-eeeee---e--e--eeeee-eeeeeeee-ee---ee-eee
+>A7WNV7
+eeeeeeeeeeeeeeeee-e-e--ee--e---e--ee-eee
+>P79875
+eeeeeeeeeeeee-eeeeee-eee--e---e--e--eee
+>P00735
+ee--eeeee-ee--e--ee--ee--ee-eeee--ee--eee-eeee-ee--eeeeeeeeeeeeee--ee-eeeee-eee-ee-e---ee-e--e-eeee---e-e--e-eeee--e-e-eeeeeee-e-ee------ee-ee------eeeeeee-----e--eeeee--eeeee-eee---e--eeeee-eee-ee-e-ee-e-eeeee--e-e-ee-ee--e--eeeee-eeeee-----ee-ee-------ee-------e-e-eeeeee-e-ee-eee--eeeeeeeeeeeeee--e--eee---eeeee--------eeeee-e--e--eee-eeee--eeee-ee----------eeeeee---------ee-----------eeee-e-e-ee----------eee-eee-ee-e-ee--e-ee--eee-----------eee-eeeee-------eee--ee--eee----------eeeeeeeeeee-e-e----------eeee-ee--eee--e-------eeeeeee----e-----------eeee---------------eeee--------e--e--ee--eeeee
+>A5A3H1
+eeee-eee-eee-ee-ee-eeeee-eeeee-eeee-eeeeeeeeeeeee-e
+>D5KXG5
+eeeeeeeee--ee-ee--e--eeee-e-eeeeeeeee-------ee---e-eeeeeee
+>E2S064
+eee-ee-ee-eeee-eeeeeee-e-eeee-eee--ee-eeeeeee-eee-eee
+>P07198
+eeeeeeeeeeee-ee--e---ee-eee-ee--e-e-ee--eeeeee--ee-eeeeeeeeee
+>Q8AYR5
+eeeeeeeeee--ee---ee--------eeeee--e--eeeeee-eeee-ee-ee-eeee--e---e--ee-ee-eeeeee---e-e-----e-ee----eeeee
+>Q805D4
+eeeee-e-eeeeeee-ee-ee--eee-ee-eeeeeeeeee-eeeeee-eee-eeeeeeeeeeeeeeeeeeeeeee--eeee-eeee-e-eeee---e--ee--ee-ee-eeeeeeee-------e-ee--e-eeeee
+>Q805D3
+eeeeeeeee-eee-e-ee--e--eeeeeeeeeeeeee--e--ee-eee-e------e--eeeeeeeeeee-eeeeeeeee-------ee---e--eee
+>Q5SC60
+eeeee-e-ee-eeeeeeeeee-ee-e-eeee-e-eeeeeee-----eeee-e--------ee-------ee-e---------ee-ee-ee------eeeeeee-ee-eee-e-ee-ee-e-ee-e---ee-eee-eeee-----e-eeeeeeeeeeee---------ee----ee-e
+>P80111
+eeeee-eeeeeeeeeeee-ee-eeee--ee-eee-eee--ee--ee--ee-ee-eee-ee-eeee-----e--eeeee-eee
+>Q0MWV8
+eeeee-eee-eeee-e--eeeeeeeeee-eeee-eeeeee-eeeeee-ee-eee-ee--eee
+>P0C7P5
+eeeeeeeeeee-eeee-e-ee--eeeeeeee-ee-e-ee--eeeeeee-eeee-eeee-eee--e---ee-eee-eeee-e--eee-eeeee--e-----e--ee-eee-ee--ee-ee---------e----------e--ee--ee---e-----e-ee--eeeeeee
+>P68515
+eeeee-eeee-eeeeee-ee-e-ee--eeeeeeeeee-ee-e-ee-eee-eeeeeee-e--e--eeeeeeeeeeee-e-ee--eeeeeeee-eeee-ee--eeeeeee--eeee-eee--e---ee-eee-e--e-e----eeeeeeeee-e--eeeeeeee--e------e--ee-eee-ee--ee-ee----e------e----------e-eee-eeee-e-----e-ee--e-eeeee
+>B0VXV8
+eeeee-eeeeeeee-ee-e--e--eeeeeee-ee-eeee-eeeeeeeeee-eee------ee-eee-e--eeee--eeee-eeeee-ee-eee-eeee---------e--ee--ee-ee--ee-e-----e-----------------e-eee-eeee-e-----e-ee--eee-eee
+>P0CB12
+eeeeee-eeeeeeee-ee--e-eeeeee--e-ee-eeeeeee-e
+>E3PQQ8
+eeeeee--ee-e-eeeeeee-eeee-eee------e----eeeeeeee-eeeeee--e--eeee--ee----eeeee-eee-ee-eeeeeeeeeee-ee--e--ee--eeeeee-ee--eeeeeee-eeeeeeeeee--ee---------eeeee----e--ee-ee--eeeeeeee--ee-eeee
+>P50145
+eeeeee-eeee-e-eeeeeeeeeeeeeee-ee-eeeee-eeeeeeeeee--e---e--ee-eeeeee-e--e-ee-ee-e-eee-ee----------ee--ee-e-ee
+>E2E4E4
+eee-e-eeeee--ee-eeeeeeeeeeeee-ee-ee-eeeeeeeee--e---e--ee-ee-eeeee-eee-ee----------ee--ee-e-ee
+>D6C4K5
+eeeeeeeeeeeee-eee-eeeeeee-eee-eee-e---e----e----------e-ee
+>C7DQC2
+eeeeee--e-e-e----e--e-e-eee-e-eeeeee-ee--eee
+>C7DQX6
+eeeee-e-eeeee--ee----e--eee-eeeeeeee-ee--eeee
+>C7DQB8
+ee--eeee---ee-e--ee--------ee--eeeeeeeeeee
+>Q9BPJ8
+eeeeeeeeeeeeeee-eee--eeeeee-ee-ee--e-e-e-e--e-ee
+>Q9BPH5
+eee-ee-eeeeee-eeeee-ee--e--ee---------eee----e
+>Q5EHP2
+eee-ee-eeeeee-eeeeee----e-eeee--e-e--ee--e--ee
+>P60207
 eeeeeeee--eeeee-eee--eeeee--eee
->sp|D6C4L5|CM67_CONCL Conotoxin Cl6.7 OS=Conus californicus PE=3 SV=1
-ee---------------e-eeeeeee--ee-eeeeee-eeee-eeeee--e-ee----eee---e-e
->sp|Q2I2P8|CMG1_CONLT Conotoxin Lt16.1 OS=Conus litteratus PE=2 SV=1
-eee-----------------e-eeeee-eee-eeeeee--e--ee-ee--eeeeeeee--ee--ee---e---eee-eeeeee
->sp|Q3YEG3|CO142_CONMI Conotoxin MiK42 OS=Conus miles PE=2 SV=1
-ee--------------------eeeeeeee-eeee-eee-eeeee-e--ee-eeeeee-eeeeee--eee--eeeeee--ee
->sp|P0C833|CO16V_CONST Conotoxin S6.10 OS=Conus striatus PE=2 SV=1
-ee---------------eeeeeee-eeeeeeeee-eeeeee-e--ee-eeeeee-eee-e--ee--ee-ee---e------eeeee
->sp|Q3YEE1|CO194_CONMR Conotoxin MaIr94 OS=Conus marmoreus PE=2 SV=1
-ee--------------------eeeeeeeeeeeeeeeee-eeeeeee--ee--eeeee-eeeeee-e--e-e--eeeee---e-e
->sp|P0C1M8|CO27A_CONRA Conotoxin r7a (Fragment) OS=Conus radiatus PE=1 SV=1
+>D5L5Q7
+eeeeeee-ee-ee-eeeee--e-e-eeeeee-ee--e---eee
+>Q3YEG3
+eeeeeeee-eeeeeeeeeee-e--e--ee-eeeeee-ee-eee--e--e-eeeeee--ee
+>Q9U654
+eeeee-ee--ee-eee-eeee-ee-eee--eeeee-ee-eee--e-e----e-e
+>Q9UA95
+eeeeeeeeeeee-eeeeeeee-eee-eeeeee-eee-e---e--ee-eee-eeeeee
+>G1AS75
+eeeeeeeeee-e--eeeeeeeeee--e-e------e-eee-e--eee--ee--eeee
+>G1AS80
+eeeeeeeeeeeee-e--eeeeee-ee--eee--e--ee-eeeee--eee-eeee-eee
+>P10000
+e-eeeee-ee-eeeee--e--e--eee-eee-ee-eeeeeeeeeeeeeee------eeeeeeeeeeeeeeeeeeee--------eeee-eeeee-e---ee-eeeeeeeee-e-e-eee-eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-e-e----ee-eeeee-e---ee-eeeeeee--e--ee--eeeee
+>Q9XYR5
+ee-ee--ee--eee-e-e-------eeeeeeeeeeeeeeee---e--eeeeeee
+>Q9NDA7
+eeeeeeeeee-eeeeeeee--ee--e--eeee-eeeee-e
+>P0C907
+eeeeeee-e--e-eee--ee--eeee--ee-ee--e
+>P0C906
+eeeeeee-e-ee-eee-e-e-ee--eee--ee-----eeeee
+>Q3YEH1
+eeeeeeeeee-e-ee-eee-ee--eee-e-ee--eee---e--eeeee
+>P69767
+eeeeee-e-ee-eeeeee--ee--ee-e--eeeee--e
+>C0KYC3
+eeeeeee-e--e-eeeeeeeeeee--e-------e-e
+>Q1A3Q5
+eeee-e--eeeeeeeeee-e---e--eeeee--eeee-e--ee
+>Q9BPH1
+eeeeeee-eeee-eeeeeeeeeeeeee----ee-ee
+>D2Y493
+eeeeeeeeeeeeeeee-e--e-eeee-------e-e-ee-eeeee---ee--eeeee
+>D6C4L9
+eeeeeeeeeeeeee---------eeee-eeeee--eeee-e----ee-ee-ee-e
+>B3FIA6
+eeeeeeee--ee--ee-eeee-e-ee--ee-eeeee--eee-e-eeee-e--eeee
+>O77256
+eeeeeeeeeeeee-eee-eeeeeee-eeeeeeee
+>P0C8A9
+eeeeeeee-eee-eeeeeeeeee--ee-e--e-eeee--eeeee------ee-eeeeee-ee---e-eee--------ee--eeeeeee
+>O93456
+eeeeeeeeeeeeeeeeeeee-ee-ee-----eeeeeee-eeeeeeeeeeeeeeeeeeee-ee---e-eeeeeee-eeeeeeeeeeeeeeeeeeee-ee---e-eeeeeee-eeeeeeeeeeeeeeeeeeee-ee---e-eeee-ee-eeeeeeeeeeeeeeee--e------eee-eee
+>B3IUE0
+ee--e--ee-eeee------ee-e-e-----------e-eeeeee--e-eeeeeeeeeeee-ee---ee--e--eee-e-ee--ee-ee-eee--e--ee--ee-eeeeee-ee---e-ee
+>O93451
+eeeeeeeeeeeeeeeeeeeeeee-ee--ee-ee---e--e---ee-ee--eeeee
+>O93223
+eeeeeeeeeeeeeeeeeeee-eee--ee-ee--ee--ee--ee-ee--eeeee
+>P81490
+eeeeeeeeee-eeeeeeeeee-ee--ee--ee--ee--ee-ee--eeeee
+>Q9XWV7
+eeeeeeee-e-e-eeeeeeee--e---eeeeeeee---e--e--e--ee--e---e--ee--eeee---eee-eeeeee-eeeeee--e-eeeeee--e--eeeee--e-eeeeee--e-eee
+>Q9N4V0
+eeee--e-eeee-eee--e--e--eeeeee------ee-e--------eeee--eeeeeeeeeee-----e--e-e-eeeeee--------eee-eeeeee--------eeeeeeeeee--------e-eeeeeeeeeeee--------eee--------e-ee-eee--e--eeee-e---e-eee
+>Q8MPY9
+ee---e----eee-eee-eeee--eeee-eee-e-ee---e--eeeeeeee-e--ee----eeee
+>A8WU84
+eeeeeeee---eeee-ee--e---e-eeee-e-e-e--eeeeeeee----------ee-e-e--ee
+>Q90W78
+eeeeeeeeeeeeeeeeeeeeee-eee-ee-eeeee-ee--eee-eeeeee
+>Q9VT50
+eee-e-e-ee--ee-e-e---ee-ee--e-----------eeeeeeeeeeeeeee-eee-eee--e-ee-e-ee--------e-e---------ee-eeeee---ee--ee--eeee--e--eee
+>Q9VT51
+ee--ee-ee--ee--ee--e--eeeee-e--eee-ee-e-----eeeeeeeee-ee--e----e-e-eee--e------eeeeeeee--ee--eee-e-ee-ee--ee-ee
+>Q9VT53
+eee---e--ee--e-----e-eee-eeeeeeeeee-ee--e---e--ee-e-e-eeee-eeeeeeeeeeeeeeeeeee-ee-ee--ee--ee--eee-e-ee--ee-e
+>G3ETQ2
+eeeeeeeeeeee--eee-eeeee---e--ee--ee-e-e-eeee
+>P0DJ35
+eeee-eeeeeee-eeeee---e---eeeeeeee-eee-ee
+>P08947
+eeeeee-ee-eeee--ee---e----eeeee-eeeeeeeeee-e-----eeee-e-eeee
+>Q17093
+eeeeee---ee-eeeee----eeee-----ee-eeee-----eeee-----ee-e-ee-----eeee-----eeee-ee-----eeeeeeeeeee-----ee-e-ee-eeeee-eeeee-eeeeee
+>Q25060
+eeeeeeeeeeeeee-eeeeeeeee-eee-ee-eeeeeeeeeeeeeeeeeeeeeeeeeeeee-eeeeeeeee-eeeeee-ee-eeee-eeeeeeeeeeeeeeeeeeee-eeeeeeeee-eeeeeeeeeeeeeeeeeee-eeeeeeeee-eeeeeeeeeeeeeeeeeee-eeeeeeeee-eeeee-eee--eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-eeeeeeeeeeeeeeeeeee-eeeeeeeeeeeeeeeeeeeeeeeeeeeee-eeee-eeeeeeeeeeeeee-eeeeeee--eeeeeeee-eeeeeee-eeeeeeeee-eeeeeeeeeeee-eeee-eeeeeeeee-ee--eee--eeeeeeee-eeeeeeeeeeee
+>Q09180
+eeeee--e--ee-ee--e-----ee-eeeeeee-eeeeeeeeeeee--e--e---e--e-eeeeeee-eeeeeeeeeeee--e--e---e--e-e-eeeee-eeeeeeeeeeee--e--e------e-eeeeeee-eee-eeeeeeeeeeee--e---------eeeee-ee-e-eee-ee
+>C9X4J0
+ee-ee--ee--eee--ee-eee-ee--ee--eee-eeeee-eee-eeeeeeeeee
+>R4JNJ5
+ee-ee--ee-ee---eee-eeeee-ee--eee-eee--e--ee--e
+>I0DEB5
+eeee--ee--e--eeee-ee-ee-ee--eee-eee--e--ee-ee
+>D9U2B8
+ee---e------e--eeeeeeeeeee-eeeeee--eee-e-ee--ee-eee
+>G1FE62
+ee----ee--e--ee--eeeeeeee-eee-e--ee-eeeeee-ee--ee-eee
+>P0CI89
+eee---e------e--eeeee-e-eee-eeeeee-eeeeee-ee--ee-eee
+>B8XH50
+ee-e---e---ee--ee-e--e-----e-eeee-ee-ee--eee
+>L0GCJ6
+eeeee-e-eeeeeee--eeeeeeeee-e-eeeeeeeeeee--eeee-eee-------eeeeeeee
+>P43443
+ee-eee-ee-ee-eee------e--eeee-eee-eeeeee-eeee-eee--e--e-e-eeee-ee-eeeeeee-ee--ee--ee--eeeee
+>Q9BPA3
+eeeee--e---ee-eee-eee-eee-ee-eee------eeeee---------e-e
+>Q9BP87
+eeeeeeee-e--e-ee--ee-e-eee-ee-eee-e-e---ee-e-ee-e-ee-eee
+>Q9BPA0
+eee-eeeeeee--ee--ee-eeeeeeee-eeeeeee-eeeee---e---e--eee---e-e
+>Q9BP90
+eeeee-ee--eee-ee---e-eeeeee--ee------eeee--ee-------ee
+>Q9BPA7
+eeeeee-eee-ee-eeeeeeeeeeeeee-eee-ee-eeeee--e---eee-e
+>Q9BP70
+eeeeeeee-eee-e-e-e-eee-eeee-eee-ee--eeeeee--eeeeeee---e--ee
+>Q7PTL2
+ee-eeeeee-ee-eeeeeee-ee-e-eeeeeeeeeee-ee-eee--------e--ee---ee--ee--ee-eee-----eee-ee--ee--ee----------eeeeeee-----e-ee-eeeeeeeeeeee-e--ee-eee-e--ee-ee--eee-e---e-ee
+>P85799
+eeee-eee-ee-eee-eeeeee-ee-----eeeeeeeeeeeeee--ee-ee----e-e-ee-ee--eeeeeeeeeee-ee-----ee-e-ee--e-eee--e--e--e------eeeeeeeeeee--eeeeeee-e-eeeee-eeeeeeee-eeeeeee-ee-eeee-eee-e-eee---------eeeeeeee-ee--eee-ee-eeeee--eeeeeee-----e-ee--ee--e-ee--ee------e--ee--ee-eee-eee-eeee-eeee-e-e---e---eeeee-----eeeeee-ee-eee-----eeeeee-e-e---ee
+>P86040
+eeeeeeeeeeeeeeeeeee-eeee-ee-ee--ee-ee-ee-e-e------ee--eeee
+>B3VZU5
+eeeeeeeeeeeeeee-eee-ee---e--e---e--ee
+>Q99N14
+eeeeeeee---eeeeee------ee-e-ee-e-e-eeeeeee-ee------ee----e--e---e---ee---ee-e-eee-eeeeeeee-eeeee-eeeeeeeeeeeeeee
+>M9P2C1
+ee-e-eee-e---ee-eee-ee-ee--ee--eeee-ee------eeeeeee---eeeeeeee--ee-eeeee
+>A5A3H2
+eeeeee-eeeee-eee-eeeeee-eeeee-eeeee-eeee-eeeeeeeeeeeee-e
+>P0DKP4
+eeee-ee-ee-e-ee--e--eee--e--eeee-ee-ee-ee-e-ee--e--eeeeee-eeeee-ee-ee-ee-e-ee--e--eeeeeee-eeee-------eeeeee
+>A5LHG2
+eeeeeeeeeeeeeeeeee--e--e-eeee-ee--------eeeeeeeeeeeeeeeeee--eeeeeeeeee-eeeeeeeeeeeeee-eeee
+>Q868F8
+eeeeeeeee-ee-----eeee-e-e-e-e----e--ee---e-e-eee-ee-eee-ee-eeee---e--eee--ee-eeeeee-e-ee-e-ee-e-eee
+>P20968
+eeeee-ee-ee--eee-eee-eeee-eeee-eee--ee-eee-e-eeeeeeeeeeeeeeee--ee--ee--ee-ee-eeeeeeee-------e-ee--e-eeeee
+>Q805D8
+ee--e--eeee-ee-ee--ee-eee-eeeeeeeeeeee-eeeeeeeeeeeeee-eeeeeeeeee-eeeeeeeeeeeee-eee-ee--e-eeeee-e---e--ee--ee-----eeeee
+>Q25461
+eeeeeeeeeee-eeeeeeeee--e--eeee---e---eeee-ee-eeeeee--e-ee-eeeeeeeeeeeee--eeeee-eeeeeeee---e--ee--ee-e--eee-eeee---e--eeeeeeeeee---e--ee--ee-eee--ee-ee------e--ee-ee--ee-eeeee
+>P01021
+eeeee--eeeeeeee-eeeeeeee-ee-ee-ee-ee-e-eee-ee-eeeee-ee-eeeee-eeeeeeee-ee-eeeee-eee-eeee-ee-ee-eeeeeeee--e--eeee-eee------ee--ee-e--------e-e-eeeeee-ee--ee-eeeee-e----------e--eee-ee--ee-ee----e--------------e--e-eee-eeee-e-----e-ee--eee-eee
+>P21591
+ee--ee-eeeee-eeeeeeee---------eee-eeee-ee-ee--ee--ee--e--eeeeeeeeeeee-ee-----ee--ee--eeeee
+>A0AEI5
+eeeeeeeeeeeee--ee-ee---ee--ee--ee--ee--ee-e-e-eeee
+>P50983
+eeeee--eeee---e-e
+>P05226
+eeeeee-e---e---e--ee--e------ee-ee-ee-eeee---eeeee--------eeeeeee-eee--e-------e--ee--e-------e-eeeeeeeeeee--eeeee---------eeee-e--------eeeeeee-eee--e-------e--ee--e---ee-eeeeeeeeeeeeee-eeeeee-e------eeeeeee
+>U5KJZ2
+eee-e-ee--ee--ee--eeeeee------e-eeeeeeeeeeeeeee-e-e-ee-e-eeeeeeeeee-e-eeeee-ee-e-e-eeeeeee--e---eeeeeeeeeeeeeeeeeeeeeeeeeeeee-eeee-ee-eee-ee-ee--ee-eee-eee-ee-eee-e-----eee
+>Q8JHB9
+eee-eeeeeee-eee-eeeeeeeeeeee-eeeeee-eeeeeeeee-ee-ee---e--ee-ee-eeee----e-ee-e-e-e-ee-e--------ee--ee-e-ee
+>D6C4H9
+eeeeeee--ee-e-ee-eee-ee-eee-ee--ee-eeeee--eee--ee---ee-ee-e
+>C7DQX9
+e-eeee---e---e--eee--eee-ee--eeeeeeeeee---e--eee
+>P16240
+eeee--ee-eeee-eeeee-eeee-eee-e--e---e--ee-eee--ee-eeeeeeeee-e--e---e-ee-eeeeeee--ee--e------e--ee--ee-eeee
+>Q9BPJ4
+eeeeeeeeee-ee-eee-eeeeee--ee-eeeeeee--e-ee-e-eeeeeee---ee---ee-ee-ee
+>Q5EHP4
+eee-ee-eeeeee-eeeee-e---e--eeee----ee-eee-e--e
+>Q9BPH3
+eee-ee--eeeee-eeeeeee---e--ee--ee-eeee-e-ee
+>Q3YEG4
+ee-eeeeee-e---eeeee-e-eee-eeeee--eeeee--ee--ee-eeeee
+>P0C833
+eeeeeeeeeeee-eeeeee-e--ee-eeeeee-eee-e--ee--ee-ee---e------eeeee
+>P0CH24
+eeeeeeeeeeeeeeeeeee-ee-ee-ee--ee-ee----eeeeeeeeee
+>Q2I2P1
+ee-eee-ee---e--eee--ee--eeeeee-e-eeee-e-e----e--eeeeeeeee-eeeee
+>Q9NDA6
+eeeeeeeeee-eeeeeeeeeeee--e--eeee----ee-e
+>Q9GU58
+ee-eee-eeee-eeeeee-eee-ee------eee-eee-eeeee-eee-----e--eeeee
+>Q800R2
+eeeeeeeeeeeeeeeeeeeeeeeeeee---e---e--ee--ee--e---eeee
+>Q9BPE7
+eeeeeee-e-ee-eee-ee--ee--eeee--eeee---eee
+>P0C667
+eeeeeee--ee-eee-ee--ee--e-ee--eeeee--e--eeee
+>P0C8A4
+ee-eee-eeeeee-e-eeeeee-e---eeee-ee-e-e--e-eeee-eeee---ee--e-eeeeeee-eeeee---ee
+>P0C8A5
+eeeee--e-eee-eee-e-eee-ee--eeeee---ee---eee
+>B3IUD8
+ee--e--ee-eeee------ee-e-e-----------e-eeeeeeeeeeeeee-ee---e---e---ee-eeeeeee-eeee-e--ee--ee-eee--e--eeee-eeee
+>A7WNV5
+eeeeeeeeeeeeeee--ee------ee--e---e---ee-ee-e-e----e-eeee
+>C6EVG1
+eeeeee-eeeeeeeeee--ee-eeeeeeeeeeeeeeeeeeeeeeeeee-eeee-eeeeeeeeee
+>Q23212
+eeeee-e---e--e----eeee-eeeee-------eeeeeeeeeeeeeeeee----------eee----------eeeeee--eeeeeeee-eeee--------e-eeeeee-------eeeee---------e--eeeee-----e-eeeeee---e-ee
+>Q7YX32
+ee-eee------ee-ee-eeeee--eeeeeeee-e---e-eee-e---e-eee-e---e--eeeeeee
+>Q21156
+eee-eeeeee-ee---e--e-eee-ee---e--eeeeeeeee-eeeee-eeeeeeeee---e--eeee-ee-ee--e--ee-eeeeee
+>Q8ML70
+eeeee-eeee------eeee------eee-e-e-ee-e-e-ee-eee-e---e-ee------eeeeeeeee----------e-eeee--ee-e--ee-eeeee---e-eee-ee-ee-e-----eeeeee-e-e-ee---e--eee-----eeeeee-e-e-ee-----eeee------eeeeee-e-eeee--ee-ee----eee----e-eeeee---eee-e-----eee--ee--e-ee--ee-e
+>E6ZBE2
+eeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-eeeeeee-ee-----------eee
+>R4JQZ0
+ee----e---e--eeee-ee-ee-ee--eee-eee--e--ee-ee
+>P0DMF9
+ee-e---ee-eee-eeeeeeee--e--eee--ee-ee--eee
+>Q9BP85
+eeeeeeeee-e--e-ee--ee-eeeeee-eeeeee-eeee--ee-----eeee---eee
+>Q9U660
+eeeeee-ee--eeeeee-eeee-ee-eee--eeeee-e---ee--eee------e-ee
+>Q9NL82
+ee-e--eee-eee-ee-e---ee-e-ee-----------e---e--eeee-e-ee---ee-e-ee-e-ee---ee-e-e----ee---ee-eeee-e-ee---ee-e-ee---ee---ee-e-ee---ee---ee-e-ee---ee---ee-e-eee--ee---ee-eeee-e-eeee--eeeeee-ee---ee-eeee---ee---ee-eeee-e-ee-e-ee-eee---ee-eee----eeee-e
+>G3F828
+eeeeeeeeeeee--ee--eee--ee-ee--ee---e--ee-e-e-eeee
+>Q91826
+eeeeeeeeeeeeeee--e---ee--e--ee--e---ee-eeeee
+>P01170
+eeeeeeeeeee-e-e-e-ee--ee-ee-ee--ee--ee--ee--ee-e-ee-e-eee-ee--e-eeee-e-eee-eeeee-eeeeeeee-ee---ee-eee
+>P87385
+eeeeee-eeeeeee-ee--ee---e--ee-eeeeeee-ee-eee-eeeeeee-eee-e-ee-e-eeeeee-ee---ee-eee
+>P0DJK0
+eeeeee--ee-eeeeeeeeeeeee--e--e-eeeeee---e-eeeee--eeeeeeeeeeee-e-ee-eeee--e---ee---e-eeeeeeeeeee
+>A8YPR9
+eeeeeeeeeeeeeeeeee-eeeeeeeeeeeeeeeeeeeee-eeeeeeeeee-eeeeeeee-e--eeeeeeeee-eeeeeeee-e-eeeeeeeeee-eeeeeeeeee-eeeeeeeeee--eeeeeee-e-eeeeeeeeee-eeeeeeeeee-eeeeeeeeee--eeeeeeeee-eeeeeeeeee-eeeeeeeeee-eeeeeeeeee-eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-eeeeeeeeeeeeeeeeeeeeee-ee-eeeee
+>E7EKD0
+eeeeeeeeeeeeeeee-eee-eee---e---e--ee-eee
+>B3VZU3
+eeeeeeeeeeeeeeeeeeee-eee--e---e--ee-eee
+>S0F1M9
+ee-e-eee-----eeeee--eeee-eeeee--ee-eeeeeeeeeee-eeeee
+>Q6ECK6
+eeeeee---eee-e-------ee-e-ee-e-e-ee-eeee-ee------ee-ee-ee--ee--eee---ee-eeeeeeeee
+>P83580
+eee-ee-ee---ee-eeeeeeee-eeeeee-eeeee-eeeee-eeee-eeeeeeeeeeeee-e
+>Q7ZZY8
+eeeeee-e-e-ee-e--eeee--e-eeee-eee-----e-----------ee-eeee-e-eee--ee-eee---eeee-ee-----ee-eeeeee-e---e--e
+>Q09GK2
+eeeeeee-ee-eeee-e---ee-eee-e--ee--eeee-e-eee-ee-ee-eee-eeeeee--e-e-------e---ee-ee--ee-ee---ee-e-eeeeeee-ee----e-eeeeee-e-e-----e-ee--eee-eee
+>Q800I8
+eeeee-ee-ee--eee-eeeeeeeeeeeeeeeeeee-eeeee-eeeeee---e--ee--ee-eeeeeeeeeee-------e-ee--e-eeeee
+>Q805D5
+eeeeeeeeee--ee---ee---------eeee--ee-eeeee-eeeeeee-ee-e---eeeee--e---e--ee-ee-eeeeee---e-e-----e-ee----eeeee
+>Q76KW6
+eee-eeeeeeee--e---e---e--ee-eeeeeeeeeeee-eee-eee-ee--eeeee---eee-eeeeeeeeeeeee--ee--eeee--eee-ee-eeee-----e-ee--e-eeeee
+>P86093
+eeeeeeeeeeeeeeee-ee-ee-ee-eee-ee-eee
+>P20481
+eeeeeeeeee-e-e--ee--eeeeeee-e-eee-eeeee--e-e--ee-eeeee-e-e-eee-eeeee-e-e-eee-eeeee-e-ee-e--eeee-e-e-eee-eeeee-e-e-eee-eeeee-e-e-eee-eeeee-e-eeeee-eeeee-eeeeeee-eeeeeee-e--ee-eeeeeee-e-eee-eeeee-e-e-eee-eeeeee--e--e--eeeeee-e--eeeeeee-eee-eee-eeeee-e-e-ee--ee--e--e-eee-eeee-e-e-eeeeeeeeeee-e-eeeeeeeee-e-e-eee-ee-eeee-e-ee-e-eeeeee-e-eee-eeeee-e-e-ee-eeeeee-e-e-ee-eeeeee-e-e-ee-eeeeee-eee-eee-ee-ee-e-e-ee-eeeeee-e-e-ee-eeeeee-e-e-eeeeeeeee-eee-eeeeeeeee-eee-ee-eeeeeeee-eeeeeeee
+>O93464
+ee-eee-eeeee-e-e--eeeeeeeeee-eee--ee-ee-eeeee-eee--e---e--eeeeeeee-ee-e-ee-eee-e-ee-e--------ee--ee-e-ee
+>C7DQX7
+eeee------e-e----e--------e-eeeeeeee--ee-eee
+>D2DGD7
+eeeeeeeeeee-ee-eee--eee-ee-eeeeee-eee-e----------e--e------eee
+>C7DQC1
+eeee-ee--------------ee-eee-ee--ee-eeeee
+>D6C4J3
+ee-eeee-eee-ee--eee-eee-eee-eeeee-eee-ee
+>Q9BPH6
+eee-ee-eeeeee-eeeeeee---e--eeee--eee--e----ee-e
+>P01523
+eeeeeeeeeeee-ee-eee-eeee-e--eeeee--eeeee-eeee-eeee--eee
+>P0C1N6
+eee-ee-eeeeee-eeeee-e---e--ee---eee--e-ee-e--ee
+>P56529
+eeeeeeeeeeeeeee-e-e-eee-ee--eeeeee-----e-ee-ee-eeee--eee
+>P69769
+eeeeeeee-ee--ee-eee-eeeeee--eee-ee--e-e-ee-eeee-eeee--ee
+>D6C4L5
+ee--ee-eeeeee-eeee-eeeee--e-ee----eee---e-e
+>Q2I2P8
+eeeeeeeeeee-eeeeee--e--e--ee--eeeeeeee--ee--ee---e---eee-eeeeee
+>Q3YEG7
+eeeeeeeeeeee-eeeeee-e--ee-eeee-e-eee-e--ee--eeeee---eeeeee
+>Q86RA3
+eeeeeeeeeeee-eeeeee-e--ee-eeeeee-eeeee--eee-eee--e-e
+>Q9UA91
+eeeeeeeeee-e-eeeeeeee-eee-eeee-----------ee-eeeeeeee
+>Q3YEE1
+eeeeeeeeeee-eeeee-eeeee-e--ee--eee--------e---------e-ee----e-e
+>Q5K0C4
+eeeeeeee-e--e-eee-eee--ee--ee-eeeeee-eeeee--eee-eee---e--e
+>G1AS74
+eeeeeeeeee-e--eeee-e-ee--eeee-e-e-e-e-e-e--eee-ee---eee
+>Q3YEF8
+eeeeeeeee--ee-eee-eee-eeeeee-e-eee--e-e-eee--eeee
+>P0C1M8
 eeeee--eeee------e-eeeee--eee-eee--eee
->sp|P0CY72|CO714_CONBU Conotoxin Bu14 (Fragment) OS=Conus bullatus PE=2 SV=1
-eeee--e-eeeeeeeee-ee-eeeeeeeeeeee-ee--ee-eeeee--eee-e--eee-eeeeeee-------e---eee
->sp|P0CY65|CO76_CONBU Conotoxin Bu6 OS=Conus bullatus PE=2 SV=1
-ee---------------e-ee-eeeeeeeeeee-eeeee-eeeeeee--eeeee----e-e---e--ee-ee-ee
->sp|D2Y495|COG1A_CONCL Conotoxin Cal6.1a OS=Conus californicus PE=2 SV=1
-eee-e------------e-e-eeeeeeeeeeee-eeeeeeeeeeeeee------ee-ee-eee-eeeeee--eee-e-e-eeeee--eee----e-e
->sp|Q04618|COLI2_ONCMY Pro-opiomelanocortin B OS=Oncorhynchus mykiss GN=pomcb PE=2 SV=1
-ee----ee-e-e-------------------ee-e-e--eeee-ee-eeeee--e--e--eee-eee-ee-eeeeeeeeeeeee-e------eeeeeeeeeeeeeeeeeeee--------eeee-eeeee-e---ee-eeeeeeeee-eee-eee-eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-e-e--e-ee-eeeee-e---ee-eeeeeee--e--ee--eeeee
->sp|Q2I2P2|CON2_CONLT Contulakin-Lt2 OS=Conus litteratus PE=2 SV=1
-eee--------------e-eeeee-ee--ee--eee--ee--ee--eee-ee-e-eeee-e------e--eeeeeeeee-eeeee
->sp|Q17AN4|CORZ_AEDAE Pro-corazonin OS=Aedes aegypti GN=Crz PE=3 SV=1
-eee--ee-----------e-ee-e-eee-eeeeeeeeeeeeeeee--ee-e-e-eeeeee-ee--ee--eee-e-e--e---ee-ee--ee--ee-ee-------e-e--ee-eeee-e-eeeeeeee--ee--eee
->sp|Q299B0|CORZ_DROPS Pro-corazonin OS=Drosophila pseudoobscura pseudoobscura GN=Crz PE=3 SV=1
-e-e--------------------e--e--ee-e-----------------eeee-ee--e-eeeeeee---e--e---------------e-eeeeeeee-ee---eeeeeeeeeee---e---ee--ee-ee--ee-ee-eeeeeee---eee-e--eee
->sp|A0NDK8|CORZ_ANOGA Pro-corazonin OS=Anopheles gambiae GN=CRZ PE=3 SV=1
-eeeee-------------e-ee-e-eee-eeeeeee-eeeeeeeeeeee-ee-e-ee--ee--eeee-ee-eeeeee--ee--eee-e-e-----ee-eeeee--e--eee-ee-eee------------eeeee------e-eeeee-eee-e-eeee-ee-eeeeeeee
->sp|Q9NDA6|COW3_CONTE Leu-contryphan-Tx OS=Conus textile PE=1 SV=1
-eee--------------e---eeeeeeeeeeee-eeeeeeee-eee--e--eeee-e-e-e-e
->sp|Q29CA0|CP2B_DROPS Cardio acceleratory peptide 2b OS=Drosophila pseudoobscura pseudoobscura GN=capa PE=3 SV=2
-ee-------------------e-ee-eeeeeeeeee-e-------e--e--ee--ee-ee-ee----e----eee-ee-eeee-eeee------e--eeeee-ee----e---e--eeeeeee-e-------e-eeeeee-ee-eeeeeeeeeee
->sp|Q9GU58|CP9A_CONTE Spasmodic peptide tx9a OS=Conus textile PE=1 SV=1
-ee----e-------------e----eeee-eee-eeee-eeeeee-eee-ee------eee-eee-eeeee-eee-----e--eeeee
->sp|Q9BPG7|CT111_CONTE Conotoxin Tx-D0111 OS=Conus textile PE=2 SV=1
-ee---------------eeee-e-eeeee-eee-ee-e-ee--e--eeee--ee-e-----ee
->sp|Q9BPD6|CT0C6_CONVE Conotoxin VnMLCL-041 OS=Conus ventricosus PE=2 SV=1
-ee-------------eeeeee-eee-eee--ee-eeeee-eeeee------------e--eeeee
->sp|Q3YEH1|CT192_CONLT Conotoxin LeDr192 OS=Conus litteratus PE=2 SV=1
-ee-------------e-e--e-eeeeeee-e-ee-eee-ee--eee-e-ee--eee---e--eeeee
->sp|P0C667|CT52_CONCB Conotoxin Ca5.2 OS=Conus caracteristicus PE=2 SV=1
-ee-------------e-eeeeeeeeeeee--ee-eee-ee--ee-eeeee--eeeee--e--eeee
->sp|Q1A3Q7|CT59_CONLT Conotoxin Lt5.9 OS=Conus litteratus PE=2 SV=1
-ee-------------eeeeee-eee-eee-eeeeee-eeeee-ee-ee-------eee---eeeeee
->sp|Q1A3Q5|CT58_CONLT Conotoxin Lt5.8 OS=Conus litteratus PE=2 SV=1
-ee-------------eeee-e-e-e--eeeeeeeeee-e---e--eeeee--eeee-e--ee
->sp|P36190|CTXA1_CERCA Ceratotoxin-A OS=Ceratitis capitata GN=CTXA1 PE=1 SV=2
-eee-e-------------e---eeeeeeee-e-eee-ee--ee--e--ee-ee---e--ee--ee-eeeee
->sp|D2Y493|CU63A_CONCL Conotoxin Cal6.3a OS=Conus californicus PE=2 SV=1
-ee---------------eeeeeeeeeeeeeeeeeeee-e--e-eeee-------e-e-ee-eeeee---ee--eeeee
->sp|D6C4L9|CU92_CONCL Conotoxin Cl9.2 OS=Conus californicus PE=3 SV=1
-eee----------e--eeeeeeeeeeeeeeee---------eeee-eeeee--eeee-e----ee-ee-ee-e
->sp|B3FIA6|CVF1_CONVT Conotoxin Vt15.1 OS=Conus vitulinus PE=2 SV=1
-eee-----------eeeeeee-eeeee--ee--ee-eeee-e-ee--ee-eeeee--eee-e-eeee-e--eeee
->sp|P0C1D0|CXA1A_CONRE Alpha-conotoxin RgIA (Fragment) OS=Conus regius PE=1 SV=1
+>P0CY72
+eeeeeeeee-ee-eeeeeeeeeeee-ee--ee-eeeee--eeeee--eee-eeeeeee-------ee--eee
+>D2Y495
+eeeeeeeeeee-eeeeeeeeeeeeee------ee-ee-eee-eeeeee--eee-e-e-eeeee--eee----e-e
+>Q9BH21
+eeeeeee-e--e-eee-ee--e--eeee-----eee-ee
+>Q3YEH0
+eeeeeee-e-ee-eee-ee--e--eeee--e-eeee--eee
+>Q9U6Z8
+eeeeeee-e-ee-eee-ee--ee-eee---eeeee--eee
+>Q3YEH3
+eeeeeee-e-ee-eee-ee--e---eeee--eee----ee
+>Q1A3Q7
+ee-eee-eee-eeeeee-eeeee-ee-ee-------eee---eeeeee
+>Q3YEH5
+eeeeeee-e-ee-eee-ee--ee--ee----eee-e--e
+>Q6PTD0
+eeeee-eeee-e--e--ee-eee-e-ee-eee--eee-e--ee
+>Q17313
+eeeeeee---eee-e---ee-ee--e---eeeee--e---eeee
+>P0C1D0
 eeeeeeee--e---ee--e---eeee-e-e-e
->sp|P0DJC6|CXT61_CONQU Conotoxin Qc6.1 OS=Conus quercinus PE=2 SV=1
-ee--------------------e--eee-eeeeeeeeeee--e--ee--ee-eeee-ee-eeeee-eee-e--e----eee---ee-------e
->sp|A4H220|DB118_GORGO Beta-defensin 118 OS=Gorilla gorilla gorilla GN=DEFB118 PE=3 SV=1
-ee-------------e--ee-eeeee--eeeee-eee-eeee--ee--ee-------eeeeeeeeeeeee-e-ee-eee------------ee-e-e-eeeeeee-eeeeeee-eeee-eeee
->sp|Q8N687|DB125_HUMAN Beta-defensin 125 OS=Homo sapiens GN=DEFB125 PE=2 SV=2
-ee-------------e--e-e-e-ee--eee--e--ee-eeee--e---eee-------e-eeeeee-ee-e-ee-e---e-ee-e---e----e-e-e-e-eeeeeeeeeeeeee-ee-eeee-e-ee-e-e-eeeee-eeeee--eeeee-eee
->sp|Q9BEE3|DB126_MACFA Beta-defensin 126 OS=Macaca fascicularis GN=DEFB126 PE=2 SV=1
-eee---------------e-e---ee--eeeee-eee-eeee-eeee-e-e-eee-------eeeeee-----eeee-ee-e-eeee-eee-e--e-e------eee-ee--e-eeeeeeeee
->sp|Q9H1M4|DB127_HUMAN Beta-defensin 127 OS=Homo sapiens GN=DEFB127 PE=1 SV=1
-ee----------eeee-eee-ee--ee--e-e-ee--e-ee-ee---ee-e----e-ee-ee-ee-eeeeeee-ee-----eee-e--ee-ee-eeeee
->sp|P0C8A2|DEFA2_ORNAN Defensin-A2 OS=Ornithorhynchus anatinus PE=2 SV=1
-eee------------ee-eee-eee-ee--eeeee-eeeeee-------e--eeeeeeeeeee-----e-e-ee-eeeeee-eeee-e-e---eeee
->sp|P0C8A1|DEFA1_ORNAN Defensin-A1 OS=Ornithorhynchus anatinus PE=2 SV=1
-eee------------eeeeeeeeeeeeeee-eeee-ee-ee---------eeeeeeeeeee-ee---e-e---e--ee-eee-eeeeee-e---eeee
->sp|P0C8A4|DEFA4_ORNAN Defensin-A4 OS=Ornithorhynchus anatinus PE=2 SV=1
-eee--------------eeeeee-eee-eeeeee-e-eeeeee-e---eeee-ee-e-e--e-eeee-eeee---ee--e-eeeeeee-eeeee---ee
->sp|P0C8A5|DEFB1_ORNAN Defensin-B1 OS=Ornithorhynchus anatinus PE=2 SV=1
-ee-----------------e--ee-eee--e-eee-eee-e-eee-ee--eeeee---ee---eee
->sp|Q9WTL0|DEFB3_MOUSE Beta-defensin 3 OS=Mus musculus GN=Defb3 PE=2 SV=1
-ee--------------eeee-eee-eee-e--eeeee---e--eeeee-ee-e-e--e--eee
->sp|P0C8A7|DEFB3_ORNAN Defensin-B3 OS=Ornithorhynchus anatinus PE=2 SV=1
-ee-----------eeeeeeeee-ee-e--eeeeee-e-e-e-eeee-ee-e--------eeeeee
->sp|P0C8A9|DEFB5_ORNAN Defensin-B5 OS=Ornithorhynchus anatinus PE=2 SV=1
-eee-------------e-eeeeeeeeee-eee-eeeeeeeeee--ee-e--e-eeee--eeeee------ee-eeeeee-ee---e-eee--------ee--eeeeeee
->sp|O93456|DEM_PACDA Dermorphin peptides OS=Pachymedusa dacnicolor PE=2 SV=1
-eee-ee------------e---eeeeeeeeeeeeeeeeeeeeeee-ee------eeeeee-eeeeeeeeeeeeeeeeeeee-ee-----eeeeeee-eeeeeeeeeeeeeeeeeeee-ee---e-eeeeeee-eeeeeeeeeeeeeeeeeeee-ee---e-eeee-ee-eeeeeeeeeeeeeeee--e------eee-eee
->sp|B3IUE0|DIH45_BOMMO Diuretic hormone 45 OS=Bombyx mori GN=dh45 PE=2 SV=1
-ee----------------ee-eeeee-e--e--ee-eeee-------e-e-e-----------e-eeeeee--e-eeeeeeeeeeee-ee---ee--e--eee-e-ee--ee-ee-eee--e--ee--ee-eeeeee-ee---e-ee
->sp|Q17UZ0|DISTL_PHYAZ Distinctin-like peptide (Fragment) OS=Phyllomedusa azurea GN=ppdis-H1 PE=1 SV=1
-eee---------e------eeeeeeeeeeeeeeeeeeeeeee--e---e-ee--ee--ee-ee-eeeeeeeeeeeee
->sp|O93455|DMS5_PACDA Dermaseptin PD-3-7 OS=Pachymedusa dacnicolor PE=1 SV=1
-ee--ee-------------ee-eeeeeeeeeeeeeeeeeeee--ee--ee-ee--ee-eee--eee
->sp|P36193|DROS_DROME Drosocin OS=Drosophila melanogaster GN=Dro PE=1 SV=2
-ee-----------------eeeeeeeeeeeeeeeeee-e-eee-ee-eee-ee---eeeeeeee
->sp|B2ZB95|DSK_DROER Drosulfakinins OS=Drosophila erecta GN=Dsk PE=3 SV=1
-eee------------------------e--ee-ee-ee-eeeee-ee-eeee-ee-e-e---e-e-e------ee--e-----ee--e----e---e-----e-eeeee-eee-ee-------eeeeee--ee----e-ee
->sp|Q5NRP8|EDN2_ATEAB Endothelin-2 OS=Atelerix albiventris GN=EDN2 PE=2 SV=1
-e-------------------e-eeeeeeeeeeeeeeeeeeeeeeeeeee-e-ee-eeee--------------eee----e-eeeeeeeeeeeee--e--eee-ee--e--eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee--ee--e--e-eeeeeeeeeeeeeeeeeeeeee-eee
->sp|C6EVG2|EXE2_HELSC Exendin-2-long OS=Heloderma suspectum cinctum PE=2 SV=1
-eee---------------e-e-e---eee-eeeeeeeeee--e-eee-ee--eee--e--ee---ee--ee--eeeeeeeeeee
->sp|C6EVG1|EXE4_HELSC Exendin-4 OS=Heloderma suspectum cinctum PE=2 SV=1
-eee---------------e---e-e-eee-eeeeeeeeee--ee-eeeeeeeeeeeeeeeeeeeeeeeeee-eeee-eeeeeeeeee
->FARX_LYMST P42565 FMRFamide-related neuropeptides OS=Lymnaea stagnalis PE=1 SV=1
-ee---e-----------------e----eeeee-e------eeee------eee-----ee--------e--------e-------ee--------e--------e--------e--------e-e------e-------ee-e------e-------ee-e-----ee--------e--------e-e------e-e------e--------eee--------e------e-----e--e-------e---------e-------ee-------ee--------e-------ee--------ee-------eeee--------eee-e-ee-----eee-e------eeeee-e-eeee
->FLP18_CAEEL Q9N4V0 FMRFamide-like neuropeptide 18 OS=Caenorhabditis elegans GN=flp-18 PE=1 SV=2
-eee--e----------ee-ee-eee--e-eeee-eee--e--e--eeeeee------ee-e--------eeee--eeeeeeeeeee--------e-e-eeeeee--------eee-eeeeee--------eeeeeeeeee--------e-eeeeeeeeeeee--------eee--------e-ee-eee--e--eeee-e---e-eee
->FLP19_CAEEL Q9XVX1 FMRFamide-like neuropeptides 19 OS=Caenorhabditis elegans GN=flp-19 PE=1 SV=1
-ee-e---------------eee-eeeeee-e-e--eeeee-e-e--eeeee--e--eeeeee-ee-eee-eee-e-eee-e--ee-eee
->RANA_LITPI P08950 Ranatensin OS=Lithobates pipiens PE=1 SV=1
-eee-ee------e------------e----e--ee-ee-eeeee-eee-ee----e---eee-eeeeee-e---ee--eeee
->SCPRP_OCTVU Q2V2G5 Small cardioactive peptide-related peptide OS=Octopus vulgaris GN=SCPRP PE=1 SV=1
-ee-ee---------------eeeee-eeee-e-eee--ee-eee-----eeeeeeeeeee-e----e--e---------e--ee-ee--eeeeeee-------eee
->SIL1_CYLFU Q9SE35 Silaffin-1 OS=Cylindrotheca fusiformis GN=SIL1 PE=1 SV=1
-ee-ee--e-----------e--ee--eee-eeeeeeeeee-eeeeeeeeeeee-ee-eeeeee-eeee-ee-e-eeee-ee-e-eeee-ee-eeeeeeeeeee-e--eeeeeee----eeeeeee-ee-eeeee--ee--eeeeeee-ee-eeeeeeeee--eeeeeee-eeeeeeeee--eeeeeee-eeeeeeeeee-eeeeeee-eeeeeeeee--eeeeeee-eeeeeeeeee-eeeeeee-eeeeeeeee--eee-eeee
->SMS2_LOPAM P01170 Somatostatin-2 OS=Lophius americanus GN=sst2 PE=1 SV=2
-ee--e--------------e--eee-eeeeeeeee-e-e---ee--ee-ee-ee--ee--ee--ee--ee-e-ee-e-eee-ee--e-eeee-e-eee-eeeee-eeeeeeee-ee---ee-eee
->sp|P87385|SMS2_PELRI Somatostatin-2 OS=Pelophylax ridibundus GN=sst2 PE=1 SV=1
-eee--------------e-eeeeeeeeeee-eeee-eee-ee---e------eeeeee-ee-eee-eeeeeee-eee-e-ee-eeeeeeee-ee---ee-eee
->sp|Q9YGH4|SMS2_CARAU Somatostatin-2 OS=Carassius auratus GN=sst2 PE=2 SV=1
-eee-e----------------e-eeee-eee-ee--ee--ee-e---e-eee--ee--ee--ee-eeeeee-eeee-ee--eeee-e-e-eee-eeeee-eeeeeeee-ee---ee-eee
->sp|A0SIF1|SNPF_ANOGA Short neuropeptide F OS=Anopheles gambiae GN=sNPF PE=2 SV=1
-e-e--------------e-e-eeeeeeeee--ee--e----ee---e-e-ee-e-eee-eeeee-e-e--eeeeee-e-e-eeee--eeeeee--e---e---e-ee-ee-eee---eee-eee-ee---e--e-e-eee-ee--eeeee--ee--e-ee---e---e--e---e-e-eeee--eeeeeee-eeeeee-ee-e--eeeee-eeeeeeee--eeeeeeeeeeeee
->sp|P0DJK0|SRTX1_ATRIR Sarafotoxin-i1 OS=Atractaspis irregularis PE=1 SV=1
-ee--ee-ee------------eeeee-ee--ee-eeeeeeeeeeeee--e--e-eeeeee---e-eeeee--eeeeeeeeeeee-e-ee-eeee--e---ee---e-eeeeeeeeeee
->sp|A8YPR9|SVMI1_CERCE Snake venom metalloprotease inhibitor 02A10 OS=Cerastes cerastes GN=Svmpi-Cce12 PE=1 SV=1
-ee--e-------------e-eeeeeeeeee-eeeeeeeeee-eeeeeeeeee-eeeeeeeeee-eeeeeeee-e-eeeeeeeeee-eeeeeeeeee-eeeeeeeeee-eeeeeeee-e-eeeeeeeeee-eeeeeeeeee-eeeeeeee-e-eeeeeeeeee-eeeeeeeeee-eeeeeeeeee-eeeeeeee-e-eeeeeeeeee-eeeeeeeeee-eeeeeeeeee-eeeeeee-eeeeeeeeeee-eeeeeeeeeeeeee-eeeeeeeeeeeeeeeeeeeeeeeeee-e-ee-eeeeee
->sp|A8YPR6|SVMI_ECHOC Snake venom metalloprotease inhibitor 02D01 OS=Echis ocellatus PE=1 SV=2
-ee--e---e------------eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-eeeeeeeeeeeeeeeeeeeeeee-eee-eeeeeeeeeee-eeeeeee-eeeeeeeeeee-eee-eeeeeeeeeeeeeeeeeee-eeeeeeeeeee-eee-eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-eeeeeeeeeeeeeee-eeeeeeeeeeeeeeeee-------e-e---e--e----ee-e-e-ee--e--eee-eeee-e-----e--e-eee----e
->sp|P00735|THRB_BOVIN Prothrombin OS=Bos taurus GN=F2 PE=1 SV=2
-eee----e----------------e----eeee-ee--e--ee--ee--ee-eeee-eee-eeee-eeee-ee--eeeeeeeeeeeeee--ee-eeeee-eee-ee-e---ee-e--e-eeee---e-e--e-eeee--e-e-eeeeeee-e-ee------ee-ee------eeeeeee-----e--eeeee--eeeeeeeee--ee--eeeee-eee-ee-e-ee-e-eeeee--e-e-ee-ee--e--eeeee-eeeee-----ee-ee-------ee-------e-e-eeeeee-e-ee-eee--eeeeeeeeeeeeee--e--eee---eeeee--------eeeee-e--e--eee-eeee--eeee-ee----------eeeeee---------ee-----------eeee-e-e-ee----------eee-eee-ee-e-ee--e-ee--eee-----------eee-eeeee-------eee--ee--eee----------eeeeeeeeeee-e-e----------eeee-ee--eee--e-------eeeeeee----e-----------eeee---------------eeee--------e--e--ee--eeeee
->sp|S0F1M9|TK1E_HADVE Kappa-hexatoxin-Hv1e OS=Hadronyche versuta PE=3 SV=1
-eee-----------------eeee-e-eee-----eeeee--eeee-eeeee--ee-eeeeeeeeeee-eeeee
->sp|Q8CH01|TKN4_RAT Tachykinin-4 OS=Rattus norvegicus GN=Tac4 PE=2 SV=1
-e------------------eeeee---eee-e-------ee-e-ee-e-e-ee-eeee-ee------ee-ee--e-eeeeee--e-ee---e---ee---ee-eeeeeeeeeeeeee-eeeee-eeeeeeeeeeeeee--e--eeeeeeeee-ee-eee-ee-eeeeeee
->sp|Q86UU9|TKN4_HUMAN Tachykinin-4 OS=Homo sapiens GN=TAC4 PE=1 SV=1
-ee-----------------eeeeee-e--ee-e-------ee-e-ee-e-e-ee-eeee-ee------ee-eee-e-eeeeee--e-ee---e---ee---eeeeeeeeeeee
->sp|P83580|TO1A_ATRRO Omega-hexatoxin-Ar1a OS=Atrax robustus PE=1 SV=2
-eee-e---------------e-eee-ee-ee---ee-eeeeeeee-eeeeee-eeeee-eeeee-eeee-eeeeeeeeeeeee-e
->sp|P0DKP4|TU172_LOPOL Turripeptide OL172 OS=Lophiotoma olangoensis PE=2 SV=1
-eee-------------eeee-eee-ee-ee-e-ee--e--eee--e--eeee-ee-ee-ee-e-ee--e--eeeeee-eeeee-ee-ee-ee-e-ee--e--eeeeeee-eeee-------eeeeee
->sp|D5KXG5|TU61_GEMSP Turripeptide VI/VII-01 OS=Gemmula speciosa PE=2 SV=1
-ee-e---------------ee----eeeeee--ee-ee--e--eeee-e-eeeeeeeee-------ee---e-eeeeeee
->sp|E2S064|TXT1A_CRYAD Kappa-thalatoxin-Sm1a OS=Cryptodendrum adhaesivum PE=3 SV=1
-ee--------------------e-eeeeeeeeeeee-eeeeeee-e-eeee-eee--ee-eeeeeee-eee-eee
->sp|P04560|UTS2A_CYPCA Prepro-urotensin II-alpha OS=Cyprinus carpio PE=1 SV=1
-ee-e-------------e----e-eee-e-e-ee-e--eeee----eeee-eee-e---e----e------eee-e-eee--ee--ee---e-eee-ee--e-----ee-eeeeee-e---e--e
->sp|Q7ZZY8|UTS2B_DANRE Prepro-urotensin II-beta OS=Danio rerio GN=uts2b PE=2 SV=1
-e--e------------ee--e-e-ee--e-e-ee-e--eeee--e-eeee-eee-----e---------e-ee-eeee-e-eee--ee-eee---eeee-ee-----ee-eeeeee-e---e--e
->sp|P07198|XENO_XENLA Xenopsin peptides OS=Xenopus laevis PE=1 SV=1
-eee-------------e--eeeeeeeeeeeee-ee------ee--e---ee-e-e-ee--eeeee---ee-eeeeeeeeee
+>P0DJC6
+eeeeee-eeee---e-----e--e--eee-eeee-ee-eeeee-eeeee----e-e-e----e-------ee
+>P0DJC7
+eeeeee-eeeeeeeeeeee-eeeee-eeee-----eeeeee--e-----e-e
+>P0C8A7
+eeee-e--eeeeee-e-e-e-eeee-ee-e--------eeeeee
+>O93225
+eeeeeeeeeeeeeeeeeeeeeeee---e--e---e--ee--ee--eeeee
+>O93455
+eeeeeeeeeeeeeeeeeeee--ee--ee-ee--ee-eee--eee
+>C6EVG2
+ee-eee-eeeeeeeeee--e-eee-ee--eee--e--ee---ee--ee--eeeeeeeeeee
+>P42565
+ee-e-eeeee-----ee-e-----ee-e------e--------e--------e-------ee-------ee--------e--------e--------e--------e--------e--------e--------e--------e--------e--------e--------e-------------------ee--------e-----------------------e----------------------------------e------------------ee--------eeeeeeee-------e-e--------e-eee---eeee
+>Q18502
+eeeee-ee--e--eeeeeee--ee--e--eee-eeeeeee-e-eeeeee--e--eeee-----eeeeee-eeeeee--e-eee
+>Q1MX22
+eeeeeeee-eeeeeee-ee---e--e-e-eeeeeeeee--ee-eeeee-e---ee--e--ee-eee-eee-eee--e--e--ee-e--e--e--eeeee--eee-ee-eeeeee-ee---e--eeeee-eeeeeeeee-eeeeeeeeeeee-ee-e
+>A6P3B2
+eee-eee-eeee-ee--ee-e-eeeeeeee-ee-eee-ee-eeeee-eeeeee-e-eeeeee-e-e---ee-eeeeeeee------eeeeeeeeeeeee--e--ee-eee--e--eeeeeeee-ee--eeeeee-ee-ee-e-ee--eeeeeee-----eeeeeeeeeeee--e--eeeeeee-----eeeeee--e-eeeeeee--e-eeeeeee----eeeeeeee--e-eeeeeeee--e-eeeeeeee--e--eeeeeee--e-eeeeeeee--e--eeeeeee-----eeeeeee--e--eeeeeee----eeeee--e--eeeeeeee--e--eeeeeeee--e--ee-eeeeeeeee-ee
+>Q8AUU1
+eee--eeeeeeeeeeeee--eee-ee-eee-eeeeee---e---e-----eeee-ee--ee--e--ee--eeeeeee
+>Q8JIM3
+e-----eeee-ee-eeeee-ee--eeeee-eeeee-e-ee-ee-eeee--e--e-ee-e-e-eee-eeee--e---e---------eee-eee-eeeee-eee-ee--e------e-e-e-ee-ee--ee-ee-ee-e---e--ee--ee-eeeee-ee--ee-e---ee-eeeeeeee-eee-e---eeeeeeee
+>Q76IQ4
+eee--eeeeeeeeeeeeeeeee---e--ee--eeee-e-eeeeee---e---e-----eeee-ee--e---e--ee--eeeeeee
+>Q9PUR1
+eeeeeeeeeee-ee-eeeee--ee-------e--eee--ee--e---eeeeeeeeeeee--e--------e--eee--ee--e--eeeeeeeee-eee--eee-eee--ee--e--ee---ee--e---eee-eeeee
+>O12956
+eeeee-eeeeee-e-eeeeeeeeeee-eeeee--ee---e---e--eee--ee--e---eeeeeeeee-eeeeeee-eeeeeeee--eeeee-e-eeeeee-eeeeeeeeeeeeeeeeee-eeeeeeee-eee-ee-ee-ee---e-e--ee--e--ee---ee--e--eeee-eeee-eee-e
+>Q9GQV7
+eeeee-eee-eeeeeeeeeee---ee--eeeeeeeeee-eee-eeeee-e--eeeeeeeeee-eee-eee-eeeeeeee-eeeeeeeee--ee-eeeeeeeeeeee
+>G0LWV9
+eeeeeeeeeeeeeeeeeeeeeeeeee--ee--ee-ee--ee--e-eee
+>Q16992
+eeeeeeeeeeee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-eeeeeee--e-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-eee-ee-ee-ee-ee-ee-ee--eeeeeee-eeeeee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee--e-ee-ee-ee-ee-ee-ee-ee-eeeeee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee--e-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee-ee--e-ee-ee-ee-ee-ee-ee-e-eeeeeeee-ee-ee-ee-ee-ee-eeee
+>H2CYR5
+eee---e---e--eee--ee-ee-ee--eee-eee--e--ee-ee
+>E4VP50
+eeee--e--eee-ee--eeeeeee--eee-ee--ee-eee-e-ee--ee-eee
+>Q09982
+eeee-e-e--e-e-----eee-eeee-ee-ee---------------------------------------------ee-eee
+>P86442
+eeeeeee-ee--e--e--ee-ee---e--eee-eeeee-eeeeeee--eeeee-ee--ee--eee
+>Q9BH84
+eeeeee-ee---e--ee-eee-ee-eee---ee-e----ee-e-e--e-----e-e
+>Q9BPA4
+eeeee--ee--ee--ee-eee-ee-eeeee-eee-e-----e-eee--------e-e
+>P21259
+eeee-ee--eee-eeeeeeeeeeeeeeeeeee-eeee--eeeeee-eee-eeeeeee--eee--eeeeeee-eee--eeeeee--eee--eeeeeeeeeee--eeeeeee-eee--eeeeee--eee--eeeeeeeeeee--eeeeeee-eee--eeeeee-eeee--eeeeee-eeee--eeeeeeeeeee--eeeeee-eeee--eeeeeee-eee-eeeeeeeeeeeeeeeeeeee-eeeeeeeeeeeeeeeeeeeee-eeee
+>P82003
+eeeeeeeeeeeeeeeeee-eeeeeeeeeee-ee-eeeeee-e-ee-eeeeee-e-eeeeeeeeeee--e-eeeeeeee-ee-eeeeee-e-ee-eeeeeeeeeeeeeeeee-ee-eeeeee-e-ee-eeeeee-e-eeeeeeeeeee--e-eeeeeeee--e-eeeeee-e-ee-ee-eee-ee-e-ee-eeeeee-e-eeeeeeeee-eeeeeeeeeeeeeeeeeeeeeee-ee-eeeeeeeeeeeeeeeeeee
+>C5J8E3
+eeeeeeeeeeeeeeeee-ee-eee-ee----eeeeeee
+>Q2V2G5
+eeeee-eeee-e-eee--ee-eee-----eeeeeeeeeee-e----e--e---------e--ee-ee--eeeeeee-------eee
+>A0SIF1
+eeeeeeee--ee--ee--eee-e-e-e-ee-e-eee-eeeee-e-e--eeeeee-e-e-eeee--eeeeee-ee---e--ee-ee-ee-eee---eee-eee-ee--ee--e-e-e-e-eee-eeee---ee--ee-e-e-e--eee-e-e-eee--e-e-eeeeeeee-eeeeeeeee-e--eeeee-eeeeeeee--eeeeeeeeeeeee
+>A0SIX6
+eeeeeeee--ee--e----ee---e-e-ee-e-eee-eeeee-e-e--eeeeee-e-eee-eee-eeeeee--e-------e-ee-ee-eee--eeeee-eeee-eeeeee-e---eeee--ee--ee-e---e--eee-e-ee--eee-eee---e--eeeeeeeeeeee--ee-eee-e-eeeeeeeeeee
+>A8YPR6
+eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-eee-eeeeeeeeeee-eeeeeee-eeeeeeeeeee-eeeeeeeeeee-eeeeeeeeeeeeeee-eeeeeeeeeee-eeeeeeeeeeeeeeeeeee-eeeeeeeeeeeeeeeeeee-eeeeeeeeeeeeeeeeeeeeeee-eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-eeeeeeeeeee-eeeeeeee-ee--eeeeee-ee-eee--eeee-ee-eee----e
+>E7EKD4
+eeeeeeeeeeeee-e-e-eeee--e---e--ee-eee
+>Q86UU9
+eeeee-e--ee-e-------ee-e-ee-e-e-ee-eeee-ee------ee-eee-e--eeeee--e-ee---e---ee---eeeeeeeeeeee
+>P04560
+eeeeee-e-e-ee-e--eeee----eeee-eee-e---e----e------eee-e-eee--ee--ee---e-eee-eee-e-----ee-eeeeee-e---e--e

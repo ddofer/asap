@@ -62,3 +62,20 @@ Note that many toxins appear! (Also, the length cutoff is important due to vario
 
     To get DISOrder preds:
         I manually changed all the fasta names, replacing "|" with "--". I run DisoPred (using "GetDiso.py") on this. I will then rename the sequences to their original name.
+---------------
+RERUN! D3
+
+I EXTRACTED the Fastas from the D3 XML. (Otherwise - names are no good). (These fastas are with the SignalPeptide removed)
+
+I Then filter the fastas anew.
+
+    i) filter Test-seqs internally - using usearch.
+        usearch -cluster_fast annotated_seqs.fasta -id 0.65 -centroids annotated_seqs.fasta
+        886 -> 460 sequences.   (Most are singletons).  "D3.fasta"
+
+    ii)    Then filtered for max 40% ID similarity  with the data/Neuropred training set  - 238 sequences).
+        http://weizhong-lab.ucsd.edu/cdhit_suite/cgi-bin/result.cgi?JOBID=1442743762
+        ("Sequences in db2 that are not matched to db1"):
+        ->  327 sequences ("annotated_seqs.fasta")
+
+    iii) Extract external features for the test data.  (I'm not doing another filter of it).

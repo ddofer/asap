@@ -5,8 +5,6 @@ Arguments:
 '''
 
 import sys
-sys.path.append('..')
-sys.path += ('.')
 import re
 import xml.etree.ElementTree as et
 from StringIO import StringIO
@@ -74,7 +72,8 @@ def get_proteins_with_cleavage_sites(raw_xml_path):
                         skip_protein = True
                         break
                     else:
-                        signal_peptide_end = max(signal_peptide_end, end - 1)
+                        # signal_peptide_end = max(signal_peptide_end, end - 1) #ORIG
+                        signal_peptide_end = (max(signal_peptide_end, end - 1)+1)
                 else:
 
                     if begin is not None:

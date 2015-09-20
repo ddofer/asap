@@ -1,5 +1,4 @@
 import logging
-
 from Bio import SeqIO
 
 from . import util
@@ -13,8 +12,10 @@ def convert_lf_to_fasta(source, output_file):
     '''
     Converts a .lf file, which also contains annotations, to a .fasta file, which contains only the amino-acid sequences of the
     records.
-    @param source (file handle): The source .lf file to read.
-    @param output_file (file handle): A file handlw with writing permissions to write the output FASTA into.
+    @param source (file handle):
+        The source .lf file to read.
+    @param output_file (file handle):
+        A file handlw with writing permissions to write the output FASTA into.
     '''
 
     full_records = parse_records_from_file(source, extract_annotations = True)

@@ -8,8 +8,6 @@ Arguments:
 
 import sys
 
-sys.path.append('..')
-sys.path += ('.')
 from asap import window_extraction #Changed - Dan
 
 from cleavepred import util
@@ -50,8 +48,6 @@ def close_files():
     util.close_files(extra_tracks_files.values())
 
 def extract_windows():
-    #extract_windows_from_file
-    # window_extraction
     window_extraction.extract_windows_from_file(annotated_seqs_file, extract_annotations = True, seqs_filtration_file = seqs_filtration_file, \
             extra_tracks_files = extra_tracks_files, csv_output_file = csv_output_file, window_extraction_params = window_extraction_params)
 

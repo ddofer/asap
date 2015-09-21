@@ -8,8 +8,10 @@ class SequenceTrack(object):
 
     def __init__(self, name, seq, padding_value = '_'):
         '''
-        @param name: The name of the track (string).
-        @param seq: The actual sequence (string).
+        @param name:
+            The name of the track (string).
+        @param seq:
+            The actual sequence (string).
         '''
         self.name = name
         self.seq = seq
@@ -63,7 +65,6 @@ class SequenceTracks(object):
                 used_track_name = track.name
                 length = track.length()
             elif length != track.length():
-                print(track)
                 raise Exception('Track lengths don\'t match (%s: %d, %s: %d)' % (used_track_name, length, track.name, track.length()))
 
         return length
@@ -72,7 +73,8 @@ class DataRecord(object):
 
     def __init__(self, sequence_tracks):
         '''
-        @param sequence_tracks (SequenceTracks): All the sequence tracks used for this data record.
+        @param sequence_tracks (SequenceTracks):
+            All the sequence tracks used for this data record.
         '''
         self.sequence_tracks = sequence_tracks
         self.length = sequence_tracks.length()
@@ -104,9 +106,12 @@ class FullDataRecord(DataRecord):
     def __init__(self, id, name, description, sequence_tracks):
         '''
         @see DataRecord
-        @param id (string): The record's ID from FASTA
-        @param name (string): The record's name from FASTA
-        @param description (string): The record's description from FASTA
+        @param id (string):
+            The record's ID from FASTA
+        @param name (string):
+            The record's name from FASTA
+        @param description (string):
+            The record's description from FASTA
         '''
         DataRecord.__init__(self, sequence_tracks)
         self.id = id
@@ -148,9 +153,10 @@ class Window(DataRecord):
 
     def is_only_almost_positive(self, hot_index):
         '''
-        Returns whether the hot index is negative, but one of the flanking indices is positive. If so, this window shouldn't
-        be considered during the learning process (we treat it neither positive nor negative), assuming that default
-        configuration is used.
+        @return:
+            whether the hot index is negative, but one of the flanking indices is positive. If so, this window shouldn't
+            be considered during the learning process (we treat it neither positive nor negative), assuming that default
+            configuration is used.
         '''
         mask = self.get_annotation_mask()
         return mask[hot_index] == '0' and (mask[hot_index - 1] == '1' or mask[hot_index + 1] == '1')

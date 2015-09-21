@@ -19,15 +19,15 @@ class CleavagePredictor(object):
         '''
         Predicts cleavage for a given peptide.
         @param seq (string):
-         The amino-acid sequence of the peptide to predict the annotations for, given in a 20 amino-acid alphabet.
+            The amino-acid sequence of the peptide to predict the annotations for, given in a 20 amino-acid alphabet.
         @param extra_tracks_data (dict, empty by default):
-            A dictionary for providing extra tracks of the given peptide. If using the simple
-            predictor (i.e. advanced = False), it can be left empty. If using the advanced predictor (i.e. advanced = True), must receive all
-            tracks (i.e. ss, acc, disorder and pssm). The given dictionary should map from track names to their sequence.
+            A dictionary for providing extra tracks of the given peptide. If using the simple predictor (i.e. advanced = False), it can
+            be left empty. If using the advanced predictor (i.e. advanced = True), must receive all tracks (i.e. ss, acc, disorder
+            and pssm). The given dictionary should map from track names to their sequence.
         @return:
             A tuple composed of:
-            1. cleavage_mask - A binary string (0's and 1's) representing whether each residue is a cleavage site (1) or not (0). The length
-            of the returned string corresponds to the length of the provided peptide sequence.
+            1. cleavage_mask - A binary string (0's and 1's) representing whether each residue is a cleavage site (1) or not (0). The
+            length of the returned string corresponds to the length of the provided peptide sequence.
             2. cleavage_products - A list of strings, each representing the amino-acid sequence of a predicted cleavage product.
         '''
         cleavage_mask = self.get_peptide_predictor().predict_annotations(seq, extra_tracks_data = extra_tracks_data)
@@ -37,7 +37,8 @@ class CleavagePredictor(object):
     def get_peptide_predictor(self):
 
         '''
-        @return: The PeptidePredictor object associated with this cleavage predictor.
+        @return:
+            The PeptidePredictor object associated with this cleavage predictor.
         '''
 
         if self._peptide_predictor is None:
@@ -54,10 +55,8 @@ class CleavagePredictor(object):
         finally:
             predictor_dump_file.close()
 
-
 simple_cleavage_predictor = CleavagePredictor(False)
 advanced_cleavage_predictor = CleavagePredictor(True)
-
 
 def _get_cleavage_products(seq, cleavage_mask):
 

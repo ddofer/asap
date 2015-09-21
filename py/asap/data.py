@@ -63,7 +63,7 @@ class SequenceTracks(object):
                 used_track_name = track.name
                 length = track.length()
             elif length != track.length():
-                # print(self.name)
+                print(track)
                 raise Exception('Track lengths don\'t match (%s: %d, %s: %d)' % (used_track_name, length, track.name, track.length()))
 
         return length

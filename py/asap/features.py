@@ -5,8 +5,7 @@ from .features_deps.AAScales import *
 import math
 from collections import Counter, defaultdict
 
-## "FEARURE" - should be FEATURE :P. - Dan
-FEARURE_KEY_OPTIONS = [
+FEATURE_KEY_OPTIONS = [
     'position', # Features related to the position of the window within the whole protein
     'basic_properties', # TODO
     'scales', # TODO
@@ -15,13 +14,15 @@ FEARURE_KEY_OPTIONS = [
     'kr_motifs', # TODO (Mention that it's relevant only for cleavage prediction)
     'charge', # The charge (+1, -1 or 0) of each residue along the window
     'accum_charge_left', # Accumulating charge from the left of the window
-    'accum_charge_right', # Accumulating charge from the right of the window
+    # 'accum_charge_right', # Accumulating charge from the right of the window
     'accum_pos_charge_left', # Accumulating charge from the left of the window where only positive amino-acids (K and R) are considered
-    'accum_pos_charge_right', # Accumulating charge from the right of the window where only positive amino-acids (K and R) are considered
-    'aa', # the actual amino-acid at each position given by one-hot encoding
+    # 'accum_pos_charge_right', # Accumulating charge from the right of the window where only positive amino-acids (K and R) are considered
+
+    # 'aa', # the actual amino-acid at each position given by one-hot encoding
     'aa_reduced', # Same as 'aa', after using a reduced alphabet of 15 amino-acids
     'aa_context_count', # Counting the number of occurrences of each amino-acid in the part of the protein to the left/right of the window
-    'aa_counts', # Counting the number of occurrences of each amino-acid in the window
+    # 'aa_counts', # Counting the number of occurrences of each amino-acid in the window
+
     'ss', # The given secondary-structure prediction at each position in the window given by one-hot encoding
     'ss_context_count', # Like 'aa_context_count', only for ss instead of aa
     'ss_segment', # TODO
@@ -38,9 +39,9 @@ FEARURE_KEY_OPTIONS = [
 def get_features(window, hot_index, feature_keys = None):
 
     if feature_keys is None:
-        feature_keys = FEARURE_KEY_OPTIONS
-    elif not set(feature_keys).issubset(FEARURE_KEY_OPTIONS):
-        raise Exception('Unknown feature keys: ' + ', '.join(map(str, set(feature_keys).difference(FEARURE_KEY_OPTIONS))))
+        feature_keys = FEATURE_KEY_OPTIONS
+    elif not set(feature_keys).issubset(FEATURE_KEY_OPTIONS):
+        raise Exception('Unknown feature keys: ' + ', '.join(map(str, set(feature_keys).difference(FEATURE_KEY_OPTIONS))))
 
     features = {}
 
@@ -317,7 +318,7 @@ def get_scales_features(seq):
         avg = PTMScales_Avg[scale]
         values = [aa_dict.get(aa, avg) for aa in seq]
 
-        for i in range(len(seq) - SCALE_WINDOW_SIZE + 1):  #Changed from xrange for compat. D
+        for i in range(len(seq) - SCALE_WINDOW_SIZE + 1):
             feature_name = 'scale_%s_window_%d' % (scale, i)
             feature_value = float(np.average(values[i:(i + SCALE_WINDOW_SIZE)]))
             features[feature_name] = feature_value
@@ -588,7 +589,7 @@ def GetAliphaticness(seq) :
     return {'Aliphaticness':aliphatic_index}
 
 'TODO: Maximally independent ICA from current scales. +  Kidera factors..'
-def Get_ParamScales(Bio_PP,window=4,edge=0.8,PickScales = PTMScales_Dict): ##,SA_window = 9, TMD_window = 19):
+def Get_ParamScales(Bio_PP,window=4,edge=0.9,PickScales = PTMScales_Dict): ##,SA_window = 9, TMD_window = 19):
     """
     Transform the overall sequence to various AA scales based representations, and returns them.
     (LATER, we extract features according to locations/masks of subsequences)
@@ -701,13 +702,6 @@ def Entropy_pssm(pssm, hot_index, get_entropy_segs = True):
         entropy_seq.append(features[feature_name])
 
     if get_entropy_segs:
-        "segments = [seq[0:hot_index-5],seq[hot_index-5:hot_index+1],seq[hot_index+1:]]"
-        # entropy_seg_1 = math.fsum(entropy_seq[0:(int(hot_index-4)/2)])
-        # entropy_seg_2 = math.fsum(entropy_seq[(int(hot_index-5)/2):hot_index-4])
-        # entropy_seg_3 = math.fsum(entropy_seq[hot_index-4:hot_index+1])
-        # entropy_seg_4 = math.fsum(entropy_seq[hot_index+1:])
-
-        #Changed:
         entropy_seg_1 = math.fsum(entropy_seq[0:hot_index-4])
         entropy_seg_2 = math.fsum(entropy_seq[hot_index-4:hot_index+1])
         entropy_seg_3 = math.fsum(entropy_seq[hot_index+1:])
@@ -718,6 +712,8 @@ def Entropy_pssm(pssm, hot_index, get_entropy_segs = True):
         features['entropy_seg_2']=entropy_seg_2
         features['entropy_seg_3']=entropy_seg_3
         features['entropy_seg_peptide']=entropy_seg_peptide
+        #The cleavage site may be before or after the peptide. We attempt to find a conserved stretch:
+        features['Max_Local_entropy_segment']=max(entropy_seg_1,entropy_seg_3)
 
         # for aa, value in profile.items():
     # s=self.seq

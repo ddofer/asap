@@ -79,3 +79,41 @@ I Then filter the fastas anew.
         ->  327 sequences ("annotated_seqs.fasta")
 
     iii) Extract external features for the test data.  (I'm not doing another filter of it).
+    SCRATCH 1.0 was used. (I couldn't install 1.1 remotely. wget file size error).
+
+
+    iv)    seq: Q3YEF9,Q9BP90 - X was removed from the LF sequence manually (It was already removed from the fasta). (There is a BUG with length mismatches - X are removed from fasta but not LF - should be fixed).
+    For now - I "fixed" the lf by hand.
+
+    v) Extracted features. Used the following feature_key:
+            FEATURE_KEY_OPTIONS = [
+            'position', # Features related to the position of the window within the whole protein
+            'basic_properties', # TODO
+            'scales', # TODO
+            'cysteine_motifs', # TODO
+            'fid_disorder', # TODO
+            'kr_motifs', # TODO (Mention that it's relevant only for cleavage prediction)
+            'charge', # The charge (+1, -1 or 0) of each residue along the window
+            'accum_charge_left', # Accumulating charge from the left of the window
+            # 'accum_charge_right', # Accumulating charge from the right of the window
+            'accum_pos_charge_left', # Accumulating charge from the left of the window where only positive amino-acids (K and R) are considered
+            # 'accum_pos_charge_right', # Accumulating charge from the right of the window where only positive amino-acids (K and R) are considered
+
+            # 'aa', # the actual amino-acid at each position given by one-hot encoding
+            'aa_reduced', # Same as 'aa', after using a reduced alphabet of 15 amino-acids
+            'aa_context_count', # Counting the number of occurrences of each amino-acid in the part of the protein to the left/right of the window
+            # 'aa_counts', # Counting the number of occurrences of each amino-acid in the window
+
+            'ss', # The given secondary-structure prediction at each position in the window given by one-hot encoding
+            'ss_context_count', # Like 'aa_context_count', only for ss instead of aa
+            'ss_segment', # TODO
+            'acc', # The given accessibility prediction at each position in the window given by one-hot encoding
+            'acc_context_count', # Like 'aa_context_count', only for acc instead of aa
+            'acc_segment', # TODO
+            'disorder', # The given disorder prediction at each position in the window given by one-hot encoding
+            'disorder_context_count', # Like 'aa_context_count', only for disorder instead of aa
+            'disorder_segment', # TODO
+            'pssm', # AA Frequency from the PSSM at each position in the window
+            'pssm_entropy', # Entropy of the PSSM at each position
+        ]
+

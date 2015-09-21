@@ -127,6 +127,7 @@ def parse_track_from_seq(seq, type):
 def _parse_fasta_record(fasta_seq, extra_tracks, extract_annotations):
 
     record_id = _format_id(fasta_seq.id)
+    # print(record_id)
 
     if extract_annotations:
         raw_seq_and_mask = str(fasta_seq.seq)

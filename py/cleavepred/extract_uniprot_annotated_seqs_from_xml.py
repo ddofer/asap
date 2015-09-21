@@ -2,6 +2,8 @@
 Extract a .lf file, containing sequences and cleavage annotation masks, out of a UniProt's XML file.
 Arguments:
 - output_file_path (file path, optional): The path to write the output .lf file to. If not provided, will update the project's relevant file.
+
+TODO: "Skip"/remove X letters. (Currently: causes a length mismatch when using external tools which remove "X")
 '''
 
 import sys
@@ -73,7 +75,7 @@ def get_proteins_with_cleavage_sites(raw_xml_path):
                         break
                     else:
                         # signal_peptide_end = max(signal_peptide_end, end - 1) #ORIG
-                        signal_peptide_end = (max(signal_peptide_end, end - 1)+1)
+                        signal_peptide_end = (max(signal_peptide_end, end - 1)+1) #Changed - Dan
                 else:
 
                     if begin is not None:

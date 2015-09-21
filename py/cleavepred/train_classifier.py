@@ -2,7 +2,7 @@
 A script to train a classifier from NueroPred's dataset. Will log performance to stdout.
 Arguments:
 - advanced (boolean): Whether to use the advanced features (extracted with the extra tracks), or just the simple ones.
-- predictor_dump_path (file path, optional): The path to dump the trained PeptidePredictor into. If not provided, will not dump it at all.
+- predictor_dump_path (file path, optional): The path to dump the trained PeptidePredictor. If not provided, will not dump it at all.
 '''
 
 import sys
@@ -35,9 +35,9 @@ else:
 project_paths.dataset_name = 'neuropred'
 
 classifiers = [
-    LogisticRegressionCV(Cs = 20, n_jobs = -1, class_weight = 'auto'),
-    RandomForestClassifier(max_features = 92, n_estimators = 150, n_jobs = -1, class_weight = 'auto'),
-    SVC(kernel = 'rbf', C = 3.798, probability = True, cache_size = 1600, class_weight = 'auto'),
+    LogisticRegressionCV(Cs = 20, n_jobs = -2, class_weight = 'auto'),
+    RandomForestClassifier(max_features = 82, n_estimators = 150, n_jobs = -2, class_weight = 'auto'),
+    SVC(kernel = 'rbf', C = 3.798, probability = True, cache_size = 1900, class_weight = 'auto'),
 ]
 
 ### Train the classifier and dump the predictor ###
@@ -49,21 +49,21 @@ def open_files():
     global windows_file, predictor_dump_file
     windows_file = open(project_paths.get_window_features_file_path(advanced), 'rb')
     predictor_dump_file = util.open_file(predictor_dump_path, 'wb')
-    
+
 def close_files():
     util.close_files([windows_file, predictor_dump_file])
-    
+
 def dump_predictor(predictor):
     if predictor_dump_file is not None:
         pickle.dump(predictor, predictor_dump_file)
-    
+
 def train_classifier():
     windows_data_frame = pd.read_csv(windows_file)
     window_classifier, classifier_performance = train_window_classifier(windows_data_frame, classifiers = classifiers, \
             drop_only_almost_positives = True)
     peptide_predictor = PeptidePredictor(window_classifier, window_extraction_params = window_extraction_params)
     dump_predictor(peptide_predictor)
-    
+
 if __name__ == '__main__':
     try:
         open_files()

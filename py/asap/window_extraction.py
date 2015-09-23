@@ -4,6 +4,7 @@ import csv
 import logging
 
 from . import util
+from . import features
 from . import parse
 
 BASIC_HEADERS = [
@@ -30,26 +31,28 @@ class WindowExtractionParams(object):
     '''
 
     def __init__(self, window_prefix = 7, window_suffix = 7, neighbourhood_prefix = 5, neighbourhood_suffix = 5, \
-            windows_filter = None, feature_keys = None):
+            windows_filter = None, feature_keys = features.DEFAULT_FEATURE_KEYS):
 
         '''
         @param window_prefix, window_suffix (int, both default 7):
-            The number of residues before and after the hot index in each window,
-            where the hot index is the position determining the label of the window (i.e. the window's label is the value of the annotation mask
-            in the hot index). It follows that the total window size is (window_prefix + window_suffix + 1).
+            The number of residues before and after the hot index in each window, where the hot index is the position determining the label of
+            the window (i.e. the window's label is the value of the annotation mask in the hot index). It follows that the total window size
+            is (window_prefix + window_suffix + 1).
         @param neighbourhood_prefix, neighbourhood_suffix (int, both default 5):
-            The number of residues before and after the hot index in
-            determining the neighbourhood of the window. The neighbourhood can be used during the training process in order to avoid duplicates of
-            very similar windows.
+            The number of residues before and after the hot index in determining the neighbourhood of the window. The neighbourhood can be used
+            during the training process in order to avoid duplicates of very similar windows.
         @param windows_filter (function, optional):
-            A function to filter the extracted windows by. The function will receive Window objects and
-            should return a bool stating whether to include them or not. If not provided, no filtration will take place in the windows level, and
-            all windows will be extracted.
-        @param feature_keys (list, optional):
-            A list of features to extract for each window. You can see the full list of optional keywords in
-            features.FEARURE_KEY_OPTIONS, where documentation is also provided for each of the feature keys. If not provided, all features will be
-            extracted by default. Note that features that rely on extra tracks (ss, acc, disorder, pssm) will not be extracted if the tracks are
-            not provided, even if those features are explicitly given in this list.
+            A function to filter the extracted windows by. The function will receive Window objects and should return a bool stating whether to
+            include them or not. If not provided, no filtration will take place in the windows level, and all windows will be extracted.
+        @param feature_keys (list, optional, default features.DEFAULT_FEATURE_KEYS):
+            A list of features to extract for each window. You can see the full list of optional keywords in features.FEARURE_KEY_OPTIONS, where
+            documentation is also provided for each of the feature keys. If not provided, all features will be extracted by default (i.e. will
+            use all of the features in features.FEARURE_KEY_OPTIONS). By default will use features.DEFAULT_FEATURE_KEYS, which is another list
+            containing most of the features, but not all of them, as there are some features that it doesn't make much sense to use at the same
+            time (e.g. both 'aa' and 'aa_reduced'). We anticipate that using the default features should give pretty good results in most
+            scenarios, so fine-tuning the exact used features can be left for late stages of a project.
+            Important note: Features that rely on extra tracks (ss, acc, disorder, pssm) will not be extracted if the tracks are not provided,
+            even if those features are explicitly given in this list.
         '''
 
         self.window_prefix = window_prefix
@@ -70,29 +73,28 @@ def extract_windows_from_file(source, extract_annotations = False, seqs_filtrati
         Parses a given file with peptide sequences and breaks it into windows with features, outputs a CSV with a row for each window
         and a column for each feature (along with a few other meta headers).
     @param source (file):
-        A file handle to parse the peptide sequences from. Can be either a .fasta or .lf format, depending on the
-        extract_annotations parameter.
+        A file handle to parse the peptide sequences from. Can be either a .fasta or .lf format, depending on the extract_annotations
+        parameter.
     @param extract_annotations (boolean, default False):
-        Whether to expect finding annotation masks inside the given file of
-        sequences. If set to True, will expect getting a .lf file which also contains annotations. If set to False, will expect getting
-        a .fasta file that contains only the sequences. Annotations are required only if one plans using the extracted windows to train
-        a new classifier, rather than using an existing one.
+        Whether to expect finding annotation masks inside the given file of sequences. If set to True, will expect getting a .lf file
+        which also contains annotations. If set to False, will expect getting a .fasta file that contains only the sequences. Annotations
+        are required only if one plans using the extracted windows to train a new classifier, rather than using an existing one.
     @param seqs_filtration_file (file, optional):
-        A fasta format file handle to use for filtering records. If given, will use only
-        sequences with an ID that is also present in the ids of this FASTA file. If not given, will not perform any filtration.
+        A fasta format file handle to use for filtering records. If given, will use only sequences with an ID that is also present in the
+        ids of this FASTA file. If not given, will not perform any filtration.
     @param extra_tracks_files (dict, empty by default):
-        A dictionary for providing extra tracks to extract data from (beside the
-        actual amino-acid sequence and annotations mask). The given dictionary should map from a track name to a file handle containing
-        the track data for each of the records in a FASTA format. The currently supported extra tracks are: ss (secondary-structure),
-        acc (accessibility), disorder and pssm (position-specific scoring matrix).
+        A dictionary for providing extra tracks to extract data from (beside the actual amino-acid sequence and annotations mask). The
+        given dictionary should map from a track name to a file handle containing the track data for each of the records in a FASTA
+        format. The currently supported extra tracks are: ss (secondary-structure), acc (accessibility), disorder and pssm (position-specific
+        scoring matrix).
     @param csv_output_file (file, optional):
-        A file handle with writing permissions to write the output CSV into. If not provided,
-        will return a StringIO object from which the output CSV can be read.
+        A file handle with writing permissions to write the output CSV into. If not provided, will return a StringIO object from which the
+        output CSV can be read.
     @param window_extraction_params (WindowExtractionParams, default params by default):
         Parameters to use for extracting the windows.
     @return:
-        If csv_output_file is given, will return nothing. If csv_output_file is not given, will return a a StringIO object from
-        which the output CSV can be read.
+        If csv_output_file is given, will return nothing. If csv_output_file is not given, will return a a StringIO object from which the
+        output CSV can be read.
     '''
 
     relevant_ids = _get_relevant_ids(seqs_filtration_file)
@@ -111,22 +113,21 @@ def extract_windows_from_seq(seq, annotation_mask = None, extra_tracks_data = {}
     @param seq (string):
         The peptide sequence to use, given in a 20 amino-acid alphabet.
     @param annotation_mask (string, optional):
-        An annotation mask to use as a labeling for each position along the sequence. Expecting
-        a binary sequence (of 0's and 1's) in the same length of the given amino-acid sequence. If not provided, the extracted windows
-        won't have labels, meaning they cannot be used for training a new classifier (only fed to an already trained classifier).
+        An annotation mask to use as a labeling for each position along the sequence. Expecting a binary sequence (of 0's and 1's) in
+        the same length of the given amino-acid sequence. If not provided, the extracted windows won't have labels, meaning they cannot
+        be used for training a new classifier (only fed to an already trained classifier).
     @param extra_tracks_data (dict, empty by default):
-        A dictionary for providing extra tracks to extract data from (beside the
-        actual amino-acid sequence and annotations mask). The given dictionary should map from track names to their sequence.
-        Currently supported extra tracks are: ss (secondary-structure), acc (accessibility), disorder and pssm (position-specific scoring
-        matrix).
+        A dictionary for providing extra tracks to extract data from (beside the actual amino-acid sequence and annotations mask). The
+        given dictionary should map from track names to their sequence. Currently supported extra tracks are: ss (secondary-structure),
+        acc (accessibility), disorder and pssm (position-specific scoring matrix).
     @param csv_output_file (file, optional):
-         A file handle with writing permissions to write the output CSV into. If not provided,
-        will return a StringIO object from which the output CSV can be read.
+        A file handle with writing permissions to write the output CSV into. If not provided, will return a StringIO object from which
+        the output CSV can be read.
     @param window_extraction_params (WindowExtractionParams, default params by default):
         Parameters to use for extracting the windows.
     @return:
-        If csv_output_file is given, will return nothing. If csv_output_file is not given, will return a a StringIO object from
-        which the output CSV can be read.
+        If csv_output_file is given, will return nothing. If csv_output_file is not given, will return a a StringIO object from which the
+        output CSV can be read.
     '''
 
     extra_tracks = _get_extra_tracks_from_raw_data(extra_tracks_data)

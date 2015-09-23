@@ -1,4 +1,4 @@
-from asap import WindowExtractionParams
+from asap import FEATURE_KEY_OPTIONS, WindowExtractionParams
 from asap.config import POSITIVE_AMINO_ACIDS
 
 AVAILABLE_TRACKS = [
@@ -8,6 +8,9 @@ AVAILABLE_TRACKS = [
     'pssm',
 ]
 
+# Here we prefer using 'aa_reduced' over 'aa'. Other than that we use all available features.
+USED_FEATURES = set(FEATURE_KEY_OPTIONS).difference(['aa'])
+
 def windows_filter(window):
     '''
     We consider only windows with a positively charged amino-acid (i.e. K/R) in the hot index (only then it can be a
@@ -16,4 +19,4 @@ def windows_filter(window):
     return window.get_aa_seq()[window_extraction_params.window_hot_index] in POSITIVE_AMINO_ACIDS
 
 window_extraction_params = WindowExtractionParams(window_prefix = 11, window_suffix = 8, neighbourhood_prefix = 5, \
-        neighbourhood_suffix = 5, windows_filter = windows_filter)
+        neighbourhood_suffix = 5, windows_filter = windows_filter, feature_keys = USED_FEATURES)

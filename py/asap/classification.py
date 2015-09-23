@@ -7,7 +7,7 @@ import pandas as pd
 from sklearn.utils import shuffle
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler
-from sklearn.feature_selection import VarianceThreshold
+from sklearn.feature_selection import VarianceThreshold, SelectFdr
 from sklearn.cross_validation import StratifiedKFold
 from sklearn.metrics import confusion_matrix, roc_auc_score, f1_score
 from sklearn.ensemble import RandomForestClassifier
@@ -15,6 +15,7 @@ from sklearn.svm import SVC
 
 from . import util
 from . import window_extraction
+from . import sklearn_extensions
 
 LOGGER = logging.getLogger('ML')
 
@@ -24,6 +25,11 @@ DEFAULT_CLASSIFIERS = [
 ]
 
 DEFAULT_TRANSFORMER = StandardScaler(copy = False)
+
+DEFAULT_FEATURE_SELECTOR = sklearn_extensions.FeatureSelectionPipeline([
+    VarianceThreshold(0.01),
+    SelectFdr(alpha = 0.3),
+])
 
 # Use a constant seed
 SEED = 1812
@@ -148,7 +154,7 @@ class PeptidePredictor(object):
         return ''.join(annotation_mask)
 
 def train_window_classifier(windows_data_frame, classifiers = DEFAULT_CLASSIFIERS, drop_only_almost_positives = False, \
-        drop_duplicates = True, transformer = DEFAULT_TRANSFORMER, feature_selector = VarianceThreshold(), n_folds = 5, \
+        drop_duplicates = True, transformer = DEFAULT_TRANSFORMER, feature_selector = DEFAULT_FEATURE_SELECTOR, n_folds = 5, \
         scoring_method = f1_score, select_best = True):
 
     '''
@@ -171,9 +177,10 @@ def train_window_classifier(windows_data_frame, classifiers = DEFAULT_CLASSIFIER
     @param transformer (sklearn transformer, optional, default sklearn.preprocessing.StandardScaler):
         A preprocessing transformer to use for the data before starting the kfold evaluation and final training of the classifiers. If None, will
         not perform any preprocessing  transformation
-    @param feature_selector (sklearn feature selector, optional, default removing features with low variance):
+    @param feature_selector (sklearn feature selector, optional, default a pipeline of VarianceThreshold and SelectFdr):
         A feature selection procedure to apply during both the kfold evaluation and final training of each classifier. If None, will not perform
-        feature selection (i.e. will use all features).
+        feature selection (i.e. will use all features). Note that the given feature selector must implement the get_support method (hence sklearn's
+        builtin Pipeline object cannot be used; if you want to pipeline then use FeatureSelectionPipeline of this project).
     @param n_folds (int, default 5):
         The number of folds to use during the kfold evaluation procedure.
     @param scoring_method (function, default sklearn.metrics.f1_score):
@@ -245,7 +252,7 @@ def _get_classifier_kfold_results(classifier, X, y, n_folds, feature_selector, s
     score, roc, sensitivity, precision, specificity, cm = _get_prediction_scores(y, y_pred, scoring_method)
 
     time_diff = datetime.datetime.now() - time_before
-    LOGGER.info('Finished training. Took %d seconds' % int(time_diff.total_seconds()))
+    LOGGER.info('Finished estimating. Took %d seconds' % int(time_diff.total_seconds()))
 
     LOGGER.info('score = %f, roc = %f, sensitivity = %f, precision = %f, specificity = %f' % (score, roc, sensitivity, precision, specificity))
     LOGGER.info('Confusion matrix:' + '\n' + str(cm))

@@ -34,7 +34,33 @@ FEATURE_KEY_OPTIONS = [
     'pssm_entropy', # Entropy of the PSSM at each position
 ]
 
-def get_features(window, hot_index, feature_keys = None):
+DEFAULT_FEATURE_KEYS = [
+    'position',
+    'basic_properties',
+    'scales',
+    'fid_disorder',
+    'charge',
+    'accum_charge_left',
+    'accum_charge_right',
+    'accum_pos_charge_left',
+    'accum_pos_charge_right',
+    'aa',
+    'aa_context_count',
+    'aa_counts',
+    'ss',
+    'ss_context_count',
+    'ss_segment',
+    'acc',
+    'acc_context_count',
+    'acc_segment',
+    'disorder',
+    'disorder_context_count',
+    'disorder_segment',
+    'pssm',
+    'pssm_entropy',
+]
+
+def get_features(window, hot_index, feature_keys = DEFAULT_FEATURE_KEYS):
 
     if feature_keys is None:
         feature_keys = FEATURE_KEY_OPTIONS
@@ -157,7 +183,7 @@ def get_aa_features(seq):
     return get_multi_option_features('aa', config.AMINO_ACIDS, seq)
 
 def get_reduced_aa_features(seq):
-    return get_multi_option_features('aa', config.REDUCED_AMINO_ACIDS, get_reduced_aa_seq(seq))
+    return get_multi_option_features('r_aa', config.REDUCED_AMINO_ACIDS, get_reduced_aa_seq(seq))
 
 def get_ss_features(ss):
     return get_multi_option_features('ss', config.SS_OPTIONS, ss)

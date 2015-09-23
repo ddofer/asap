@@ -161,7 +161,7 @@ class Window(DataRecord):
         mask = self.get_annotation_mask()
         return mask[hot_index] == '0' and (mask[hot_index - 1] == '1' or mask[hot_index + 1] == '1')
 
-    def get_features(self, hot_index, feature_keys = None):
+    def get_features(self, hot_index, feature_keys = features.DEFAULT_FEATURE_KEYS):
         return features.get_features(self, hot_index, feature_keys)
 
     def __repr__(self):

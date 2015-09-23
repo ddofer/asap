@@ -5,7 +5,6 @@ from .common import AVAILABLE_TRACKS
 # A global variable to update whenever looking to work on another dataset
 dataset_name = None
 
-
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 DATA_DIR = os.path.join(BASE_DIR, 'data/cleavage')
 

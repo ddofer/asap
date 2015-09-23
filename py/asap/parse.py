@@ -10,8 +10,8 @@ LOGGER = logging.getLogger('PARSE')
 def convert_lf_to_fasta(source, output_file):
 
     '''
-    Converts a .lf file, which also contains annotations, to a .fasta file, which contains only the amino-acid sequences of the
-    records.
+    Converts a .lf file, which also contains annotations, to a .fasta file, which contains only the amino-acid sequences
+    of the records.
     @param source (file handle):
         The source .lf file to read.
     @param output_file (file handle):
@@ -62,7 +62,7 @@ def get_record_from_seq(seq, annotation_mask = None, extra_tracks = {}):
         The amino-acid sequence of the record
     @param annotation_mask (string, optional):
         A binary mask (made of 0's and 1's) in the same size of the given sequence to use
-    as an annotation mask. If not provided, the record will not have an annotation mask.
+        as an annotation mask. If not provided, the record will not have an annotation mask.
     @param extra_tracks (dict, empty by default):
     Extra tracks to give the record, given in the following format:
         {
@@ -127,7 +127,6 @@ def parse_track_from_seq(seq, type):
 def _parse_fasta_record(fasta_seq, extra_tracks, extract_annotations):
 
     record_id = _format_id(fasta_seq.id)
-    # print(record_id)
 
     if extract_annotations:
         raw_seq_and_mask = str(fasta_seq.seq)

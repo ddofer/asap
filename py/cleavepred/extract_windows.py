@@ -8,7 +8,7 @@ Arguments:
 
 import sys
 
-from asap import window_extraction #Changed - Dan
+import asap
 
 from cleavepred import util
 from cleavepred import project_paths
@@ -48,7 +48,7 @@ def close_files():
     util.close_files(extra_tracks_files.values())
 
 def extract_windows():
-    window_extraction.extract_windows_from_file(annotated_seqs_file, extract_annotations = True, seqs_filtration_file = seqs_filtration_file, \
+    asap.extract_windows_from_file(annotated_seqs_file, extract_annotations = True, seqs_filtration_file = seqs_filtration_file, \
             extra_tracks_files = extra_tracks_files, csv_output_file = csv_output_file, window_extraction_params = window_extraction_params)
 
 if __name__ == '__main__':

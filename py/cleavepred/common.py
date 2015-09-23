@@ -10,8 +10,8 @@ AVAILABLE_TRACKS = [
 
 def windows_filter(window):
     '''
-    We consider only windows with a positively charged amino-acid (i.e. K/R) in the hot index
-    (only then it can be a cleavage candidate).
+    We consider only windows with a positively charged amino-acid (i.e. K/R) in the hot index (only then it can be a
+    cleavage candidate).
     '''
     return window.get_aa_seq()[window_extraction_params.window_hot_index] in POSITIVE_AMINO_ACIDS
 

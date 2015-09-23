@@ -97,7 +97,6 @@ class WindowClassifier(object):
         return _get_prediction_scores(y, y_pred, scoring_method)
 
     def _transform(self, X):
-        'transformer.transform(new_test_X) - would make it suited for more use. Dan'
         if self.transformer is None:
             return X
         else:

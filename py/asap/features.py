@@ -7,7 +7,7 @@ from collections import Counter, defaultdict
 
 FEATURE_KEY_OPTIONS = [
     'position', # Features related to the position of the window within the whole protein
-    'basic_properties', # PI, MW, GRAVY, aromaticity,aliphaticness,Net Charge.
+    'basic_properties', # PI, MW, GRAVY, aromaticity, aliphaticness, Net Charge.
     'scales', # Extracts quantitative features (e.g. Average at each position) using multiple amino acid propensity scales, for a given window size
     'cysteine_motifs', # Check for putative Cysteine spacer motifs. ('C[^C]{0,3}C' , 'C[^C]{0,3}C[^C]{15,40}C')
     'fid_disorder', # Get for putative disordered segment(s) according to FoldIndex method
@@ -20,11 +20,7 @@ FEATURE_KEY_OPTIONS = [
     'aa', # the actual amino-acid at each position given by one-hot encoding
     'aa_reduced', # Same as 'aa', after using a reduced alphabet of 15 amino-acids
     'aa_context_count', # Counting the number of occurrences of each amino-acid in the part of the protein to the left/right of the window
-<<<<<<< HEAD
-    # 'aa_counts', # Counting the number of occurrences of each amino-acid in the window
-=======
     'aa_counts', # Counting the number of occurrences of each amino-acid in the window
->>>>>>> 09eb71588ffcd0986e2005652f99b1360742c3ae
     'ss', # The given secondary-structure prediction at each position in the window given by one-hot encoding
     'ss_context_count', # Like 'aa_context_count', only for ss instead of aa
     'ss_segment', # Get the total amount of each type of "letter/state" in each subsegment of the sequence. Default is dividing the sequence into 3 segments.

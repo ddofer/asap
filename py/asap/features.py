@@ -7,12 +7,12 @@ from collections import Counter, defaultdict
 
 FEATURE_KEY_OPTIONS = [
     'position', # Features related to the position of the window within the whole protein
-    'basic_properties', # TODO
-    'scales', # TODO
-    'cysteine_motifs', # TODO
-    'fid_disorder', # TODO
-    'kr_motifs', # TODO (Mention that it's relevant only for cleavage prediction)
-    'charge', # The charge (+1, -1 or 0) of each residue along the window
+    'basic_properties', # PI, MW, GRAVY, aromaticity,aliphaticness,Net Charge.
+    'scales', # Extracts quantitative features (e.g. Average at each position) using multiple amino acid propensity scales, for a given window size
+    'cysteine_motifs', # Check for putative Cysteine spacer motifs. ('C[^C]{0,3}C' , 'C[^C]{0,3}C[^C]{15,40}C')
+    'fid_disorder', # Get for putative disordered segment(s) according to FoldIndex method
+    'kr_motifs', # Get putative canonical/"Known motif" cleavage sites, according to a regular expression.
+    'charge', # The charge (+1, -1 or 0) of each residue in the window
     'accum_charge_left', # Accumulating charge from the left of the window
     'accum_charge_right', # Accumulating charge from the right of the window
     'accum_pos_charge_left', # Accumulating charge from the left of the window where only positive amino-acids (K and R) are considered
@@ -20,16 +20,20 @@ FEATURE_KEY_OPTIONS = [
     'aa', # the actual amino-acid at each position given by one-hot encoding
     'aa_reduced', # Same as 'aa', after using a reduced alphabet of 15 amino-acids
     'aa_context_count', # Counting the number of occurrences of each amino-acid in the part of the protein to the left/right of the window
+<<<<<<< HEAD
+    # 'aa_counts', # Counting the number of occurrences of each amino-acid in the window
+=======
     'aa_counts', # Counting the number of occurrences of each amino-acid in the window
+>>>>>>> 09eb71588ffcd0986e2005652f99b1360742c3ae
     'ss', # The given secondary-structure prediction at each position in the window given by one-hot encoding
     'ss_context_count', # Like 'aa_context_count', only for ss instead of aa
-    'ss_segment', # TODO
+    'ss_segment', # Get the total amount of each type of "letter/state" in each subsegment of the sequence. Default is dividing the sequence into 3 segments.
     'acc', # The given accessibility prediction at each position in the window given by one-hot encoding
     'acc_context_count', # Like 'aa_context_count', only for acc instead of aa
-    'acc_segment', # TODO
+    'acc_segment', # Get the total amount of each type of "letter/state" in each subsegment of the sequence. Default is dividing the sequence into 3 segments.
     'disorder', # The given disorder prediction at each position in the window given by one-hot encoding
     'disorder_context_count', # Like 'aa_context_count', only for disorder instead of aa
-    'disorder_segment', # TODO
+    'disorder_segment', # Get the total amount of each type of "letter/state" in each subsegment of the sequence. Default is dividing the sequence into 3 segments.
     'pssm', # AA Frequency from the PSSM at each position in the window
     'pssm_entropy', # Entropy of the PSSM at each position
 ]
@@ -218,7 +222,7 @@ def Dict_Keys_prefix(multilevelDict,PrefixStr):
 def get_segment_features(seq, hot_index, seqtype):
 
     '''
-    Get the total amount of each type of ";etter/state" ,
+    Get the total amount of each type of "letter/state" ,
     in each subsegment of the sequence.
     e.g. if seq is the disordered sequence representation:
     Returns the total amount of disorder, non-disordered & predicted-binding in each seg.
@@ -473,7 +477,7 @@ def get_basic_properties_features(seq):
     '''
     Get basic physical properties as in BioPython/ExPasy ProtParam
     module.
-    Returns: PI, MW, GRAVY, aromaticity, Instability index.
+    Returns: PI, MW, GRAVY, aromaticity,aliphaticness,Net Charge.
 
     Note: These methods all assume a standard AA Alphabet.
     Warning! Returned PI is INNACCURATE For a parsed (Tail(s) removed) subseq.
@@ -485,6 +489,8 @@ def get_basic_properties_features(seq):
     MW=Bio_ProtParam.molecular_weight()
     GRAVY=Bio_ProtParam.gravy()
     aromaticity=Bio_ProtParam.aromaticity()
+    aliphaticness = GetAliphaticness(seq)
+    NetCharges = get_netCharge(seq)
 
     prot_pp = {'PI':PI,
     'Molecular_Weight':round(MW,4), 'GRAVY':round(GRAVY,4),
@@ -493,9 +499,6 @@ def get_basic_properties_features(seq):
     # #Added now - Dan.
     # flex = GetFlex(Bio_ProtParam) #Returns 3 keys/values
     # prot_pp.update(flex) # Problem with mpty window
-
-    aliphaticness = GetAliphaticness(seq)
-    NetCharges = get_netCharge(seq)
 
     prot_pp.update(aliphaticness)
     prot_pp.update(NetCharges)

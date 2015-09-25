@@ -2,7 +2,8 @@
 A script to train a classifier from NueroPred's dataset. Will log performance to stdout.
 Arguments:
 - advanced (boolean): Whether to use the advanced features (extracted with the extra tracks), or just the simple ones.
-- predictor_dump_path (file path, optional): The path to dump the trained PeptidePredictor. If not provided, will not dump it at all.
+- predictor_dump_path (file path, optional): The path to dump the trained PeptidePredictor. If not provided, will not dump it at all. If provided
+with the keyword "auto", will dump it to the project's relevant file.
 '''
 
 import sys
@@ -25,7 +26,10 @@ from cleavepred.common import window_extraction_params
 advanced = util.parse_bool(sys.argv[1])
 
 if len(sys.argv) > 2:
-    predictor_dump_path = sys.argv[2]
+    if sys.argv[2].lower() == 'auto':
+        predictor_dump_path = project_paths.get_peptide_predictor_dump_file_path(advanced)
+    else:
+        predictor_dump_path = sys.argv[2]
 else:
     predictor_dump_path = None
 

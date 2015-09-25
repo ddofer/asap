@@ -56,4 +56,16 @@ docs/_build/
 
 # PyBuilder
 target/
+<<<<<<< HEAD
 *.csv
+=======
+
+# cleavepred auto-generated files
+data/cleavage/uniprot_dataset/annotated_seqs.lf
+data/cleavage/neuropred_dataset/window_simple_features.csv
+data/cleavage/neuropred_dataset/window_advanced_features.csv
+data/cleavage/uniprot_dataset/window_simple_features.csv
+data/cleavage/uniprot_dataset/window_advanced_features.csv
+data/cleavage/simple_peptide_predictor.pkl
+data/cleavage/advanced_peptide_predictor.pkl
+>>>>>>> 3db99da14878854754a48b670ac4e4dab7b83b12

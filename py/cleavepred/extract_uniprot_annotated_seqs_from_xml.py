@@ -71,7 +71,7 @@ def get_proteins_with_cleavage_sites(raw_xml_path):
                         skip_protein = True
                         break
                     else:
-                        signal_peptide_end = max(signal_peptide_end, end - 1) + 1
+                        signal_peptide_end = max(signal_peptide_end, end)
                 else:
 
                     if begin is not None:
@@ -87,11 +87,9 @@ def get_proteins_with_cleavage_sites(raw_xml_path):
         if skip_protein:
             continue
             
-        cleavage_sites = set([i for i in cleavage_sites if i >= (signal_peptide_end+3) and i < (len(seq)-3) and seq[i] in 'KR'])
-
+        cleavage_sites = set([i for i in cleavage_sites if i >= signal_peptide_end + 3 and i < len(seq) - 3 and seq[i] in 'KR'])
         cleavage_sites_to_remove = set([i - 1 for i in cleavage_sites]) # If 11, we take only the second
         cleavage_sites = cleavage_sites.difference(cleavage_sites_to_remove)
-
 
         if cleavage_sites: # we don't want samples with no cleavages at all - it's probably a mistake
             yield accession, seq, cleavage_sites, signal_peptide_end
@@ -104,14 +102,26 @@ def cleavage_sites_to_mask(seq_length, cleavage_sites):
         mask[cleavage_site] = '1'
 
     return ''.join(mask)
+    
+def remove_xs(seq, mask):
+    
+    revised_seq = ''
+    revised_mask = ''
+    
+    for aa, label in zip(seq, mask):
+        if aa.lower() != 'x':
+            revised_seq += aa
+            revised_mask += label
+            
+    return revised_seq, revised_mask
 
 def space_seq(seq, chunk_length = 10):
     return ' '.join(util.split_to_chunks(seq, chunk_length))
 
-def write_fasta_like_record(file, accession, seq, cleavage_sites, signal_peptide_end):
+def write_fasta_like_record(file, accession, seq, mask):
     file.write('>' + accession + '\n')
-    file.write(space_seq(seq[signal_peptide_end:]) + '\n')
-    file.write(space_seq(cleavage_sites_to_mask(len(seq), cleavage_sites)[signal_peptide_end:]) + '\n')
+    file.write(space_seq(seq) + '\n')
+    file.write(space_seq(mask) + '\n')
     file.write('\n')
 
 if __name__ == '__main__':
@@ -120,7 +130,10 @@ if __name__ == '__main__':
 
     try:
         for accession, seq, cleavage_sites, signal_peptide_end in get_proteins_with_cleavage_sites(project_paths.get_raw_data_xml_file_path()):
-            write_fasta_like_record(output_file, accession, seq, cleavage_sites, signal_peptide_end)
+            mask_to_write = cleavage_sites_to_mask(len(seq), cleavage_sites)[signal_peptide_end:]
+            seq_to_write = seq[signal_peptide_end:]
+            seq_to_write, mask_to_write = remove_xs(seq_to_write, mask_to_write)
+            write_fasta_like_record(output_file, accession, seq_to_write, mask_to_write)
     finally:
         output_file.close()
 

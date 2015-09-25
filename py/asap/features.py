@@ -13,11 +13,11 @@ FEATURE_KEY_OPTIONS = [
     'fid_disorder', # Get for putative disordered segment(s) according to FoldIndex method
     'kr_motifs', # Get putative canonical/"Known motif" cleavage sites, according to a regular expression.
     'charge', # The charge (+1, -1 or 0) of each residue in the window
-    'accum_charge_left', # Accumulating charge from the left of the window
-    'accum_charge_right', # Accumulating charge from the right of the window
-    'accum_pos_charge_left', # Accumulating charge from the left of the window where only positive amino-acids (K and R) are considered
-    'accum_pos_charge_right', # Accumulating charge from the right of the window where only positive amino-acids (K and R) are considered
-    'aa', # the actual amino-acid at each position given by one-hot encoding
+    # 'accum_charge_left', # Accumulating charge from the left of the window
+    # 'accum_charge_right', # Accumulating charge from the right of the window
+    # 'accum_pos_charge_left', # Accumulating charge from the left of the window where only positive amino-acids (K and R) are considered
+    # 'accum_pos_charge_right', # Accumulating charge from the right of the window where only positive amino-acids (K and R) are considered
+    # 'aa', # the actual amino-acid at each position given by one-hot encoding
     'aa_reduced', # Same as 'aa', after using a reduced alphabet of 15 amino-acids
     'aa_context_count', # Counting the number of occurrences of each amino-acid in the part of the protein to the left/right of the window
     'aa_counts', # Counting the number of occurrences of each amino-acid in the window
@@ -283,6 +283,9 @@ def get_accumulating_positive_charge_features(seq, side):
     return features
 
 def get_pssm_features(pssm):
+    '''
+    PSSM profile AA Order: {'A', 'C', 'E', 'D', 'G', 'F', 'I', 'H', 'K', 'M', 'L', 'N', 'Q', 'P', 'S', 'R', 'T', 'W', 'V', 'Y', '_'}
+    '''
 
     features = {}
 
@@ -584,7 +587,7 @@ def calculateProteinCharge(sequence, pH=7.2): # Has_N_Terminal=True,Has_C_Termin
         protein_charge += AA_Counter[amino_acid] * calculateAminoAcidCharge(amino_acid, pH)
     return protein_charge
 
-def get_netCharge(seq,PH_ranges = [4.5,5.5,6.8,7.3,8.1]):
+def get_netCharge(seq,PH_ranges = [5.5,6.8,7.3,8.1]):
         st = "PH_Charge_"
         res = defaultdict(float)
         # res = Counter()
@@ -612,7 +615,7 @@ def GetAliphaticness(seq) :
     return {'Aliphaticness':aliphatic_index}
 
 'TODO: Maximally independent ICA from current scales. +  Kidera factors..'
-def Get_ParamScales(Bio_PP,window=4,edge=0.9,PickScales = PTMScales_Dict): ##,SA_window = 9, TMD_window = 19):
+def Get_ParamScales(Bio_PP,window=5,edge=0.9,PickScales = PTMScales_Dict): ##,SA_window = 9, TMD_window = 19):
     """
     Transform the overall sequence to various AA scales based representations, and returns them.
     (LATER, we extract features according to locations/masks of subsequences)
@@ -691,36 +694,44 @@ def log2(number):
     """Shorthand for base-2 logarithms"""
     return math.log(number, 2) if number > 0 else math.log(10E-50, 2)
 
-#Changed: division by uniform background freq - http://docs.scipy.org/doc/scipy-dev/reference/generated/scipy.stats.entropy.html # DAN
-def Entropy_pssm(pssm, hot_index, get_entropy_segs = True):
-    '''
-    TODO: Is the formula correct ???
-    TODO: Background frequency correction.
+VERT_AA_FREQ = {
+    'A':0.074,'R':0.042,'N':0.044,'D':0.059,
+    'C': 0.033 ,'Q': 0.037 ,'E': 0.058 ,
+'G': 0.074 ,'H': 0.029 ,'I': 0.038 ,'L': 0.076 ,
+'K': 0.072 ,'M': 0.018 ,'F': 0.04 ,'P': 0.05 ,
+'S': 0.081 ,'T': 0.062 ,'W': 0.013 ,'Y': 0.033 ,
+'V': 0.068,'_':1
+}
 
-    Calculate the (Shannon) information entropy  of a given input string.
+def Entropy_pssm(pssm, hot_index, get_entropy_segs = True,background_freq_dict = VERT_AA_FREQ):
+    '''
+    PSSM profile AA Order: {'A', 'C', 'E', 'D', 'G', 'F', 'I', 'H', 'K', 'M', 'L', 'N', 'Q', 'P', 'S', 'R', 'T', 'W', 'V', 'Y', '_'}
+    TODO: Background frequency correction.
+    Background frequencies taken from default for Vertebrates:
+    http://www.tiem.utk.edu/~gross/bioed/webmodules/aminoacid.html
+    It might be useful to use other background frequencies - e.g. from the training set proteins, or default BloSum.
+    Additional sources of background frequencies: http://www.bioinformatics.org/pipermail/ssml-general/2005-July/000203.html
+
+    Calculate the Relative entropy (KL-divergence, with relative frequency accounted for)
+     at each position, from a PSSM profile.
+
     Entropy is the expected value of the measure of information content in system.
     http://rosettacode.org/wiki/Entropy#Python
-
-    Uses background uniform frequency (Pb) . (This is innaccurate)
-    Add better background Freqs for getting Relative entropy!
-
     https://github.com/talmo/MotifSearch/blob/master/genomics.py
 
-    http://stackoverflow.com/questions/23480002/shannon-entropy-of-data-in-this-format-dna-motif
     '''
 
     features = {}
-    background_freq_uniform = 0.047 #http://bioinf.uab.es/transcout/entropy.html
-
+    # background_freq_uniform = 0.047 #http://bioinf.uab.es/transcout/entropy.html
     entropy_seq = [] #store entropy at each position along the sequence
 
-    #TODO: Check that PSSM entropy formula is correct!
     for i, profile in enumerate(pssm):
+
         feature_name = 'EntropyPssm@' + str(i)
         #ORIG
-        # features[feature_name] = (-sum( ((count * log2(count)) - background_freq_uniform) for count in profile.values()))
-        #CHANGED: Dan - from (count) to (count/background_freq)
-        features[feature_name] = (-sum( (count * log2(count/background_freq_uniform)) for count in profile.values()))
+        # features[feature_name] = (-sum( (count * log2(count/background_freq_uniform)) for count in profile.values())) #Pre Change to new background frequencies
+        pssm_keys = profile.keys()
+        features[feature_name] = (-sum((profile[aa_letter] * log2(profile[aa_letter]/background_freq_dict[aa_letter]) for aa_letter in pssm_keys)))
 
         entropy_seq.append(features[feature_name])
 

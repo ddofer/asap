@@ -30,7 +30,7 @@ class WindowExtractionParams(object):
     Parameters that should be used when extracting windows and their features from full records.
     '''
 
-    def __init__(self, window_prefix = 7, window_suffix = 7, neighbourhood_prefix = 5, neighbourhood_suffix = 5, \
+    def __init__(self, window_prefix = 9, window_suffix = 9, neighbourhood_prefix = 5, neighbourhood_suffix = 5, \
             windows_filter = None, feature_keys = features.DEFAULT_FEATURE_KEYS):
 
         '''

@@ -58,22 +58,31 @@ class WindowClassifier(object):
         self.used_features = used_features
         self.transformer = transformer
 
-    def classify_windows(self, windows_data_frame):
+    def classify_windows(self, windows_data_frame, proba = False):
+        
         '''
         Classifies windows extracted with their features, given in a CSV format. Obviously, these windows don't need to have annotations/labels.
         Even if labels are given, they will be ignored.
         @param windows_data_frame (pandas.DataFrame):
             A data frame of the windows' CSV.
+        @param proba (default False):
+            Whether to return predicted probabilities (floats from between 0 to 1) or binary labels (0s or 1s).
         @return:
             A numpy array of the predicted labels for the given windows. The length of the returned array will correspond to the number of
             windows in the given data frame.
         '''
+        
         if len(windows_data_frame) == 0:
             return np.empty(shape = 0)
         else:
+            
             X = windows_data_frame[self.used_features].values
             X = self._transform(X)
-            return self.raw_classifier.predict(X)
+            
+            if proba:
+                return self.raw_classifier.predict_proba(X)[:,1]
+            else:
+                return self.raw_classifier.predict(X)
 
     def test_performance(self, windows_data_frame, drop_only_almost_positives = False, drop_duplicates = True, scoring_method = f1_score):
         '''
@@ -125,7 +134,7 @@ class PeptidePredictor(object):
         self.window_classifier = window_classifier
         self.window_extraction_params = window_extraction_params
 
-    def predict_annotations(self, seq, extra_tracks_data = {}):
+    def predict_annotations(self, seq, extra_tracks_data = {}, proba = False):
 
         '''
         Predicts the annotations of a peptide.
@@ -135,9 +144,12 @@ class PeptidePredictor(object):
             A dictionary for providing extra tracks of the given peptide. Must receive the data for all the tracks that have been used to
             extract the windows for training this classifier. Specifically, if this predictor relies on a feature that relies on a certain
             track, then this track must be provided here. The given dictionary should map from track names to their sequence.
+        @param proba (default False):
+            Whether to return predicted probabilities (floats from between 0 to 1) or binary labels (0s or 1s).
         @return:
-            A binary string (of 0's and 1's) representing the predicted annotations for the given peptide. The length of the returned string
-            will correspond to the length of the provided peptide sequence.
+            If proba = False, will return a binary string (of 0's and 1's) representing the predicted annotations for the given peptide. If
+            proba = True, will return a list of floats (between 0 to 1), representing the predicted probabilities. Either way, the length of
+            the returned string/list will correspond to the length of the provided peptide sequence.
         '''
 
         length = len(seq)
@@ -146,14 +158,17 @@ class PeptidePredictor(object):
         windows_data_frame = pd.read_csv(windows_csv)
         window_indices = windows_data_frame['window_hot_index'].values
 
-        labels = self.window_classifier.classify_windows(windows_data_frame)
-        annotation_mask = ['0'] * length
+        labels = self.window_classifier.classify_windows(windows_data_frame, proba = proba)
+        annotation_mask = [0] * length
 
         for window_index, label in zip(window_indices, labels):
-            if label and window_index >= 0 and window_index < length:
-                annotation_mask[window_index] = '1'
-
-        return ''.join(annotation_mask)
+            if window_index >= 0 and window_index < length:
+                annotation_mask[window_index] = label
+                
+        if proba:
+            return map(float, annotation_mask)
+        else:
+            return ''.join(map(str, annotation_mask))
         
 def train_window_classifier(windows_data_frame, classifiers = DEFAULT_CLASSIFIERS, drop_only_almost_positives = False, \
         drop_duplicates = True, transformer = DEFAULT_TRANSFORMER, feature_selector = DEFAULT_FEATURE_SELECTOR, n_folds = 5, \

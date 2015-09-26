@@ -15,7 +15,7 @@ class CleavagePredictor(object):
         self.advanced = advanced
         self._peptide_predictor = None
 
-    def predict(self, seq, extra_tracks_data = {}):
+    def predict(self, seq, extra_tracks_data = {}, proba = False):
         '''
         Predicts cleavage for a given peptide.
         @param seq (string):
@@ -24,13 +24,17 @@ class CleavagePredictor(object):
             A dictionary for providing extra tracks of the given peptide. If using the simple predictor (i.e. advanced = False), it can
             be left empty. If using the advanced predictor (i.e. advanced = True), must receive all tracks (i.e. ss, acc, disorder
             and pssm). The given dictionary should map from track names to their sequence.
+        @param proba (default False):
+            Whether to return mask of predicted probabilities (floats from between 0 to 1) or binary labels (0s or 1s).
         @return:
             A tuple composed of:
-            1. cleavage_mask - A binary string (0's and 1's) representing whether each residue is a cleavage site (1) or not (0). The
-            length of the returned string corresponds to the length of the provided peptide sequence.
+            1. cleavage_mask - If proba = False, it will be a binary string (0's and 1's) representing whether each residue is a cleavage
+            site (1) or not (0). If proba = True, it will be a list of floats (between 0 to 1) representing the probability of each residue
+            to be a cleavage site. Either way, the length of the returned string/list will correspond to the length of the provided peptide
+            sequence.
             2. cleavage_products - A list of strings, each representing the amino-acid sequence of a predicted cleavage product.
         '''
-        cleavage_mask = self.get_peptide_predictor().predict_annotations(seq, extra_tracks_data = extra_tracks_data)
+        cleavage_mask = self.get_peptide_predictor().predict_annotations(seq, extra_tracks_data = extra_tracks_data, proba = proba)
         cleavage_products = _get_cleavage_products(seq, cleavage_mask)
         return cleavage_mask, cleavage_products
 
@@ -64,7 +68,7 @@ def _get_cleavage_products(seq, cleavage_mask):
     current_product = ''
 
     for aa, label in zip(seq, cleavage_mask):
-        if label == '1':
+        if _is_cleavage(label):
             _add_if_not_empty(products, current_product)
             current_product = ''
         else:
@@ -72,6 +76,14 @@ def _get_cleavage_products(seq, cleavage_mask):
 
     _add_if_not_empty(products, current_product)
     return products
+    
+def _is_cleavage(label):
+    if isinstance(label, str):
+        return label == '1'
+    elif isinstance(label, int) or isinstance(label, float):
+        return int(round(label)) == 1
+    else:
+        raise Exception('Unknown label type: ' + str(type(label)))
 
 def _add_if_not_empty(array, string):
     if len(string) > 0:

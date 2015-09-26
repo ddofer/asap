@@ -13,11 +13,11 @@ FEATURE_KEY_OPTIONS = [
     'fid_disorder', # Get for putative disordered segment(s) according to FoldIndex method
     'kr_motifs', # Get putative canonical/"Known motif" cleavage sites, according to a regular expression.
     'charge', # The charge (+1, -1 or 0) of each residue in the window
-    # 'accum_charge_left', # Accumulating charge from the left of the window
-    # 'accum_charge_right', # Accumulating charge from the right of the window
-    # 'accum_pos_charge_left', # Accumulating charge from the left of the window where only positive amino-acids (K and R) are considered
-    # 'accum_pos_charge_right', # Accumulating charge from the right of the window where only positive amino-acids (K and R) are considered
-    # 'aa', # the actual amino-acid at each position given by one-hot encoding
+    'accum_charge_left', # Accumulating charge from the left of the window
+    'accum_charge_right', # Accumulating charge from the right of the window
+    'accum_pos_charge_left', # Accumulating charge from the left of the window where only positive amino-acids (K and R) are considered
+    'accum_pos_charge_right', # Accumulating charge from the right of the window where only positive amino-acids (K and R) are considered
+    'aa', # the actual amino-acid at each position given by one-hot encoding
     'aa_reduced', # Same as 'aa', after using a reduced alphabet of 15 amino-acids
     'aa_context_count', # Counting the number of occurrences of each amino-acid in the part of the protein to the left/right of the window
     'aa_counts', # Counting the number of occurrences of each amino-acid in the window

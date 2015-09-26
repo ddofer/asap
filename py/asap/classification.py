@@ -7,7 +7,7 @@ import pandas as pd
 from sklearn.utils import shuffle
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler
-from sklearn.feature_selection import VarianceThreshold, SelectFdr
+from sklearn.feature_selection import VarianceThreshold, SelectFdr, RFECV
 from sklearn.cross_validation import StratifiedKFold
 from sklearn.metrics import confusion_matrix, roc_auc_score, f1_score
 from sklearn.ensemble import RandomForestClassifier
@@ -30,6 +30,8 @@ DEFAULT_FEATURE_SELECTOR = sklearn_extensions.FeatureSelectionPipeline([
     VarianceThreshold(0.01),
     SelectFdr(alpha = 0.3),
 ])
+
+RFECV_FEATURE_SELECTION_DEFAULT_CLASSIFIER = sklearn_extensions.RandomForestClassifierWithCoef(n_estimators = 50, n_jobs = -2, class_weight = 'auto')
 
 # Use a constant seed
 SEED = 1812
@@ -152,7 +154,7 @@ class PeptidePredictor(object):
                 annotation_mask[window_index] = '1'
 
         return ''.join(annotation_mask)
-
+        
 def train_window_classifier(windows_data_frame, classifiers = DEFAULT_CLASSIFIERS, drop_only_almost_positives = False, \
         drop_duplicates = True, transformer = DEFAULT_TRANSFORMER, feature_selector = DEFAULT_FEATURE_SELECTOR, n_folds = 5, \
         scoring_method = f1_score, select_best = True):
@@ -176,7 +178,7 @@ def train_window_classifier(windows_data_frame, classifiers = DEFAULT_CLASSIFIER
         Whether to drop duplicating windows in the dataset, based on their neighbourhood property.
     @param transformer (sklearn transformer, optional, default sklearn.preprocessing.StandardScaler):
         A preprocessing transformer to use for the data before starting the kfold evaluation and final training of the classifiers. If None, will
-        not perform any preprocessing  transformation
+        not perform any preprocessing  transformation.
     @param feature_selector (sklearn feature selector, optional, default a pipeline of VarianceThreshold and SelectFdr):
         A feature selection procedure to apply during both the kfold evaluation and final training of each classifier. If None, will not perform
         feature selection (i.e. will use all features). Note that the given feature selector must implement the get_support method (hence sklearn's
@@ -213,6 +215,37 @@ def train_window_classifier(windows_data_frame, classifiers = DEFAULT_CLASSIFIER
         return best_classifier, best_results
     else:
         return window_classifiers_and_results
+        
+def get_top_features(windows_data_frame, drop_only_almost_positives = False, drop_duplicates = True, transformer = DEFAULT_TRANSFORMER, \
+        classifier = RFECV_FEATURE_SELECTION_DEFAULT_CLASSIFIER, n_folds = 2, step = 0.05, scoring = 'f1'):
+
+    '''
+    Using sklearn.feature_selection.RFECV model in order to find the top features of given windows with features, given in a CSV format.
+    @param windows_data_frame (pandas.DataFrame):
+        A data frame of the windows' CSV.
+    @param drop_only_almost_positives (boolean, default False):
+        Same as in train_window_classifier.
+    @param drop_duplicates (boolean, default True):
+        Whether to drop duplicating windows in the dataset, based on their neighbourhood property, prior to RFECV.
+    @param transformer (sklearn transformer, optional, default sklearn.preprocessing.StandardScaler):
+        A preprocessing transformer to use for the data before applying RFECV. If None, will not perform any preprocessing transformation.
+    @param classifier (sklearn classifier, default a special version of random forest suitable for RFECV):
+        The classifier to use as the estimator of RFECV.
+    @param n_folds (int, default 2):
+        The n_folds to use in the kfold cross-validation as part of the RFECV process.
+    @param step (default 0.05):
+        See sklearn.feature_selection.RFECV
+    @param scoring (default 'f1'):
+        See sklearn.feature_selection.RFECV
+    @return:
+        A list of the top features, each represented as a string.
+    '''
+    
+    features, X, y = _get_training_data(windows_data_frame, drop_only_almost_positives, drop_duplicates, transformer)
+    kfold = StratifiedKFold(y, n_folds = n_folds, shuffle = True, random_state = SEED)
+    rfecv = RFECV(estimator = classifier, cv = kfold, step = step, scoring = scoring)
+    rfecv.fit(X, y)
+    return util.apply_mask(features, rfecv.support_)
 
 def _get_training_data(windows_data_frame, drop_only_almost_positives, drop_duplicates, transformer, features = None):
 

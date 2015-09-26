@@ -2,6 +2,21 @@
 This module contains extensions required by our project that we wish sklearn supported.
 '''
 
+from sklearn.ensemble import RandomForestClassifier
+
+class RandomForestClassifierWithCoef(RandomForestClassifier):
+
+    '''
+    A small hack required to make sklearn.ensemble.RandomForestClassifier support sklearn.feature_selection.RFECV.
+    '''
+
+    def fit(self, *args, **kwargs):
+        '''
+        @see sklearn.ensemble.RandomForestClassifier.fit
+        '''
+        super(RandomForestClassifierWithCoef, self).fit(*args, **kwargs)
+        self.coef_ = self.feature_importances_
+
 class FeatureSelectionPipeline(object):
     
     '''

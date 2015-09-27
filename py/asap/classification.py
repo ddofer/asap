@@ -21,14 +21,14 @@ LOGGER = logging.getLogger('ML')
 
 DEFAULT_CLASSIFIERS = [
     RandomForestClassifier(n_estimators = 150, n_jobs = -2, class_weight = 'auto'),
-    SVC(kernel = 'rbf', class_weight = 'auto'),
+    SVC(kernel = 'rbf', class_weight = 'auto',probability=True,cache_size = 1200),
 ]
 
 DEFAULT_TRANSFORMER = StandardScaler(copy = False)
 
 DEFAULT_FEATURE_SELECTOR = sklearn_extensions.FeatureSelectionPipeline([
     VarianceThreshold(0.01),
-    SelectFdr(alpha = 0.3),
+    SelectFdr(alpha = 0.1),
 ])
 
 RFECV_FEATURE_SELECTION_DEFAULT_CLASSIFIER = sklearn_extensions.RandomForestClassifierWithCoef(n_estimators = 50, n_jobs = -2, class_weight = 'auto')
@@ -59,7 +59,7 @@ class WindowClassifier(object):
         self.transformer = transformer
 
     def classify_windows(self, windows_data_frame, proba = False):
-        
+
         '''
         Classifies windows extracted with their features, given in a CSV format. Obviously, these windows don't need to have annotations/labels.
         Even if labels are given, they will be ignored.
@@ -71,14 +71,14 @@ class WindowClassifier(object):
             A numpy array of the predicted labels for the given windows. The length of the returned array will correspond to the number of
             windows in the given data frame.
         '''
-        
+
         if len(windows_data_frame) == 0:
             return np.empty(shape = 0)
         else:
-            
+
             X = windows_data_frame[self.used_features].values
             X = self._transform(X)
-            
+
             if proba:
                 return self.raw_classifier.predict_proba(X)[:,1]
             else:
@@ -105,7 +105,7 @@ class WindowClassifier(object):
             precision, specificity, cm), just like in train_window_classifier.
         '''
         LOGGER.info('Testing ' + str(type(self.raw_classifier)))
-        features, X, y = _get_training_data(windows_data_frame, drop_only_almost_positives, drop_duplicates, self.transformer, \
+        features, X, y = get_training_data(windows_data_frame, drop_only_almost_positives, drop_duplicates, self.transformer, \
                 features = self.used_features)
         LOGGER.info('Predicting %d records...' % len(X))
         y_pred = self.raw_classifier.predict(X)
@@ -164,12 +164,12 @@ class PeptidePredictor(object):
         for window_index, label in zip(window_indices, labels):
             if window_index >= 0 and window_index < length:
                 annotation_mask[window_index] = label
-                
+
         if proba:
             return map(float, annotation_mask)
         else:
             return ''.join(map(str, annotation_mask))
-        
+
 def train_window_classifier(windows_data_frame, classifiers = DEFAULT_CLASSIFIERS, drop_only_almost_positives = False, \
         drop_duplicates = True, transformer = DEFAULT_TRANSFORMER, feature_selector = DEFAULT_FEATURE_SELECTOR, n_folds = 5, \
         scoring_method = f1_score, select_best = True):
@@ -214,7 +214,7 @@ def train_window_classifier(windows_data_frame, classifiers = DEFAULT_CLASSIFIER
         classifiers, sorted by their score in a descending order.
     '''
 
-    features, X, y = _get_training_data(windows_data_frame, drop_only_almost_positives, drop_duplicates, transformer)
+    features, X, y = get_training_data(windows_data_frame, drop_only_almost_positives, drop_duplicates, transformer)
     window_classifiers_and_results = []
 
     for classifier in classifiers:
@@ -230,7 +230,7 @@ def train_window_classifier(windows_data_frame, classifiers = DEFAULT_CLASSIFIER
         return best_classifier, best_results
     else:
         return window_classifiers_and_results
-        
+
 def get_top_features(windows_data_frame, drop_only_almost_positives = False, drop_duplicates = True, transformer = DEFAULT_TRANSFORMER, \
         classifier = RFECV_FEATURE_SELECTION_DEFAULT_CLASSIFIER, n_folds = 2, step = 0.05, scoring = 'f1'):
 
@@ -255,14 +255,14 @@ def get_top_features(windows_data_frame, drop_only_almost_positives = False, dro
     @return:
         A list of the top features, each represented as a string.
     '''
-    
-    features, X, y = _get_training_data(windows_data_frame, drop_only_almost_positives, drop_duplicates, transformer)
+
+    features, X, y = get_training_data(windows_data_frame, drop_only_almost_positives, drop_duplicates, transformer)
     kfold = StratifiedKFold(y, n_folds = n_folds, shuffle = True, random_state = SEED)
     rfecv = RFECV(estimator = classifier, cv = kfold, step = step, scoring = scoring)
     rfecv.fit(X, y)
     return util.apply_mask(features, rfecv.support_)
 
-def _get_training_data(windows_data_frame, drop_only_almost_positives, drop_duplicates, transformer, features = None):
+def get_training_data(windows_data_frame, drop_only_almost_positives, drop_duplicates, transformer, features = None):
 
     LOGGER.info('Given a data frame of %d records X %d columns.' % windows_data_frame.shape)
 

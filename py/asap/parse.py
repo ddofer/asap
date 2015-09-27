@@ -1,4 +1,5 @@
 import logging
+
 from Bio import SeqIO
 
 from . import util

@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div style = "text-align: center;">
+        <div>Please fill below the amino-acid sequences to predict in FASTA format:</div>
+        <form action = "/cleavage-prediction/" method = "POST">
+            {% csrf_token %}
+            <div style = "margin: 10px;"><textarea name = "seqs" rows = "20" cols = "70"></textarea></div>
+            <div><input type = "submit" value = "Submit"/></div>
+        </form>
+    </div>
+{% endblock %}

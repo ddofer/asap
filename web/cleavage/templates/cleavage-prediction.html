@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div style = "margin-left: 20px;">
+        <p style = "text-align: center;">Following are the prediction results. Below each amino-acid is its predicted probability of being a cleavage site.</p>
+        {% for record_id, labeled_aa_chunks, cleavage_products in seqs_data %}
+            <div style = "margin-top: 50px; font-weight: bold;">&gt {{ record_id }}</div>
+            <table>
+                {% for labeled_aa_chunk in labeled_aa_chunks %}
+                    <tr>
+                        {% for labeled_aa in labeled_aa_chunk %}
+                            <td style = "padding-top: 20px; padding-right: 30px;"><span style = "background-color: {{ labeled_aa.background_color }};">{{ labeled_aa.aa }}</span></td>
+                        {% endfor %}
+                    </tr>
+                    <tr>
+                        {% for labeled_aa in labeled_aa_chunk %}
+                            <td style = "color: {{ labeled_aa.probability_color }};">{{ labeled_aa.cleavage_probability|floatformat:2 }}</td>
+                        {% endfor %}
+                    </tr>
+                {% endfor %}
+            </table>
+            <div style = "margin-top: 30px;"><span style = "text-decoration: underline;">Predicted cleavage products</span>:</div>
+            <ul style = "width: 800px;">
+                {% for cleavage_product in cleavage_products %}
+                    <li style = "word-wrap: break-word;">{{ cleavage_product }}</li>
+                {% endfor %}
+            </ul>
+            <div style = "margin-top: 30px; text-align: center;"><a href = "/">Go back to home page</a></div>
+        {% endfor %}
+    </div>
+{% endblock %}

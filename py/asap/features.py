@@ -136,9 +136,9 @@ def get_features(window, hot_index, feature_keys = DEFAULT_FEATURE_KEYS):
 
 def get_position_features(window):
 
-    total_size = window.full_record.length
+    total_size = window.full_record.length()
     left_size = window.offset
-    right_size = total_size - left_size - window.length
+    right_size = total_size - left_size - window.length()
 
     return {
         'total_size': total_size,

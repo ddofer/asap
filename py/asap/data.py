@@ -77,9 +77,11 @@ class DataRecord(object):
             All the sequence tracks used for this data record.
         '''
         self.sequence_tracks = sequence_tracks
-        self.length = sequence_tracks.length()
         self.padding_prefix_length = 0
         self.padding_suffix_length = 0
+        
+    def length(self):
+        return self.sequence_tracks.length()
 
     def pad(self, prefix_length, suffix_length):
         self.padding_prefix_length += prefix_length
@@ -125,7 +127,7 @@ class FullDataRecord(DataRecord):
                          description = self.description)
 
     def get_windows(self, window_size):
-        for i in range(self.length - window_size + 1):
+        for i in range(self.length() - window_size + 1):
             yield Window(self, i, i - self.padding_prefix_length, self.sequence_tracks.get_subsequence(i, window_size))
 
     def __repr__(self):
@@ -143,7 +145,7 @@ class Window(DataRecord):
         return self.full_record.get_track_seq(name)[:self.offset]
 
     def get_right_context_track_seq(self, name):
-        return self.full_record.get_track_seq(name)[(self.offset + self.length):]
+        return self.full_record.get_track_seq(name)[(self.offset + self.length()):]
 
     def get_neighbourhood(self, hot_index, neighbourhood_prefix, neighbourhood_suffix):
         return self.get_aa_seq()[(hot_index - neighbourhood_prefix):(hot_index + neighbourhood_suffix + 1)]

@@ -1,0 +1,9 @@
+	np_adv	np_simple	uni_adv	uni_simple
+Accuracy	0.94	0.933	0.935	0.931
+Average Precision	0.83	0.814	0.846	0.836
+F1	0.813	0.797	0.823	0.814
+Precision	0.828	0.794	0.867	0.848
+ROC_AUC	0.883	0.88	0.877	0.874
+Recall	0.799	0.8	0.784	0.782
+Specificity	0.968	0.959	0.971	0.966
+mcc	0.778	0.757	0.785	0.772

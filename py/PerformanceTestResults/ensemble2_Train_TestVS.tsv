@@ -1,9 +1,0 @@
-	Adv NeuroPred on UniProt	Adv UniProt on NeuroPred	Simple NeuroPred on UniProt	Simple UniProt on NeuroPred
-Accuracy	0.89	0.914	0.9	0.909
-Average Precision	0.729	0.75	0.757	0.74
-F1	0.675	0.724	0.715	0.715
-Precision	0.789	0.759	0.798	0.734
-ROC_AUC	0.776	0.824	0.804	0.823
-Recall	0.59	0.691	0.648	0.696
-Specificity	0.962	0.957	0.96	0.951
-mcc	0.62	0.673	0.661	0.661

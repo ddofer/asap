@@ -11,11 +11,13 @@ import pickle
 
 import pandas as pd
 
+from sklearn.feature_selection import VarianceThreshold, SelectFdr
 from sklearn.linear_model import LogisticRegressionCV
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.svm import SVC
+from mlxtend.classifier import EnsembleClassifier
 
-from asap import train_window_classifier, PeptidePredictor
+from asap import train_window_classifier, PeptidePredictor, FeatureSelectionPipeline
 
 from cleavepred import util
 from cleavepred import project_paths
@@ -38,11 +40,17 @@ else:
 # We use NeuroPred's dataset for training/validation of our predictors.
 project_paths.dataset_name = 'neuropred'
 
-classifiers = [
-    LogisticRegressionCV(Cs = 20, n_jobs = -2, class_weight = 'auto'),
-    RandomForestClassifier(max_features = 82, n_estimators = 150, n_jobs = -2, class_weight = 'auto'),
-    SVC(kernel = 'rbf', C = 3.798, probability = True, cache_size = 1900, class_weight = 'auto'),
+ensemble_classifiers = [
+    LogisticRegressionCV(Cs = 15, n_jobs = -2, class_weight = 'auto'),
+    RandomForestClassifier(max_features = 45, n_estimators = 165, bootstrap = True, criterion = 'gini', n_jobs = -2, class_weight = 'auto'),
+    SVC(kernel = 'rbf', C = 3.798, probability = True, cache_size = 2200, class_weight = 'auto'),
 ]
+classifiers = [EnsembleClassifier(clfs = ensemble_classifiers, voting = 'hard')]
+
+feature_selector = FeatureSelectionPipeline([
+    VarianceThreshold(0.03),
+    SelectFdr(alpha = 0.25),
+])
 
 ### Train the classifier and dump the predictor ###
 
@@ -64,7 +72,7 @@ def dump_predictor(predictor):
 def train_classifier():
     windows_data_frame = pd.read_csv(windows_file)
     window_classifier, classifier_performance = train_window_classifier(windows_data_frame, classifiers = classifiers, \
-            drop_only_almost_positives = True)
+            drop_only_almost_positives = True, feature_selector = feature_selector, n_folds = 10)
     peptide_predictor = PeptidePredictor(window_classifier, window_extraction_params = window_extraction_params)
     dump_predictor(peptide_predictor)
 

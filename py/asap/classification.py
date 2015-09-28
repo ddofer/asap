@@ -21,7 +21,7 @@ LOGGER = logging.getLogger('ML')
 
 DEFAULT_CLASSIFIERS = [
     RandomForestClassifier(n_estimators = 150, n_jobs = -2, class_weight = 'auto'),
-    SVC(kernel = 'rbf', class_weight = 'auto',probability=True,cache_size = 1200),
+    SVC(kernel = 'rbf', class_weight = 'auto', probability = True, cache_size = 1200),
 ]
 
 DEFAULT_TRANSFORMER = StandardScaler(copy = False)
@@ -105,7 +105,7 @@ class WindowClassifier(object):
             precision, specificity, cm), just like in train_window_classifier.
         '''
         LOGGER.info('Testing ' + str(type(self.raw_classifier)))
-        features, X, y = get_training_data(windows_data_frame, drop_only_almost_positives, drop_duplicates, self.transformer, \
+        features, X, y = get_windows_data(windows_data_frame, drop_only_almost_positives, drop_duplicates, self.transformer, \
                 features = self.used_features)
         LOGGER.info('Predicting %d records...' % len(X))
         y_pred = self.raw_classifier.predict(X)
@@ -214,7 +214,7 @@ def train_window_classifier(windows_data_frame, classifiers = DEFAULT_CLASSIFIER
         classifiers, sorted by their score in a descending order.
     '''
 
-    features, X, y = get_training_data(windows_data_frame, drop_only_almost_positives, drop_duplicates, transformer)
+    features, X, y = get_windows_data(windows_data_frame, drop_only_almost_positives, drop_duplicates, transformer)
     window_classifiers_and_results = []
 
     for classifier in classifiers:
@@ -256,13 +256,34 @@ def get_top_features(windows_data_frame, drop_only_almost_positives = False, dro
         A list of the top features, each represented as a string.
     '''
 
-    features, X, y = get_training_data(windows_data_frame, drop_only_almost_positives, drop_duplicates, transformer)
+    features, X, y = get_windows_data(windows_data_frame, drop_only_almost_positives, drop_duplicates, transformer)
     kfold = StratifiedKFold(y, n_folds = n_folds, shuffle = True, random_state = SEED)
     rfecv = RFECV(estimator = classifier, cv = kfold, step = step, scoring = scoring)
     rfecv.fit(X, y)
     return util.apply_mask(features, rfecv.support_)
 
-def get_training_data(windows_data_frame, drop_only_almost_positives, drop_duplicates, transformer, features = None):
+def get_windows_data(windows_data_frame, drop_only_almost_positives = False, drop_duplicates = True, transformer = DEFAULT_TRANSFORMER, \
+        features = None):
+
+    '''
+    Extracts numeric vectorial data in numpy format, suitable for applying standard sklearn models on, from a CSV of windows with features.
+    @param windows_data_frame (pandas.DataFrame):
+        A data frame of the windows' CSV.
+    @param drop_only_almost_positives (boolean, default False):
+        Same as in train_window_classifier.
+    @param drop_duplicates (boolean, default True):
+        Whether to drop duplicating windows in the dataset, based on their neighbourhood property.
+    @param transformer (sklearn transformer, optional, default sklearn.preprocessing.StandardScaler):
+        A transformer to apply on the data (X). If None, will not perform any preprocessing transformation.
+    @param features (list of strings, optional):
+        The names of the features to extract from each window. If None, will extract all the features that appear in the given CSV.
+    @return:
+        A tuple comprised of:
+        1. features - A list of strings corresponding to the names of the features extracted from the data.
+        2. X - A numpy matrix of the extracted data points. Each row in the matrix represents a window, and each column a feature.
+        3. y - A numpy array of binary integer values (0s and 1s), corresponding to the label of the extracted data points (windows). The
+        length of y is equal to the number of rows in X.
+    '''
 
     LOGGER.info('Given a data frame of %d records X %d columns.' % windows_data_frame.shape)
 

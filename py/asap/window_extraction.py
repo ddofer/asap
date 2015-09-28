@@ -203,15 +203,15 @@ def _extract_windows_to_csv(full_records, output_file, window_extraction_params)
 
 def _process_window_to_csv(window, csv_writer, window_extraction_params, feature_headers, include_annotations):
 
-    features = window.get_features(window_extraction_params.window_hot_index, window_extraction_params.feature_keys)
-
     if feature_headers is None:
+        features = window.get_features(window_extraction_params.window_hot_index, window_extraction_params.feature_keys)
         feature_headers = list(sorted(features.keys()))
         include_annotations = window.has_annotation_mask()
         util.write_csv_line(csv_writer, _get_meta_headers(include_annotations) + feature_headers)
 
     if window_extraction_params.windows_filter is None or window_extraction_params.windows_filter(window):
         meta_values = _get_window_meta_values(window, window_extraction_params, include_annotations)
+        features = window.get_features(window_extraction_params.window_hot_index, window_extraction_params.feature_keys)
         feature_values = [features[header] for header in feature_headers]
         util.write_csv_line(csv_writer, meta_values + feature_values)
 

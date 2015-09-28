@@ -8,8 +8,8 @@ AVAILABLE_TRACKS = [
     'pssm',
 ]
 
-# Here we prefer using 'aa_reduced' over 'aa'. Other than that we use all available features.
-USED_FEATURES = set(FEATURE_KEY_OPTIONS).difference(['aa'])
+# Here we prefer using 'aa_reduced' over 'aa'. We give up on some other features.
+USED_FEATURES = set(FEATURE_KEY_OPTIONS).difference(['aa', 'accum_charge_left', 'accum_charge_right', 'accum_pos_charge_left', 'accum_pos_charge_right'])
 
 def windows_filter(window):
     '''

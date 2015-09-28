@@ -708,7 +708,7 @@ def Entropy_pssm(pssm, hot_index, get_entropy_segs = True,background_freq_dict =
     PSSM profile AA Order: {'A', 'C', 'E', 'D', 'G', 'F', 'I', 'H', 'K', 'M', 'L', 'N', 'Q', 'P', 'S', 'R', 'T', 'W', 'V', 'Y', '_'}
     TODO: Background frequency correction.
     Background frequencies taken from default for Vertebrates:
-    http://www.tiem.utk.edu/~gross/bioed/webmodules/aminoacid.html
+    http://www.tiem.utk.edu/~gross/bioed/webmodules/aminoacid.htm
     It might be useful to use other background frequencies - e.g. from the training set proteins, or default BloSum.
     Additional sources of background frequencies: http://www.bioinformatics.org/pipermail/ssml-general/2005-July/000203.html
 

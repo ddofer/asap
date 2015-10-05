@@ -2,11 +2,11 @@
 
 {% block content %}
     <div style = "text-align: center;">
-        <div>Please fill below the amino-acid sequences to predict in FASTA format:</div>
-        <form action = "{{ settings.SITE_URL }}/cleavage-prediction/" method = "POST">
+        <div>Please fill below the amino-acid sequences to predict in FASTA format. You may either upload a FASTA file, or paste a it as a free text.</div>
+        <form action = "{{ settings.SITE_URL }}/cleavage-prediction/" method = "POST" enctype = "multipart/form-data">
             {% csrf_token %}
-            <div style = "margin: 10px;"><textarea name = "seqs" rows = "20" cols = "70"></textarea></div>
-            <div><input type = "submit" value = "Submit"/></div>
+            <div style = "margin: 10px;"><textarea name = "seqs-text" rows = "20" cols = "70"></textarea></div>
+            <div><input type = "file" name = "seqs-file" value = "lol" style = "margin-right: 50px; border: 1px solid #c0c0c0;"/><input type = "submit" value = "Submit"/></div>
         </form>
     </div>
 {% endblock %}

@@ -5,6 +5,10 @@ Django settings for cleavepred project.
 import sys
 import os
 
+### Local Environment-Dependent Settings ###
+
+SITE_URL = ''
+
 ### Preparations ###
 
 BASE_DIR = os.path.dirname(__file__)
@@ -43,6 +47,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.media',
     'django.core.context_processors.static',
     'django.contrib.messages.context_processors.messages',
+    'context_processors.settings_access'
 )
 
 MIDDLEWARE_CLASSES = (

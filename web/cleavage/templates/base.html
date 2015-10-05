@@ -4,7 +4,7 @@
     </head>
     <body style = "font-size: 15px; color: #101010;">
         <div>
-            <a href = "/" style = "text-decoration: none; color: inherit;"><h1 style = "margin-top: 50px; text-align: center; font-family: Copperplate, 'Copperplate Gothic Light', fantasy; font-size: 45px;">CleavePred</h1></a>
+            <a href = "{{ settings.SITE_URL }}/" style = "text-decoration: none; color: inherit;"><h1 style = "margin-top: 50px; text-align: center; font-family: Copperplate, 'Copperplate Gothic Light', fantasy; font-size: 45px;">CleavePred</h1></a>
             <div style = "text-align: center; font-weight: bold; font-size: 18px;">A Machine-Learning model for predicting cleavage products of neuropeptide precursors</div>
             <hr style = "width: 800px;"/>
         </div>
@@ -13,8 +13,7 @@
         </div>
         <div style = "margin-bottom: 25px; text-align: center; font-size: 14px;">
             <hr/>
-            <p>CleavePred is powered by <a href = "https://github.com/ddofer/asap">ASAP</a>, a generic API for learning peptide annotations with minimal fine-tuning using powerful feature engineering combined with standard Machine-Learning models. Inside ASAP's <a href = "https://github.com/ddofer/asap">GitHub project</a>, you will also find the source code of CleavePred, which comes with a handy API as well. To learn more about either of ASAP's or CleavePred's APIs (which offer more options than this website), read the Wiki page in GitHub.</p>
-            <p>To learn more about the underlying algorithm, please read our paper "ASAP: A Machine-Learning Framework for Local Protein Properties". <span style = "font-weight: bold;">If you found our work to be useful for your research, please cite it.</span></p>
+            <p>CleavePred is powered by <a href = "https://github.com/ddofer/asap">ASAP</a>, a generic API for easily learning local protein annotations with minimal fine-tuning using powerful feature engineering combined with standard Machine-Learning models. Inside ASAP's <a href = "https://github.com/ddofer/asap">GitHub project</a>, you will also find the source code of CleavePred, which comes with a handy API as well. To learn more about either of ASAP's or CleavePred's APIs (which offer more options than this website), read the Wiki page in GitHub (in particular <a href = "https://github.com/ddofer/asap/wiki/Getting-Started:-A-Basic-Tutorial">this tutorial</a>). To learn more about the underlying algorithm, please read our paper "ASAP: A Machine-Learning Framework for Local Protein Properties". <span style = "font-weight: bold;">If you found our work to be useful for your research, please cite it.</span></p>
             <p>For any issue/request, feel free to contact us: Nadav Brandes (<a href = "mailto:nadav.brandes@mail.huji.ac.il" target = "_blank">nadav.brandes@mail.huji.ac.il</a>) and Dan Ofer (<a href = "mailto:ddofer@gmail.com" target = "_blank">ddofer@gmail.com</a>).</p>
         </div>
     </body>

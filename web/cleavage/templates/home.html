@@ -2,7 +2,7 @@
 
 {% block content %}
     <div style = "text-align: center;">
-        <div>Please fill below the amino-acid sequences to predict in FASTA format. You may either upload a FASTA file, or paste a it as a free text.</div>
+        <div>Please fill below the amino-acid sequences to predict in FASTA format. You may either upload a FASTA file, or paste it as a free text.</div>
         <form action = "{{ settings.SITE_URL }}/cleavage-prediction/" method = "POST" enctype = "multipart/form-data">
             {% csrf_token %}
             <div style = "margin: 10px;"><textarea name = "seqs-text" rows = "20" cols = "70"></textarea></div>

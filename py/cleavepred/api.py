@@ -68,11 +68,12 @@ def _get_cleavage_products(seq, cleavage_mask):
     current_product = ''
 
     for aa, label in zip(seq, cleavage_mask):
+    
+        current_product += aa
+    
         if _is_cleavage(label):
             _add_if_not_empty(products, current_product)
             current_product = ''
-        else:
-            current_product += aa
 
     _add_if_not_empty(products, current_product)
     return products

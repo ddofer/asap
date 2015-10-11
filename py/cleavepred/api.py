@@ -67,11 +67,12 @@ def _get_cleavage_products(seq, cleavage_mask):
     products = []
     current_product = ''
 
-    for aa, label in zip(seq, cleavage_mask):
+    for i in range(len(seq)):
     
-        current_product += aa
+        current_product += seq[i]
     
-        if _is_cleavage(label):
+        # When we have continuous positive cleavage sites, we consider only the most C-terminus one.
+        if _is_cleavage(cleavage_mask[i]) and (i >= len(seq) - 1 or not _is_cleavage(cleavage_mask[i + 1])):
             _add_if_not_empty(products, current_product)
             current_product = ''
 

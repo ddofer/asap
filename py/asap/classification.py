@@ -20,8 +20,8 @@ from . import sklearn_extensions
 LOGGER = logging.getLogger('ML')
 
 DEFAULT_CLASSIFIERS = [
-    RandomForestClassifier(n_estimators = 150, n_jobs = -2, class_weight = 'auto'),
-    SVC(kernel = 'rbf', class_weight = 'auto', probability = True, cache_size = 1200),
+    RandomForestClassifier(n_estimators = 180, n_jobs = -2, class_weight = 'auto'),
+    SVC(kernel = 'rbf', class_weight = 'auto', probability = True, cache_size = 1500),
 ]
 
 DEFAULT_TRANSFORMER = StandardScaler(copy = False)
@@ -31,7 +31,7 @@ DEFAULT_FEATURE_SELECTOR = sklearn_extensions.FeatureSelectionPipeline([
     SelectFdr(alpha = 0.1),
 ])
 
-RFECV_FEATURE_SELECTION_DEFAULT_CLASSIFIER = sklearn_extensions.RandomForestClassifierWithCoef(n_estimators = 50, n_jobs = -2, class_weight = 'auto')
+RFECV_FEATURE_SELECTION_DEFAULT_CLASSIFIER = sklearn_extensions.RandomForestClassifierWithCoef(n_estimators = 400, n_jobs = -2, class_weight = 'auto')
 
 # Use a constant seed
 SEED = 1812
@@ -232,7 +232,7 @@ def train_window_classifier(windows_data_frame, classifiers = DEFAULT_CLASSIFIER
         return window_classifiers_and_results
 
 def get_top_features(windows_data_frame, drop_only_almost_positives = False, drop_duplicates = True, transformer = DEFAULT_TRANSFORMER, \
-        classifier = RFECV_FEATURE_SELECTION_DEFAULT_CLASSIFIER, n_folds = 2, step = 0.05, scoring = 'f1'):
+        classifier = RFECV_FEATURE_SELECTION_DEFAULT_CLASSIFIER, n_folds = 3, step = 0.05, scoring = 'f1'):
 
     '''
     Using sklearn.feature_selection.RFECV model in order to find the top features of given windows with features, given in a CSV format.

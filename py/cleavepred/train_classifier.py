@@ -41,15 +41,15 @@ else:
 project_paths.dataset_name = 'neuropred'
 
 ensemble_classifiers = [
-    LogisticRegressionCV(Cs = 15, n_jobs = -2, class_weight = 'auto'),
-    RandomForestClassifier(max_features = 45, n_estimators = 165, bootstrap = True, criterion = 'gini', n_jobs = -2, class_weight = 'auto'),
-    SVC(kernel = 'rbf', C = 3.798, probability = True, cache_size = 2200, class_weight = 'auto'),
+    LogisticRegressionCV(Cs = 16, n_jobs = -2, class_weight = 'auto'),
+    RandomForestClassifier(n_estimators = 250, bootstrap = True, criterion = 'gini', n_jobs = -2, class_weight = 'auto'),
+    SVC(kernel = 'rbf', C = 3.798, probability = True, cache_size = 2400, class_weight = 'auto'),
 ]
 classifiers = [EnsembleClassifier(clfs = ensemble_classifiers, voting = 'hard')]
 
 feature_selector = FeatureSelectionPipeline([
     VarianceThreshold(0.03),
-    SelectFdr(alpha = 0.25),
+    SelectFdr(alpha = 0.1),
 ])
 
 ### Train the classifier and dump the predictor ###

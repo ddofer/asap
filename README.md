@@ -3,9 +3,8 @@ Amino-acid Sequence Annotation Predictor
 
 Please take a look at our Wiki for a quick tutorial: https://github.com/ddofer/asap/wiki/Getting-Started:-A-Basic-Tutorial
 
-Please note that the code is in 'beta'. Feel free to add or improve! Tell us if you find any bug or a missing feature.
+Feel free to add or improve!
 
-If you use our tool, or code, please cite us: http://biorxiv.org/content/early/2015/11/21/032532 
-"ASAP: A Machine-Learning Framework for Local Protein Properties" 
-Dan Ofer, Nadav Brandes, Michal Linial 
-doi: http://dx.doi.org/10.1101/032532
+If you use us (or our code), please cite us:
+
+> Brandes, N., Ofer, D., & Linial, M. (2016). ASAP: a machine learning framework for local protein properties. Database : the journal of biological databases and curation, 2016, baw133. https://doi.org/10.1093/database/baw133
